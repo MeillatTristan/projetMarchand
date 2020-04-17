@@ -3,11 +3,8 @@
 			<!---- header-info ---->
 			<div class="header-info text-center">
 				<div class="container">
-					<h1><span> les légumes, c'est cool<span> </span></h1>
-					<p>Your clients on the internet. Learn how to receive them.</p>
-					<a class="big-btn" href="#">I want clients</a>
-					<a class="down-arrow down-arrow-to scroll" href="#about"><span> </span></a>
-					<label class="mouse-divice"> </label>
+					<h1><span> </span><label>LEGUMES</label><span> </span></h1>
+					<p>Choisissez vos légumes en déscendant la page</p>
 				</div>
 			</div>
 			</div>

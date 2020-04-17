@@ -5,9 +5,6 @@
 				<div class="container">
 					<h1><span> </span><label>SALAH </label> PRIMEUR<span> </span></h1>
 					<p>Votre marchand</p>
-					<a class="big-btn" href="#">I want clients</a>
-					<a class="down-arrow down-arrow-to scroll" href="#about"><span> </span></a>
-					<label class="mouse-divice"> </label>
 				</div>
 			</div>
 			</div>
