@@ -68,10 +68,11 @@ body a{
 }
 /*-----start-header----*/
 .bg{
-	background: url(../images/bg.jpg) no-repeat 0px 0px;
+	background: url(../images/bgHeader.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height: 760px;
 }
+
 .header{
 }
 .logo{
@@ -95,7 +96,7 @@ body a{
 	padding: 0.8em 0em;
 }
 .top-nav ul li a{
-	color: #FFF;
+	color: #303030;
 	padding: 0.4em 0em;
 	font-size: 1em;
 	font-weight: 400;
@@ -108,8 +109,8 @@ body a{
 }
 .top-nav ul li.active a,
 .top-nav ul li a:hover{
-	color:#FC645F;
-	border-bottom:3px solid #FC645F;
+	color:#10ac84;
+	border-bottom:3px solid #10ac84;
 }
 .logo a{
 	display:block;
@@ -138,7 +139,7 @@ nav li {
 	position:relative;
 }
 nav a {
-	color: #fff;
+	color: #303030;
 	display: inline-block;
 	text-align: center;
 	text-decoration: none;
@@ -232,7 +233,7 @@ nav a#pull {
 	padding: 7.5em 0 4em;
 }
 .header-info h1{
-	color: #FFF;
+	color: #303030;
 	font-family: 'open_sansbold';
 	text-transform: uppercase;
 	font-size: 3.5em;
@@ -252,19 +253,19 @@ nav a#pull {
 	margin-left:0.5em;
 }
 .header-info h1 label{
-	color:#FC645F;
+	color:#10ac84;
 }
 .header-info p{
-	color: #fff;
+	color: #303030;
 	margin: 0;
 	font-size: 1.4em;
 	font-family: 'open_sanslight';
 	margin: 0.5em 0 2em;
 }
 .header-info a.big-btn{
-	color: #FC645F;
+	color: #10ac84;
 	font-size: 1.45em;
-	border: 2px solid #FC645F;
+	border: 2px solid #10ac84;
 	padding: 0.45em 1.3em;
 	display: inline-block;
 	transition: border-color 0.4s;
@@ -408,9 +409,9 @@ a.about-down-icon span{
 	color:#FC635E;
 }
 a.expand-btn{
-	color: #FC645F;
+	color: #10ac84;
 	font-size: 1.45em;
-	border: 2px solid #FC645F;
+	border: 2px solid #10ac84;
 	padding: 0.45em 2.6em;
 	display: inline-block;
 	transition: border-color 0.4s;
