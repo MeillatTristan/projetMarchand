@@ -66,6 +66,7 @@ body a{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
+
 /*-----start-header----*/
 .bg{
 	background: url(../images/bgHeader.jpg) no-repeat 0px 0px;
@@ -147,7 +148,7 @@ nav a {
 }
 nav a:hover{
 	text-decoration:none;
-	color:#00A2C1;
+	color: #10ac84;
 }
 nav a#pull {
 	display: none;
@@ -190,7 +191,7 @@ nav a#pull {
 	nav a#pull {
 		display: block;
 		position: relative;
-		color: #F26D7D;
+		color: #10ac84;
 		text-align: right;
 		position: absolute;
 		top:12px;
@@ -426,7 +427,7 @@ form input[type="text"], form input[type="password"]{
 }
 
 .falsePass{
-	color: #ee5253;
+	color: #10ac84;
 }
 
 .goodPass{
@@ -699,7 +700,7 @@ a.mr-down-arrow span {
 		margin-right: 0.5em;
 	}
 	#filters li span.active {
-		color: #F16D7D;
+		color: #10ac84;
 	}
  	#portfoliolist .portfolio {
 		-webkit-box-sizing: border-box;
@@ -807,7 +808,7 @@ a.mr-down-arrow span {
 	top:0;
 	bottom:0;
 	width:20%;
-	background:rgba(243, 103, 89, 0.8);
+	background:#10ac84;
 	transition:all 0.5s linear;
 	-moz-transition:all 0.5s linear;
 	-ms-transition:all 0.5s linear;
@@ -885,7 +886,7 @@ a.mr-down-arrow span {
 .b-from-left{
 	position: relative;
 	left: -100%;
-	background: rgba(214, 95, 88, 0.95);
+	background: #10ac84;
 	height: 100%;
 	margin: 0;
 }
@@ -1107,7 +1108,7 @@ p.copy-right a{
 	text-decoration:none;
 }
 p.copy-right a:hover{
-	color:#868686;
+	color: #10ac84;
 }
 #toTop {
 	display: none;
@@ -1130,8 +1131,9 @@ p.copy-right a:hover{
 	float: right;
 	opacity: 0;
 	-moz-opacity: 0;
-	filter: alpha(opacity=0);
+	filter: alpha(opacity=0);	
 }
+
 /*------- responsive-design -----*/
 @media (max-width:1280px){
 	.bg {
