@@ -65,9 +65,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!----start-top-nav---->
 						 <nav class="top-nav">
 							<ul class="top-nav">
-								<li><a href="legume.php" >Légumes</a></li>
-								<li><a href="fruit.php" >Fruits</a></li>
-								<li><a href="panier.php" >Panier</a></li>
+								<li><a href="index.php">Accueil</a></li>
+								<li><a href="legume.php">Légumes</a></li>
+								<li><a href="fruit.php">Fruits</a></li>
+								<li><a href="panier.php">Panier</a></li>
 								<?php
 								if(isset($_SESSION['id'])){
 									echo "<li><a href='pannelAdmin.php'>Admin</a></li>";

@@ -337,6 +337,33 @@ label.mouse-divice{
 .about-head h3 span{
 	color:#00d8a6;
 }
+
+.sidebar{
+	height: 100%;
+	background-color: #eeeeee;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.containerAdmin{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.containerAdmin ul{
+	padding: 10px;
+}
+
+.containerAdmin ul li{
+	list-style: none;
+	margin-top: 10px;
+}
+
+.containerAdmin .header-info{
+	padding-top: 40px;
+}
+
 .about-head p{
 	color: #ADADAD;
 	margin: 0;
@@ -392,7 +419,7 @@ a.about-down-icon span{
 	bottom: 8%;
 }
 
-form input[type="text"]{
+form input[type="text"], form input[type="password"]{
 	border-radius: 2px;
 	border: solid 1px;
 	border-color: #10ac84;
