@@ -14,7 +14,6 @@
 			<div id="about" class="about">
 				<div class="container">
 					<div class="about-head text-center">
-						<h3>What can <span>you receive?</span></h3>
 						<p>Daisy is sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum</p>
 					</div>
 					<!--- about-grids ---->

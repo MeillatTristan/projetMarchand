@@ -1,4 +1,7 @@
-<?php include "header.php" ?>
+<?php
+  include "header.php";
+  include "configbdd.php";
+?>
 
 			<!---- header-info ---->
 			<div class="header-info text-center">
