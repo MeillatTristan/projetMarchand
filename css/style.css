@@ -338,11 +338,16 @@ label.mouse-divice{
 	color:#00d8a6;
 }
 
-.sidebar{
-	height: 100%;
+.containerAdminAll{
+	display: flex;
+}
+
+.containerAdminAll .sideBar{
+	min-height: 100%;
 	background-color: #eeeeee;
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-top: 40px;
 }
 
 .containerAdmin{
@@ -351,11 +356,17 @@ label.mouse-divice{
 	align-items: center;
 }
 
-.containerAdmin ul{
-	padding: 10px;
+.sideBar ul{
+	padding-left: 10px;
+	padding-top: 20px;
 }
 
-.containerAdmin ul li{
+.containerAdmin .container{
+	display: flex;
+	justify-content: space-around;
+}
+
+.sideBar ul li{
 	list-style: none;
 	margin-top: 10px;
 }
