@@ -22,7 +22,7 @@ $namePicture = $_FILES['picture']['name'];
 move_uploaded_file($_FILES['picture']['tmp_name'], "images/" . $namePicture);
 $queryInsert = $bdd->prepare("INSERT INTO articles SET name = :name, type = :type, prix = :price, quantity = :quantity, picture = :picture, venteBool= :venteBool, provenance= :provenance");
 $queryInsert->execute(array(':name' =>$name,':type'=> $type, ':price'=>$price, ':quantity'=>$quantity, ':picture' => $namePicture, ':venteBool' =>'y', ':provenance'=>$provenance));
-header('Location :addArticleForm.php?good=y')
+header('Location: addArticleForm.php?good=y');
 
 
 ?>
