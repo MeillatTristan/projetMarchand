@@ -35,7 +35,7 @@
 
     <!---- header-info ---->
     <div class="header-info text-center">
-      <div class="container">
+      <div  class="titleAdd">
         <h2>ajouter un article</h2>
         <?php
         if( isset($_REQUEST['good']) && $_REQUEST['good'] == 'f'){

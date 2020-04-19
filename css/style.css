@@ -284,6 +284,7 @@ nav a#pull {
 .header-info h1 label{
 	color:#10ac84;
 }
+
 .header-info p{
 	color: #303030;
 	margin: 0;
@@ -465,11 +466,11 @@ form input[type="text"], form input[type="password"], form select{
 	border-color: #10ac84;
 }
 
-.falsePass{
-	color: #10ac84;
+.header-info .falsePass{
+	color: #ff6b6b;
 }
 
-.goodPass{
+.header-info .goodPass{
 	color: #10ac84;
 }
 
