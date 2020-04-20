@@ -44,7 +44,7 @@
         <div style='overflow-x:auto;'>
           <table>
             <thead>
-              <tr class="row">
+              <tr>
                 <th>Nom de l'article</th>
                 <th>Fruit/Légume</th>
                 <th>Quantité</th>

@@ -864,17 +864,36 @@ a.mr-down-arrow span {
 	visibility:visible;
 }
 
-table {
-	width: 100%;
+
+table tr:nth-child(even){
+	background-color: #f2f2f2;
 }
 
-/* .row th {
-	padding: 50px;
-} */
+table tr:hover {
+	background-color: #ddd;
+}
+
+table th {
+	padding-top: 12px;
+	padding-left: 7px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #10ac84;
+  color: white;
+}
+
+table{
+	width: 100%;
+	text-align: left;
+}
 
 table td img {
 	width: 50px;
 	height: 50px;
+}
+
+table td{
+	padding-left: 7px;
 }
 
 

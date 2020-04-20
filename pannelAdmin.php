@@ -29,7 +29,7 @@
     <?php include "header.php" ?>
     <style type="text/css">
     .bg {
-      background : #fff
+      background : #eceef2
     }
     </style>
 
