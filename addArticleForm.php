@@ -29,14 +29,14 @@
     <?php include "header.php" ?>
     <style type="text/css">
     .bg {
-      background : #fff
+      background : #eceef2
     }
     </style>
 
     <!---- header-info ---->
     <div class="header-info text-center">
       <div  class="titleAdd">
-        <h2>ajouter un article</h2>
+        <h2>Ajouter un article</h2>
         <?php
         if( isset($_REQUEST['good']) && $_REQUEST['good'] == 'f'){
           echo "<p class='falsePass'>Une erreur est servenu</p>";
