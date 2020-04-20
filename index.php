@@ -96,10 +96,5 @@
                                     });
                                 </script>
                 <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-			<div class="footer text-center">
-				<a href="#"><img src="images/footer-logo.png" title="daisy" /></a>
-				<p class="copy-right">Template by <a href="http://w3layouts.com/">W3layouts</a></p>
-			</div>
-
 	</body>
 </html>
