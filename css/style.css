@@ -395,7 +395,7 @@ label.mouse-divice{
 
 .containerAdmin .container{
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 .sideBar ul li{

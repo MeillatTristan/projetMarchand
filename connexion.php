@@ -7,6 +7,7 @@
 		<script src="js/jquery.min.js"></script>
 		 <!-- Custom Theme files -->
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href="css/connexion.css" rel='stylesheet' type='text/css' />
 
 		 <!---- start-smoth-scrolling---->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
