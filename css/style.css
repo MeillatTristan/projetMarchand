@@ -863,6 +863,22 @@ a.mr-down-arrow span {
 .b-link-stripe:hover .b-line{
 	visibility:visible;
 }
+
+table {
+	width: 100%;
+}
+
+/* .row th {
+	padding: 50px;
+} */
+
+table td img {
+	width: 50px;
+	height: 50px;
+}
+
+
+
 .b-link-stripe .b-line1{
 	left:0;
 }
