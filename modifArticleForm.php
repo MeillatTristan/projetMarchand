@@ -52,6 +52,7 @@
                 <th>Provenace</th>
                 <th>En vente</th>
                 <th>Photo</th>
+                <th>Modifier</th>
               </tr>
             </thead>
             <tbody class='tableau'>
