@@ -61,17 +61,17 @@
 
               while ( $articles = $requete->fetch()){
               echo "<tr>";
-              if ($articles['type'] = 'f' ) {
+              if ($articles['type'] == 'f' ) {
                 $type = 'Fruit' ;
               }
-              elseif ($articles['type'] = 'l' ) {
+              elseif ($articles['type'] == 'l' ) {
                 $type = 'Légume' ;
               }
 
-              if ($articles['ventebool'] = 'y' ) {
+              if ($articles['ventebool'] == 'y' ) {
                 $vente = 'Oui' ;
               }
-              elseif ($articles['ventebool'] = 'n' ) {
+              elseif ($articles['ventebool'] == 'n' ) {
                 $vente = 'Non' ;
               }
                 echo "<td>". $articles['name']."</td>" ;
