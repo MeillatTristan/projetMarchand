@@ -864,6 +864,9 @@ a.mr-down-arrow span {
 	visibility:visible;
 }
 
+table tr {
+	margin-top: 20px ;
+}
 
 table tr:nth-child(even){
 	background-color: #f2f2f2;
@@ -876,7 +879,8 @@ table tr:hover {
 table th {
 	padding-top: 12px;
 	padding-left: 7px;
-  padding-bottom: 12px;
+	padding-bottom: 12px;
+	padding-right: 7px;
   text-align: left;
   background-color: #10ac84;
 	color: white;
@@ -884,7 +888,7 @@ table th {
 }
 
 table{
-	width: 98.5%;
+	width: 90%;
 	text-align: left;
 	margin-left: 10px;
 	
@@ -895,9 +899,22 @@ table td img {
 	height: 50px;
 }
 
-table td{
-	padding-left: 7px;
+td.name {
+	padding-left: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
+
+table td{
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+
+
+
 
 
 

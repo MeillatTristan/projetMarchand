@@ -72,14 +72,15 @@
                 } elseif ($articles['venteBool'] == 'n') {
                   $vente = 'Non';
                 }
-                echo "<td>" . $articles['name'] . "</td>";
-                echo "<td>" . $type . "</td>";
-                echo "<td>" . $articles['quantity'] . "</td>";
-                echo "<td>" . $articles['prix'] . "</td>";
-                echo "<td>" . $articles['provenance'] . "</td>";
-                echo "<td>" . $vente . "</td>";
-                echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
-                // echo "<td><a href='profil.php?idMaj=".$articles[' id']."'>Modifier</a></td>" ;
+                // echo "<td>" . $articles['name'] . "</td>";
+                echo "<td class=name >" . "<form action='modifArticle.php'>" . "<input  size='25' type='text' name='name' value='" . $articles['name'] ." ' >" . "</td>";
+                echo "<td>" . "<select name='type' id='type'  required placeholder='Type de l\'article'> <option value='l'>Légume</option> <option value='f'>Fruit</option> </select>" . "</td>";
+                echo "<td>" . "<input size='10' type='text' name='quantity' value='" . $articles['quantity'] . " ' >" . "</td>";
+                echo "<td>" . "<input size='10' type='text' name='prix' value='" . $articles['prix'] . " ' >" . "</td>";
+                echo "<td>" . "<input size='30' type='text' name='provenance' value='" . $articles['provenance'] . " ' >" . "</td>";
+                echo "<td>" . "<select name='VenteBool' id='vente'  required placeholder='En vente'> <option value='y'>Oui</option> <option value='n'>Non</option> </select>" . "</td>";
+                echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'> <input type='file' id='picture' name='picture' accept='image/*' required></td>" . "</form>" ;
+                echo "<td>" . "<button type='submit' name='modifyBook'>Modifier</button>" . "</td>" ;
                 echo "</tr>";
               }
               ?>
