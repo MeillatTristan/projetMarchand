@@ -37,61 +37,9 @@
 
       <!---- header-info ---->
       <div class="header-info text-center">
-        <?php
-        $requete = $bdd->query('SELECT * FROM articles');
-        ?>
-        <h3>Utilisateurs :</h3>
-        <div style='overflow-x:auto;'>
-          <table>
-            <thead>
-              <tr>
-                <th>Nom de l'article</th>
-                <th>Fruit/Légume</th>
-                <th>Quantité</th>
-                <th>Prix</th>
-                <th>Provenace</th>
-                <th>En vente</th>
-                <th>Photo</th>
-                <th>Modifier</th>
-              </tr>
-            </thead>
-            <tbody class='tableau'>
-              <?php
-              
-
-              while ( $articles = $requete->fetch()){
-              echo "<tr>";
-              if ($articles['type'] = 'f' ) {
-                $type = 'Fruit' ;
-              }
-              elseif ($articles['type'] = 'l' ) {
-                $type = 'Légume' ;
-              }
-
-              if ($articles['ventebool'] = 'y' ) {
-                $vente = 'Oui' ;
-              }
-              elseif ($articles['ventebool'] = 'n' ) {
-                $vente = 'Non' ;
-              }
-                echo "<td>". $articles['name']."</td>" ;
-                echo "<td>". $type."</td>" ;
-                echo "<td>". $articles['quantity']."</td>" ;
-                echo "<td>". $articles['prix']."</td>" ;
-                echo "<td>". $articles['provenance']."</td>" ;
-                echo "<td>". $vente . "</td>";
-                echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
-                // echo "<td><a href='profil.php?idMaj=".$articles[' id']."'>Modifier</a></td>" ;
-                echo "</tr>";
-              }
-              ?>
-              
-            </tbody>
-          </table>
-        </div>
+       
       </div>
     </div>
-  </div>
   </div>
 
 </body>
