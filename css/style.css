@@ -899,11 +899,20 @@ table td img {
 	height: 50px;
 }
 
-table td{
-	padding-left: 15px;
+td.name {
+	padding-left: 0px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+
+table td{
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+
 
 
 
