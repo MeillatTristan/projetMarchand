@@ -79,7 +79,7 @@
                 echo "<td>" . $articles['provenance'] . "</td>";
                 echo "<td>" . $vente . "</td>";
                 echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
-                g// echo "<td><a href='profil.php?idMaj=".$articles[' id']."'>Modifier</a></td>" ;
+                // echo "<td><a href='profil.php?idMaj=".$articles[' id']."'>Modifier</a></td>" ;
                 echo "</tr>";
               }
               ?>
