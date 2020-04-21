@@ -56,8 +56,8 @@
 			<!---- header-info ---->
 			<div class="header-info text-center">
 				<div class="container">
-					<h1><span> </span><label>LEGUMES</label><span> </span></h1>
-					<p>Choisissez vos légumes en déscendant la page</p>
+					<h1><span> </span><label>PANIER</label><span> </span></h1>
+					<p>Voici votre panier</p>
 				</div>
 			</div>
 			</div>
@@ -66,53 +66,16 @@
 			<!--- about-us ---->
 			<div id="about" class="about">
 				<div class="container">
-					<div class="containerPrintArticle">
-					<?php
-				$requete = $bdd->query("SELECT * FROM articles WHERE type='l'");
-        ?>
-        <h3>Légumes disponible :</h3>
-        <div style='overflow-x:auto;'>
-          <table>
-            <thead>
-              <tr>
-								<th>Photo</th>
-                <th>Nom de l'article</th>
-								<th>Provenance</th>
-								<th>Prix</th>
-								<th>Quantité</th>
-                <th>Ajouter au panier</th>
-              </tr>
-            </thead>
-            <tbody class='tableau'>
-              <?php
-              
-
-              while ( $articles = $requete->fetch()){
-              echo "<tr>";
-              if ($articles['type'] == 'f' ) {
-                $type = 'Fruit' ;
-              }
-              elseif ($articles['type'] == 'l' ) {
-                $type = 'Légume' ;
-              }
-
-              if ($articles['venteBool'] == 'y' ) {
-                $vente = 'Oui' ;
-              }
-              elseif ($articles['venteBool'] == 'n' ) {
-                $vente = 'Non' ;
-							}
-							echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
-							echo "<td>". $articles['name']."</td>" ;
-							echo "<td>". $articles['provenance']."</td>" ;
-							echo "<td>". $articles['prix']."</td>" ;
-							echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' type='number' min=0 required>"."</td>" ;
-							echo "<td>" . "<input type='submit' value='Ajouter au panier'> </form>" ."</td>";
-							echo "</tr>";
-              }
-							?>
-						</tbody>
-          </table>
+          <?php
+          if(!isset($_SESSION['panier'])){
+            echo "<p>Votre panier est vide</p>";
+          }
+          else{
+            foreach ($article as $_SESSION['panier']){
+              var_dump($article);
+            }
+          }
+          ?>
         </div>
 			</div>
 	</body>
