@@ -49,7 +49,7 @@
                 <th>Fruit/Légume</th>
                 <th>Quantité</th>
                 <th>Prix</th>
-                <th>Provenace</th>
+                <th>Provenance</th>
                 <th>En vente</th>
                 <th>Photo</th>
                 <th>Modifier</th>
@@ -73,11 +73,13 @@
                   $vente = 'Non';
                 }
                 echo "<td>" . $articles['name'] . "</td>";
+                echo "<td>" . $type . "</td>";
+                echo "<td>" . $articles['quantity'] . "</td>";
                 echo "<td>" . $articles['prix'] . "</td>";
                 echo "<td>" . $articles['provenance'] . "</td>";
-                echo "<td>" . $articles['quantity'] . "</td>";
                 echo "<td>" . $vente . "</td>";
-                // echo "<td><a href='profil.php?idMaj=".$articles[' id']."'>Modifier</a></td>" ;
+                echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
+                g// echo "<td><a href='profil.php?idMaj=".$articles[' id']."'>Modifier</a></td>" ;
                 echo "</tr>";
               }
               ?>
