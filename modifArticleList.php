@@ -58,6 +58,7 @@
             <tbody class='tableau'>
               <?php
 
+<<<<<<< HEAD
 
               while ($articles = $requete->fetch()) {
                 echo "<tr>";
@@ -77,6 +78,28 @@
                 echo "<td>" . $articles['provenance'] . "</td>";
                 echo "<td>" . $articles['quantity'] . "</td>";
                 echo "<td>" . $vente . "</td>";
+=======
+              while ( $articles = $requete->fetch()){
+              echo "<tr>";
+              if ($articles['type'] == 'f' ) {
+                $type = 'Fruit' ;
+              }
+              elseif ($articles['type'] = 'l' ) {
+                $type = 'Légume' ;
+              }
+
+              if ($articles['ventebool'] = 'y' ) {
+                $vente = 'Oui' ;
+              }
+              elseif ($articles['ventebool'] = 'n' ) {
+                $vente = 'Non' ;
+              }
+                echo "<td>". $articles['name']."</td>" ;
+                echo "<td>". $articles['prix']."</td>" ;
+                echo "<td>". $articles['provenance']."</td>" ;
+                echo "<td>". $articles['quantity']."</td>" ;
+                echo "<td>". $vente . "</td>";
+>>>>>>> dcb8e0ae5728dbc0b49f300648aa4e19a006b93f
                 // echo "<td><a href='profil.php?idMaj=".$articles[' id']."'>Modifier</a></td>" ;
                 echo "</tr>";
               }
