@@ -377,7 +377,7 @@ label.mouse-divice{
 
 .containerAdminAll .sideBar{
 	min-height: 100%;
-	background-color: #fff;
+	background-color: #9cd7c0;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 40px;
@@ -879,12 +879,15 @@ table th {
   padding-bottom: 12px;
   text-align: left;
   background-color: #10ac84;
-  color: white;
+	color: white;
+	
 }
 
 table{
-	width: 100%;
+	width: 98.5%;
 	text-align: left;
+	margin-left: 10px;
+	
 }
 
 table td img {
