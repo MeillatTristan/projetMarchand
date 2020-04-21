@@ -67,9 +67,9 @@
                   $type = 'Légume';
                 }
 
-                if ($articles['ventebool'] == 'y') {
+                if ($articles['venteBool'] == 'y') {
                   $vente = 'Oui';
-                } elseif ($articles['ventebool'] == 'n') {
+                } elseif ($articles['venteBool'] == 'n') {
                   $vente = 'Non';
                 }
                 echo "<td>" . $articles['name'] . "</td>";
