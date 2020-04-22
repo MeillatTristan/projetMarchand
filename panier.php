@@ -71,9 +71,32 @@
             echo "<p>Votre panier est vide</p>";
           }
           else{
-            foreach ($article as $_SESSION['panier']){
-              var_dump($article);
-            }
+            $total = 0;
+            ?>
+            <div class="containerAllPanier">
+              <div class="containerAllArticle">
+              <?php
+              foreach ($_SESSION['panier'] as $article ){
+                $query = $bdd->query("SELECT * FROM articles WHERE id=".key($_SESSION['panier']))->fetch();
+                $total += $article * $query['prix'];
+                ?>
+
+                <div class="containerArticle">
+                  <img src="images/<?php echo $query['picture']?>" alt="pictureArticle">
+                  <p><?php echo $query['name']?></p>
+                  <p>quantité : <?php echo $article?></p>
+                  <a href="delArticlePanier.php">Supprimer l'article</a>
+                </div>
+              <?php
+              }
+              ?>
+              </div>
+              <div class="totalPanier">
+                <h4>Total : <?php echo $total ?>€</h4>
+                <input type="submit" value="Envoyer ma commande">
+              </div>
+            </div>
+            <?php
           }
           ?>
         </div>

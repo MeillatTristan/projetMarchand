@@ -343,6 +343,27 @@ a.down-arrow span{
 	bottom: -43%;
 	left: 49%;
 }
+
+.containerAllPanier{
+	display: flex;
+}
+
+.containerAllArticle{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+
+.containerArticle img{
+	width: 100px;
+	height: 100px;
+
+}
+
+.containerTotal{
+	width: 30%;
+}
+
 label.mouse-divice{
 	width: 120px;
 	height: 342px;
