@@ -83,8 +83,14 @@
 
                 <div class="containerArticle">
                   <img src="images/<?php echo $query['picture']?>" alt="pictureArticle">
-                  <p><?php echo $query['name']?></p>
-                  <p>quantité : <?php echo $article?></p>
+                  <div class="namePrixArticle">
+                    <p><?php echo $query['name']?></p>
+                    <p><?php echo $query['prix']?>€</p>
+                  </div>
+                  <div class="quantityTotalArticle">
+                    <p>quantité : <?php echo $article?></p>
+                    <p><?php echo $article*$query['prix']?>€</p>
+                  </div>
                   <a href="delArticlePanier.php">Supprimer l'article</a>
                 </div>
               <?php

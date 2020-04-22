@@ -346,12 +346,19 @@ a.down-arrow span{
 
 .containerAllPanier{
 	display: flex;
+	justify-content: space-around;
+	width: 100%;
 }
 
 .containerAllArticle{
 	width: 70%;
 	display: flex;
 	flex-direction: column;
+}
+
+.containerArticle{
+	display: flex;
+	justify-content: space-between;
 }
 
 .containerArticle img{
