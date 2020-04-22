@@ -54,7 +54,7 @@
 			<!---- header-info ---->
 			<div class="header-info text-center">
 				<div class="container">
-					<h1><span> </span><label>SALAH </label> PRIMEUR<span> </span></h1>
+					<h1><span> </span><label>SALAH </label> PRIMEURS<span> </span></h1>
 					<p>Votre marchand</p>
 				</div>
 			</div>
