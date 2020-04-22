@@ -358,7 +358,18 @@ a.down-arrow span{
 
 .containerArticle{
 	display: flex;
-	justify-content: space-between;
+}
+
+.containerArticle:nth-child(4){
+	justify-self: end;
+}
+
+.quantityTotalArticle{
+	display: flex;
+}
+
+.quantityTotalArticle *{
+	padding-right: 10px;
 }
 
 .containerArticle img{
