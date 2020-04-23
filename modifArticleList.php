@@ -79,8 +79,8 @@
                 echo "<td>" . "<input size='10' type='text' name='prix' value='" . $articles['prix'] . " ' >" . "</td>";
                 echo "<td>" . "<input size='30' type='text' name='provenance' value='" . $articles['provenance'] . " ' >" . "</td>";
                 echo "<td>" . "<select name='VenteBool' id='vente'  required placeholder='En vente'> <option value='y'>Oui</option> <option value='n'>Non</option> </select>" . "</td>";
-                echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'> <input type='file' id='picture' name='picture' accept='image/*' required></td>" . "</form>" ;
-                echo "<td>" . "<button type='submit' name='modifyBook'>Modifier</button>" . "</td>" ;
+                echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'> <input type='file' id='picture' name='picture' accept='image/*' ></td>"  ;
+                echo "<td>" . "<button type='submit' name='modifyBook'>Modifier</button>" . "</td>" . "</form>" ;
                 echo "</tr>";
               }
               ?>
