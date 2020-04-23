@@ -48,8 +48,16 @@
 		<?php
 		session_start();
 		?>
-
-<?php include "header.php" ?>
+		<div id="top" class="bg">
+		<!----- start-header---->
+			<div id="home" class="header">
+					<div class="top-header">
+						<div class="container">
+						<!----start-top-nav---->
+						<?php include "header.php" ?>
+					</div>
+				</div>
+			</div>
 
 			<!---- header-info ---->
 			<div class="header-info text-center">

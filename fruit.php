@@ -52,11 +52,9 @@
 <?php include "header.php" ?>
 
 			<!---- header-info ---->
-			<div class="header-info text-center">
 				<div class="container">
-					<h1><span> </span><label>FRUITS</label><span> </span></h1>
-					<p>Choisissez vos fruits en déscendant la page</p>
-				</div>
+					<h2>Fruits</h2>
+					<h5>Choissez vos fruits ici</h5>
 			</div>
 			</div>
 			<div class="clearfix"> </div>

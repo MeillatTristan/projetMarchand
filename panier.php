@@ -7,6 +7,8 @@
 		<script src="js/jquery.min.js"></script>
 		 <!-- Custom Theme files -->
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href="css/panier.css" rel='stylesheet' type='text/css' />
+
    		 <!-- Custom Theme files -->
    		  <!---- start-smoth-scrolling---->
 		<script type="text/javascript" src="js/move-top.js"></script>
@@ -54,58 +56,56 @@
 ?>
 
 			<!---- header-info ---->
-			<div class="header-info text-center">
-				<div class="container">
-					<h1><span> </span><label>PANIER</label><span> </span></h1>
-					<p>Voici votre panier</p>
-				</div>
-			</div>
-			</div>
-			<div class="clearfix"> </div>
-			<!---- header-info ---->
-			<!--- about-us ---->
-			<div id="about" class="about">
-				<div class="container">
-          <?php
-          if(!isset($_SESSION['panier'])){
-            echo "<p>Votre panier est vide</p>";
-          }
-          else{
-            $total = 0;
-            ?>
-            <div class="containerAllPanier">
-              <div class="containerAllArticle">
-              <?php
-              foreach ($_SESSION['panier'] as $article ){
-                $query = $bdd->query("SELECT * FROM articles WHERE id=".key($_SESSION['panier']))->fetch();
-                $total += $article * $query['prix'];
-                ?>
+		<div class="container">
+			<h2>Fruits</h2>
+			<h5>Choissez vos fruits ici</h5>
+		</div>
+	</div>
+	<div class="clearfix"> </div>
+	<!---- header-info ---->
+	<!--- about-us ---->
+	<div id="about" class="about">
+		<div class="container">
+			<?php
+			if(!isset($_SESSION['panier'])){
+				echo "<p>Votre panier est vide</p>";
+			}
+			else{
+				$total = 0;
+				?>
+				<div class="containerAllPanier">
+					<div class="containerAllArticle">
+					<?php
+					foreach ($_SESSION['panier'] as $article ){
+						$query = $bdd->query("SELECT * FROM articles WHERE id=".key($_SESSION['panier']))->fetch();
+						$total += $article * $query['prix'];
+						?>
 
-                <div class="containerArticle">
-                  <img src="images/<?php echo $query['picture']?>" alt="pictureArticle">
-                  <div class="namePrixArticle">
-                    <p><?php echo $query['name']?></p>
-                    <p><?php echo $query['prix']?>€</p>
-                  </div>
-                  <div class="quantityTotalArticle">
-                    <p>quantité : <?php echo $article?></p>
-                    <p><?php echo $article*$query['prix']?>€</p>
-                  </div>
-                  <a href="delArticlePanier.php">Supprimer l'article</a>
-                </div>
-              <?php
-              }
-              ?>
-              </div>
-              <div class="totalPanier">
-                <h4>Total : <?php echo $total ?>€</h4>
-                <input type="submit" value="Envoyer ma commande">
-              </div>
-            </div>
-            <?php
-          }
-          ?>
-        </div>
-			</div>
-	</body>
+						<div class="containerArticle">
+							<img src="images/<?php echo $query['picture']?>" alt="pictureArticle">
+							<div class="namePrixArticle">
+								<p class="infoArticle"><?php echo $query['name']?></p>
+								<p class="infoArticle"><?php echo $query['prix']?>€</p>
+							</div>
+							<div class="quantityTotalArticle">
+								<p class="infoArticle">quantité : <?php echo $article?></p>
+								<p class="infoArticle"><?php echo $article*$query['prix']?>€</p>
+							</div>
+							<a href="delArticlePanier.php">Supprimer l'article</a>
+						</div>
+					<?php
+					}
+					?>
+					</div>
+					<div class="totalPanier">
+						<h4>Total : <?php echo $total ?>€</h4>
+						<input type="submit" value="Envoyer ma commande">
+					</div>
+				</div>
+				<?php
+			}
+			?>
+		</div>
+	</div>
+</body>
 </html>

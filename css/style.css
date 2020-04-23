@@ -76,8 +76,24 @@ body a{
 	min-height: 760px;
 }
 
-.header{
+.container h2{
+	font-size: 50px;
+	text-align: center;
+	margin-top: 50px;
 }
+
+.container h5{
+	font-size: 30px;
+	text-align: center;
+	color: #666666;
+}
+
+
+.infoArticle{
+	font-size: 20px;
+	color: #303030;
+}
+
 .logo{
 	float: left;
 	margin-top: 0.6em;
@@ -358,11 +374,20 @@ a.down-arrow span{
 
 .containerArticle{
 	display: flex;
+	justify-content: space-around;
+	transition: 0.2s;
+	border-radius: 3px;
+	margin-top: 6px;
 }
 
-.containerArticle:nth-child(4){
-	justify-self: end;
+.containerArticle:hover,
+.containerArticle:focus{
+	background-color: #dff2ea;
 }
+
+/* .containerArticle a{
+	margin-left: auto;
+} */
 
 .quantityTotalArticle{
 	display: flex;

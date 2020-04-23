@@ -54,12 +54,10 @@
 ?>
 
 			<!---- header-info ---->
-			<div class="header-info text-center">
 				<div class="container">
-					<h1><span> </span><label>LEGUMES</label><span> </span></h1>
-					<p>Choisissez vos légumes en déscendant la page</p>
+					<h2>Légumes</h2>
+					<h5>Choissez vos légumes ici</h5>
 				</div>
-			</div>
 			</div>
 			<div class="clearfix"> </div>
 			<!---- header-info ---->
@@ -70,7 +68,6 @@
 					<?php
 				$requete = $bdd->query("SELECT * FROM articles WHERE type='l'");
         ?>
-        <h3>Légumes disponible :</h3>
         <div style='overflow-x:auto;'>
           <table>
             <thead>
