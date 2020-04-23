@@ -57,8 +57,7 @@
 
 			<!---- header-info ---->
 		<div class="container">
-			<h2>Fruits</h2>
-			<h5>Choissez vos fruits ici</h5>
+			<h2>Panier</h2>
 		</div>
 	</div>
 	<div class="clearfix"> </div>
@@ -77,8 +76,10 @@
 					<div class="containerAllArticle">
 					<?php
 					foreach ($_SESSION['panier'] as $article ){
+						if (!is_int($article) OR $article <= 0){
+							continue;
+						}
 						$query = $bdd->query("SELECT * FROM articles WHERE id=".key($_SESSION['panier']))->fetch();
-						echo $article . 'des espaces mes couilles' . $query['prix'] ;
 						$total += $article * $query['prix'];
 						?>
 
