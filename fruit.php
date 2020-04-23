@@ -93,7 +93,7 @@
 									echo "<td>". $articles['name']."</td>" ;
 									echo "<td>". $articles['provenance']."</td>" ;
 									echo "<td>". $articles['prix']."</td>" ;
-									echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' type='number' min=0 required>"."</td>" ;
+									echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' value=0 type='number' min=0 required>"."</td>" ;
 									echo "<td>" . "<input type='submit' value='Ajouter au panier'> </form>" ."</td>";
 									echo "</tr>";
 								}
