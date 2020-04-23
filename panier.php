@@ -98,7 +98,7 @@
 					?>
 					</div>
 					<div class="totalPanier">
-						<h4>Total : <?php echo $total ?>€</h4>
+						<h4>Total (prix approximatif) : <?php echo $total ?>€</h4>
 						<input type="submit" value="Envoyer ma commande">
 					</div>
 				</div>

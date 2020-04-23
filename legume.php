@@ -66,7 +66,7 @@
 				<div class="container">
 					<div class="containerPrintArticle">
 					<?php
-				$requete = $bdd->query("SELECT * FROM articles WHERE type='l'");
+				$requete = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y'");
         ?>
         <div style='overflow-x:auto;'>
           <table>
@@ -85,27 +85,14 @@
               
 
               while ( $articles = $requete->fetch()){
-              echo "<tr>";
-              if ($articles['type'] == 'f' ) {
-                $type = 'Fruit' ;
-              }
-              elseif ($articles['type'] == 'l' ) {
-                $type = 'Légume' ;
-              }
-
-              if ($articles['venteBool'] == 'y' ) {
-                $vente = 'Oui' ;
-              }
-              elseif ($articles['venteBool'] == 'n' ) {
-                $vente = 'Non' ;
-							}
-							echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
-							echo "<td>". $articles['name']."</td>" ;
-							echo "<td>". $articles['provenance']."</td>" ;
-							echo "<td>". $articles['prix']."</td>" ;
-							echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' type='number' min=0 required>"."</td>" ;
-							echo "<td>" . "<input type='submit' value='Ajouter au panier'> </form>" ."</td>";
-							echo "</tr>";
+								echo "<tr>";
+								echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
+								echo "<td>". $articles['name']."</td>" ;
+								echo "<td>". $articles['provenance']."</td>" ;
+								echo "<td>". $articles['prix']."</td>" ;
+								echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' type='number' min=0 required>"."</td>" ;
+								echo "<td>" . "<input type='submit' value='Ajouter au panier'> </form>" ."</td>";
+								echo "</tr>";
               }
 							?>
 						</tbody>
