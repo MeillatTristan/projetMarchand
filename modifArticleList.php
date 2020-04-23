@@ -40,7 +40,7 @@
         <?php
         $requete = $bdd->query('SELECT * FROM articles');
         ?>
-        <h3>Utilisateurs :</h3>
+        <h3>Modification d'articles :</h3>
         <div style='overflow-x:auto;'>
           <table>
             <thead>
@@ -72,8 +72,7 @@
                 } elseif ($articles['venteBool'] == 'n') {
                   $vente = 'Non';
                 }
-                // echo "<td>" . $articles['name'] . "</td>";
-                echo "<td class=name >" . "<form action='modifArticle.php'>" . "<input  size='25' type='text' name='name' value='" . $articles['name'] ." ' >" . "</td>";
+                echo "<td class=name >" . "<form action='modifArticle.php'>" . "<input type = 'hidden' value = '$articles[id]' name = 'idarticle'>" . "<input  size='25' type='text' name='name' value='" . $articles['name'] ." ' >" . "</td>";
                 echo "<td>" . "<select name='type' id='type'  required placeholder='Type de l\'article'> <option value='l'>Légume</option> <option value='f'>Fruit</option> </select>" . "</td>";
                 echo "<td>" . "<input size='10' type='text' name='quantity' value='" . $articles['quantity'] . " ' >" . "</td>";
                 echo "<td>" . "<input size='10' type='text' name='prix' value='" . $articles['prix'] . " ' >" . "</td>";

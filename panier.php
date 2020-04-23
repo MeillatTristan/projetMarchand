@@ -78,6 +78,7 @@
 					<?php
 					foreach ($_SESSION['panier'] as $article ){
 						$query = $bdd->query("SELECT * FROM articles WHERE id=".key($_SESSION['panier']))->fetch();
+						echo $article . 'des espaces mes couilles' . $query['prix'] ;
 						$total += $article * $query['prix'];
 						?>
 
