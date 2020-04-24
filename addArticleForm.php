@@ -52,8 +52,8 @@
           <option value="l">Légume</option>
           <option value="f">Fruit</option>
         </select>
-        <input type="text" name="quantity" required placeholder="Quantité">
-        <input type="text" name="price" placeholder="Prix" required>
+        <input type="number" name="quantity" required placeholder="Quantité">
+        <input type="number" name="price" placeholder="Prix" required>
         <input type="text" name="provenance" placeholder="Provenance" required>
         <div class="uploadPicture">
           <label for="pictureLabel">Photo de l'article :</label>

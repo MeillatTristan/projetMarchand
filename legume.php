@@ -68,7 +68,12 @@
 					<?php
 				$requete = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y'");
         ?>
-        <div style='overflow-x:auto;'>
+				<div style='overflow-x:auto;'>
+					<?php 
+						if(isset($_REQUEST['falseQuantity'])){
+							echo "<p>Merci de rentrer une quantité uniquement composé de chiffre</p>";
+						}
+					?>
           <table>
             <thead>
               <tr>
@@ -89,7 +94,7 @@
 								echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
 								echo "<td>". $articles['name']."</td>" ;
 								echo "<td>". $articles['provenance']."</td>" ;
-								echo "<td>". $articles['prix']."</td>" ;
+								echo "<td>". $articles['prix']."€ ( ≃ ) </td>" ;
 								echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' type='number' value=0 min=0 required>"."</td>" ;
 								echo "<td>" . "<input type='submit' value='Ajouter au panier'> </form>" ."</td>";
 								echo "</tr>";

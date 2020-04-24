@@ -374,7 +374,7 @@ a.down-arrow span{
 
 .containerArticle{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	transition: 0.2s;
 	border-radius: 3px;
 	margin-top: 6px;
@@ -391,6 +391,16 @@ a.down-arrow span{
 
 .quantityTotalArticle{
 	display: flex;
+	flex-direction: column;
+}
+
+#totalOneArticle{
+	color: #455156;
+	font-size: 15px;
+}
+
+#quantityOneArticle{
+	margin-bottom: 0px;
 }
 
 .quantityTotalArticle *{

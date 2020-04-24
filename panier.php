@@ -76,9 +76,6 @@
 					<div class="containerAllArticle">
 					<?php
 					foreach ($_SESSION['panier'] as $article ){
-						if (!is_int($article) OR $article <= 0){
-							continue;
-						}
 						$query = $bdd->query("SELECT * FROM articles WHERE id=".key($_SESSION['panier']))->fetch();
 						$total += $article * $query['prix'];
 						?>
@@ -90,10 +87,10 @@
 								<p class="infoArticle"><?php echo $query['prix']?>€</p>
 							</div>
 							<div class="quantityTotalArticle">
-								<p class="infoArticle">quantité : <?php echo $article?></p>
-								<p class="infoArticle"><?php echo $article*$query['prix']?>€</p>
+								<p class="infoArticle" id="quantityOneArticle">quantité : <?php echo $article?></p>
+								<p class="infoArticle" id="totalOneArticle">total pour cet article : <?php echo $article*$query['prix']?>€</p>
 							</div>
-							<a href="delArticlePanier.php">Supprimer l'article</a>
+							<a href="delArticlePanier.php?idToDel=<?php echo key($_SESSION['panier']) ?>">Supprimer l'article</a>
 						</div>
 					<?php
 					}
