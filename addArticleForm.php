@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html class="toHeight">
 	<head>
 		<title>Daisy Website Template | Home :: w3layouts</title>
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -13,7 +13,7 @@
 		<!----//End-top-nav-script---->
 
 	</head>
-	<body>
+	<body class="toHeight">
   <?php
   session_start();
   ?>

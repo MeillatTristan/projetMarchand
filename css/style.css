@@ -144,13 +144,17 @@ body a{
 
 .formAddArticle > *{
 	margin-top: 10px;
-	width: 15%;
+}
+
+.toHeight{
+	height: 100%;
 }
 
 .uploadPicture{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	align-items: center;
 }
 
 .uploadPicture label{
@@ -447,6 +451,7 @@ label.mouse-divice{
 
 .containerAdminAll{
 	display: flex;
+	height: 100%;
 }
 
 .containerAdminAll .sideBar{
