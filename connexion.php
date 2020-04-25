@@ -45,16 +45,5 @@ include "configbdd.php";
         </form>
 			</div>
 			</div>
-			<!---- header-info ---->
-			<!--- about-us ---->
-			<div id="about" class="about">
-				<div class="container">
-					<div class="about-head text-center">
-            <span>A propos<span> de moi</span></span>
-            <p>Daisy is sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum</p>
-					</div>
-</div>
-				
-
 	</body>
 </html>

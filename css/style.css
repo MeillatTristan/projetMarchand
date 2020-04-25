@@ -167,6 +167,15 @@ body a{
 	font-weight: bold;
 }
 
+div.quantityArticle input {
+	width: 100px;
+}
+
+div.prixArticle input {
+	width: 100px;
+}
+
+
 .lineTable{
 	display: flex;
 	justify-content: space-between;
