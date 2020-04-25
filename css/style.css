@@ -146,6 +146,109 @@ body a{
 	margin-top: 10px;
 }
 
+.containerAdmin .header-info{
+	width: 100%;
+}
+
+.headList{
+	display: flex;
+	justify-content: space-between;
+	background-color: #10ac84;
+
+}
+
+.bodyList{
+	display: flex;
+	flex-direction: column;
+}
+
+.spanHeadList{
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.lineTable{
+	display: flex;
+	justify-content: space-between;
+}
+
+.lineTable input{
+	text-align: center;
+
+}
+
+.lineTable img{
+	height: 50px;
+	width: 50px;
+}
+
+.imgModif{
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+}
+
+/* on personnalise le label comme on veut */
+.label-file {
+    color: #303030;
+		z-index: 0;
+		position: relative;
+		font-weight: normal;
+		cursor:pointer;
+}
+.label-file:hover {
+    color: #25a5c4;
+}
+
+/* et on masque le input */
+.input-file {
+	position: absolute;
+	cursor:pointer;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.allTable{
+	padding: 0px 40px 0px 40px;
+}
+
+.nameArticle input{
+	width: 100px;
+}
+
+.quantityArticle input{
+	width: 40px;
+}
+
+.prixArticle input{
+	width: 70px;
+}
+
+.nameArticle, .typeArticle, .quantityArticle, .prixArticle, .provenanceArticle, .venteBoolArticle, .pictureArticle, .updatePicture{
+	width: 10%;
+}
+
+.provenanceArticle{
+	width: 17%;
+}
+
+.headList{
+	padding-right: 10px;
+	margin-bottom: 20px;
+}
+
+.headPanier{
+	display: flex;
+	justify-content: space-between;
+	border: solid 1px #faf0e6;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
 .toHeight{
 	height: 100%;
 }
@@ -382,6 +485,8 @@ a.down-arrow span{
 	transition: 0.2s;
 	border-radius: 3px;
 	margin-top: 6px;
+	border: solid 1px #faf0e6;
+	padding: 10px;
 }
 
 .containerArticle:hover,
@@ -392,6 +497,12 @@ a.down-arrow span{
 /* .containerArticle a{
 	margin-left: auto;
 } */
+
+.totalPanier{
+	border: solid 1px #faf0e6;
+	padding: 10px;
+	padding-right: 20px;
+}
 
 .quantityTotalArticle{
 	display: flex;
@@ -465,7 +576,6 @@ label.mouse-divice{
 
 .containerAdmin{
 	width: 80%;
-	padding-right: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

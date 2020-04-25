@@ -83,9 +83,20 @@
 					<h3>Addresse</h3>
 					<p>615 4th Ave S, Jacksonville Beach, FL 32250</p>
 				</div>
-				<div class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d177504.0179213423!2d-0.5970969089488695!3d47.51826750012542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48087127748b35f3%3A0x40d37521e0d8610!2sVillev%C3%AAque%2C%2049140%20Rives-du-Loir-en-Anjou!5e0!3m2!1sfr!2sfr!4v1587214424827!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>				</div>
-			</div>
+
+				<div class="map"></div>
+					<script>
+						function myMap() {
+						var mapProp= {
+							center:new google.maps.LatLng(51.508742,-0.120850),
+							zoom:5,
+						};
+						var map = new google.maps.Map(document.getElementByClassName("map"),mapProp);
+						}
+					</script>
+
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApqRbeCVJJ-1trZpCV94SL7WEVxbQekSg&callback=myMap"></script>
+
 			<!---- Address ---->
 			<!---- footer ---->
 			<script type="text/javascript">

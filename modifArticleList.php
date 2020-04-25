@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html class="toHeight">
+<html>
 
 <head>
   <title>Daisy Website Template | Home :: w3layouts</title>
@@ -41,50 +41,60 @@
         $requete = $bdd->query('SELECT * FROM articles');
         ?>
         <h3>Modification d'articles :</h3>
-        <div style='overflow-x:auto;'>
-          <table>
-            <thead>
-              <tr>
-                <th>Nom de l'article</th>
-                <th>Fruit/Légume</th>
-                <th>Quantité</th>
-                <th>Prix</th>
-                <th>Provenance</th>
-                <th>En vente</th>
-                <th>Photo</th>
-                <th>Modifier</th>
-              </tr>
-            </thead>
-            <tbody class='tableau'>
-              <?php
+        <div class='allTable'>
+          <div class="headList">
+            <div class="nameArticle">
+              <span class="spanHeadList">Nom de l'article</span>
+            </div>
+            <div class="typeArticle">
+              <span class="spanHeadList">Fruit/légume</span>
+            </div>
+            <div class="quantityArticle">
+              <span class="spanHeadList">Quantité</span>
+            </div>
+            <div class="prixArticle">
+              <span class="spanHeadList">prix</span>
+            </div>
+            <div class="provenanceArticle">
+              <span class="spanHeadList">provenance</span>
+            </div>
+            <div class="venteBoolArticle">
+              <span class="spanHeadList">En vente</span>
+            </div>
+            <div class="pictureArticle">
+              <span class="spanHeadList">Photo</span>
+            </div>
+            <div class="updateArticle">
+              <span class="spanHeadList">modifier</span>
+            </div>
+          </div>
+          <div class="bodyList">
+          <?php
 
-
-              while ($articles = $requete->fetch()) {
-                echo "<tr>";
-                if ($articles['type'] == 'f') {
-                  $type = 'Fruit';
-                } elseif ($articles['type'] == 'l') {
-                  $type = 'Légume';
-                }
-
-                if ($articles['venteBool'] == 'y') {
-                  $vente = 'Oui';
-                } elseif ($articles['venteBool'] == 'n') {
-                  $vente = 'Non';
-                }
-                echo "<td class=name >" . "<form action='modifArticle.php'>" . "<input type = 'hidden' value = '$articles[id]' name = 'idarticle'>" . "<input  size='25' type='text' name='name' value='" . $articles['name'] ." ' >" . "</td>";
-                echo "<td>" . "<select name='type' id='type'  required placeholder='Type de l\'article'> <option value='l'>Légume</option> <option value='f'>Fruit</option> </select>" . "</td>";
-                echo "<td>" . "<input size='10' type='text' name='quantity' value='" . $articles['quantity'] . " ' >" . "</td>";
-                echo "<td>" . "<input size='10' type='text' name='prix' value='" . $articles['prix'] . " ' >" . "</td>";
-                echo "<td>" . "<input size='30' type='text' name='provenance' value='" . $articles['provenance'] . " ' >" . "</td>";
-                echo "<td>" . "<select name='VenteBool' id='vente'  required placeholder='En vente'> <option value='y'>Oui</option> <option value='n'>Non</option> </select>" . "</td>";
-                echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'> <input type='file' id='picture' name='picture' accept='image/*' ></td>"  ;
-                echo "<td>" . "<button type='submit' name='modifyBook'>Modifier</button>" . "</td>" . "</form>" ;
-                echo "</tr>";
+            while ($articles = $requete->fetch()) {
+              echo "<tr>";
+              if ($articles['type'] == 'f') {
+                $type = 'Fruit';
+              } elseif ($articles['type'] == 'l') {
+                $type = 'Légume';
               }
-              ?>
-            </tbody>
-          </table>
+
+              if ($articles['venteBool'] == 'y') {
+                $vente = 'Oui';
+              } elseif ($articles['venteBool'] == 'n') {
+                $vente = 'Non';
+              }
+              echo " <div class='lineTable'><div class='nameArticle' >" . "<form action='modifArticle.php'>" . "<input type = 'hidden' value = '$articles[id]' name = 'idarticle'>" . "<input type='text' name='name' value='" . $articles['name'] ." ' >" . "</div>";
+              echo "<div class='typeArticle'>" . "<select name='type' id='type'  required placeholder='Type de l\'article'> <option value='l'>Légume</option> <option value='f'>Fruit</option> </select>" . "</div>";
+              echo "<div class='quantityArticle'>" . "<input type='text' name='quantity' value='" . $articles['quantity'] . " ' >" . "</div>";
+              echo "<div class='prixArticle'>" . "<input type='text' name='prix' value='" . $articles['prix'] . " ' >" . "</div>";
+              echo "<div class='provenanceArticle'>" . "<input  type='text' name='provenance' value='" . $articles['provenance'] . " ' >" . "</div>";
+              echo "<div class='venteBoolArticle'>" . "<select name='VenteBool' id='vente'  required placeholder='En vente'> <option value='y'>Oui</option> <option value='n'>Non</option> </select>" . "</div>";
+              echo "<div class='pictureArticle imgModif'><img src='images/".$articles['picture'] ."' alt='photo de l'article'> <label for='file' class='label-file'>Choisir une image</label> <input type='file' class='input-file' id='picture' name='picture' accept='image/*' ></div>"  ;
+              echo "<div class='updateArticle'>" . "<button type='submit' name='modifyBook'>Modifier</button>" . "</div>" . "</form> </div>" ;
+            }
+            ?>
+          </div>
         </div>
       </div>
     </div>

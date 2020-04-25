@@ -74,6 +74,20 @@
 				?>
 				<div class="containerAllPanier">
 					<div class="containerAllArticle">
+						<div class='headPanier'>
+							<div class='infoArticle'>
+								<span>Photo</span>
+							</div>
+							<div class='infoArticle'>
+								<span>Articles</span>
+							</div>
+							<div class='infoArticle'>
+								<span>Quantité</span>
+							</div>
+							<div class='infoArticle'>
+								<span >Supprimer du panier</span>
+							</div>
+						</div>
 					<?php
 					foreach ($_SESSION['panier'] as $article ){
 						$query = $bdd->query("SELECT * FROM articles WHERE id=".key($_SESSION['panier']))->fetch();
