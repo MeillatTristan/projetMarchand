@@ -95,7 +95,7 @@
 								echo "<td>". $articles['name']."</td>" ;
 								echo "<td>". $articles['provenance']."</td>" ;
 								echo "<td>". $articles['prix']."€ ( ≃ ) </td>" ;
-								echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' type='number' value=1 min=1 required>"."</td>" ;
+								echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' type='number' step=0.01 value=1 min=1 required>"."</td>" ;
 								echo "<td>" . "<input type='submit' value='Ajouter au panier'> </form>" ."</td>";
 								echo "</tr>";
               }
