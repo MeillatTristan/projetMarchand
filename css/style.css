@@ -176,22 +176,26 @@ div.prixArticle input {
 }
 
 .inscription {
-	margin: 25px;
-	float: left;
+	display: flex;
+	justify-content: space-around;
 }
 
-.inscription input {
-	display: inline-block
+.first_contenant {
+	display: flex;
+	flex-direction: column;
+	width: 25%;
 }
 
 .inscription input:focus {
 	background: #eaeaea;
 }
 
+.inscription input{
+	height: auto;
+}
 
-.inscription span {
-	display: inline-block;
-	margin: 30px;
+.first_contenant * {
+	margin: 10px;
 }
 
 .button_inscription {
@@ -201,7 +205,14 @@ div.prixArticle input {
 	background:rgb(226, 226, 226);
 	font: 16px;
 	color: #333;
+	width: 50%;
 }
+
+.contenant_button {
+	display: flex;
+	justify-content: center;
+}
+
 
 .lineTable{
 	display: flex;

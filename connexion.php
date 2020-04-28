@@ -39,7 +39,7 @@ include "configbdd.php";
 					<h2>Connexion Admin</h2>
         </div>
         <form action="authUser.php">
-          <input type="text" name="identifiant" required placeholder="identifiant">
+          <input type="text" name="email" required placeholder="Adresse Email">
           <input type="password" name="password" required placeholder="Mot de Passe">
           <input type="submit" value="Connexion">
         </form>

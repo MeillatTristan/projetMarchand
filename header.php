@@ -4,7 +4,13 @@
 		<li><a href="legume.php">Légumes</a></li>
 		<li><a href="fruit.php">Fruits</a></li>
 		<li><a href="panier.php">Panier</a></li>
+		
 		<?php
+		if (!isset($_SESSION['id'])) {
+			echo "<li><a href='connexion.php'>Connexion</a></li>" ;
+			echo "<li><a href='inscription.php'>Inscription</a></li>";
+		}
+
 		if(isset($_SESSION['id'])){
 			echo "<li><a href='pannelAdmin.php'>Admin</a></li>";
 			echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";

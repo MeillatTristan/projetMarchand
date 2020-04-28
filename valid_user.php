@@ -7,7 +7,14 @@ $email = $_REQUEST["email"] ;
 $adresse = $_REQUEST["adresse"] ;
 $code_postal = $_REQUEST["code_postal"] ;
 $ville = $_REQUEST["ville"] ;
-$telephone = "+33".$_REQUEST["telephone"];
+if (isset($_REQUEST['telephone_f'])) {
+  $telephone_f = $_REQUEST['telephone_f'] ;
+}
+else {
+  $telephone_f = '' ;
+}
+
+$telephone_p = "+33".$_REQUEST["telephone_p"];
 $password_1 = password_hash($_REQUEST['valid_mdp1'], PASSWORD_DEFAULT);
 
 
