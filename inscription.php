@@ -8,24 +8,92 @@
   <script src="js/jquery.min.js"></script>
   <!-- Custom Theme files -->
   <link href="css/style.css" rel='stylesheet' type='text/css' />
-  <link href="css/connexion.css" rel='stylesheet' type='text/css' />
-
+  <!-- Custom Theme files -->
+  <!---- start-smoth-scrolling---->
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event) {
+        event.preventDefault();
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1500);
+      });
+    });
+  </script>
   <!---- start-smoth-scrolling---->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="application/x-javascript">
+    addEventListener("load", function() {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+  </script>
+  </script>
+  <!----start-top-nav-script---->
+  <script>
+    $(function() {
+      var pull = $('#pull');
+      menu = $('nav ul');
+      menuHeight = menu.height();
+      $(pull).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+      });
+      $(window).resize(function() {
+        var w = $(window).width();
+        if (w > 320 && menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  </script>
   <!----//End-top-nav-script---->
 
 </head>
 
 <body>
-
-<div><form action='valid_user.php'>
-  <input type="text" name='firstname' id='firstname'  required placeholder='Prénom' > </input>
-  <input type="text" name='lastname' id='lastname'  required placeholder='Nom' > </input>       
-  <input type="text" name='email' id='email'  required placeholder='Email' > </input> 
-  <input type="text" name='adresse' id='adresse'  required placeholder='Adresse' > </input> 
-  <input type="text" name='telephone' id='telephone'  required placeholder='Numéros de téléphone' > </input> 
-  <input type="password" name='valid_mdp1' id='password_1'  required placeholder='Mot de passe' > </input> 
-  <input type="password" name='valid_mdp2' id='password_2'  required placeholder='Confirmation de mot de passe' > </input> 
-  <button type='submit' name='valid_user'>Valider</button>
-</form>
-</div>
+  <?php
+  session_start();
+  ?>
+  <?php
+  include "header.php";
+  include "configbdd.php";
+  ?>
+  <div class="container">
+    <h2>Inscription</h2>
+  </div>
+  <div >
+    <form class="inscription" action='valid_user.php'>
+      <span>Prénom :</span>
+      <input type="text" name='firstname' id='firstname' required placeholder='Prénom' autofocus=""> </input>
+      <span>Nom :</span>
+      <input type="text" name='lastname' id='lastname' required placeholder='Nom'> </input>
+      <span>Adresse Email :</span>
+      <input type="text" name='email' id='email' required placeholder='Email'> </input>
+      <br>
+      <span>Adresse :</span>
+      <input type="text" name='adresse' id='adresse' required placeholder='Adresse'> </input>
+      <span>Code Postal :</span>
+      <input type="text" name='code_postal' id='code_postal' required placeholder='Code Postal'> </input>
+      <span>Ville :</span>
+      <input type="text" name='ville' id='ville' required placeholder='Ville'> </input>
+      <br>
+      <span>Numéros de Téléphone Fixe :</span>
+      <input type="text" name='telephone' id='telephone_f' required placeholder=''> </input>
+      <span>Numéros de Télephone :</span>
+      <input type="text" name='telephone' id='telephone_p' required placeholder='+33'> </input>
+      <br>
+      <span>Mot de passe :</span>
+      <input type="password" name='valid_mdp1' id='password_1' required placeholder='************'> </input>
+      <span>Confirmation de mot de passe :</span>
+      <input type="password" name='valid_mdp2' id='password_2' required placeholder='************'> </input>
+      <br>
+      <button class="button_inscription" type='submit' name='valid_user'>Valider</button>
+      <br>
+  </form>
+  </div>

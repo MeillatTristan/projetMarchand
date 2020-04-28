@@ -175,6 +175,33 @@ div.prixArticle input {
 	width: 100px;
 }
 
+.inscription {
+	margin: 25px;
+	float: left;
+}
+
+.inscription input {
+	display: inline-block
+}
+
+.inscription input:focus {
+	background: #eaeaea;
+}
+
+
+.inscription span {
+	display: inline-block;
+	margin: 30px;
+}
+
+.button_inscription {
+	border:none;
+	padding:5px 12px 5px 12px;
+	border-radius:8px;
+	background:rgb(226, 226, 226);
+	font: 16px;
+	color: #333;
+}
 
 .lineTable{
 	display: flex;
