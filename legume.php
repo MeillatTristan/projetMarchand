@@ -44,21 +44,21 @@
 		<!----//End-top-nav-script---->
 
 	</head>
-	<body>
+	<body class="Wbg">
 		<?php
 		session_start();
 		?>
-<?php
-  include "header.php";
-  include "configbdd.php";
-?>
+	<div class="containerAll">
+		<?php
+		include "header.php";
+		include "configbdd.php";
+		?>
 
 			<!---- header-info ---->
-				<div class="container">
-					<h2>Légumes</h2>
-					<h5>Choissez vos légumes ici</h5>
-				</div>
-			</div>
+		<div class="container">
+			<h2>Légumes</h2>
+			<h5>Choissez vos légumes ici</h5>
+		</div>
 			<div class="clearfix"> </div>
 			<!---- header-info ---->
 			<!--- about-us ---->
@@ -104,5 +104,6 @@
           </table>
         </div>
 			</div>
+	</div>
 	</body>
 </html>

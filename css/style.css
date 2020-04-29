@@ -723,6 +723,8 @@ form input[type="text"], form input[type="password"], form select{
 	padding: 7em 0;
 	position:relative;
 }
+
+
 .expand-info h2{
 	color: #FFF;
 	font-family: 'open_sansbold';
@@ -1122,6 +1124,24 @@ table tr:hover {
 	background-color: #ddd;
 }
 
+.Wbg{
+	background-image: linear-gradient(rgba(152, 209, 200, 1), rgba(255, 255, 0, 0.5));
+	display: flex;
+	background-size: cover;
+	justify-content: center;
+}
+
+.containerAll{
+	width: 90%;
+	margin-top: 3%;
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 table th {
 	padding-top: 12px;
 	padding-left: 7px;
@@ -1133,8 +1153,12 @@ table th {
 	
 }
 
+.about{
+	width: 100%;
+}
+
 table{
-	width: 90%;
+	width: 100%;
 	text-align: left;
 	margin-left: 10px;
 	
