@@ -66,6 +66,7 @@
   ?>
   <div class="container">
     <h2>Inscription</h2>
+    <h5>Inscrivez-vous ici</h5>
   </div>
   <div>
     <form class="inscription" action='valid_user.php'>

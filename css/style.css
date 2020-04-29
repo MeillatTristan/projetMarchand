@@ -192,6 +192,11 @@ div.prixArticle input {
 
 .inscription input{
 	height: auto;
+	box-shadow: 0 0 2px 2px rgb(206, 206, 206);
+}
+
+.first_contenant span {
+	text-decoration: underline #afafaf;
 }
 
 .first_contenant * {
