@@ -6,13 +6,18 @@
 		<li><a href="panier.php">Panier</a></li>
 		
 		<?php
+		include "configbdd.php";
 		if (!isset($_SESSION['id'])) {
 			echo "<li><a href='connexion.php'>Connexion</a></li>" ;
 			echo "<li><a href='inscription.php'>Inscription</a></li>";
 		}
 
 		if(isset($_SESSION['id'])){
-			echo "<li><a href='pannelAdmin.php'>Admin</a></li>";
+			$id = $_SESSION['id'];
+			$query = $bdd->query("SELECT admin FROM users WHERE id=$id")->fetch()[0];
+			if($query == 'y'){
+				echo "<li><a href='pannelAdmin.php'>Gestion</a></li>";
+			}
 			echo "<li><a href='deconnexion.php'>Déconnexion</a></li>";
 		}
 		?>

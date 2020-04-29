@@ -16,6 +16,7 @@ else {
 }
 $query = $bdd->prepare("UPDATE articles SET name=:name, type=:type, quantity=:quantity, prix=:prix, provenance=:provenance, venteBool=:venteBool, picture=:picture WHERE id=:id");
 $query->execute(['name'=>$name, 'type'=>$type, 'quantity'=>$quantity, 'prix'=>$prix, 'provenance'=>$provenance, 'venteBool'=>$vente, 'picture'=>$picture, 'id'=>$id]) ;
-header('Location: http://localhost/projetMarchand/modifArticleList.php');
+
+header('Location: modifArticleList.php');
 exit();
 ?>

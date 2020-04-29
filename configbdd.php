@@ -3,7 +3,7 @@
    try
    {
       //ouverture base de donnée
-      $bdd = new PDO('mysql:host=mysql-elfe.alwaysdata.net;dbname=elfe_salahprimeur;charset=utf8', 'elfe', 'Superdunk13');
+      $bdd = new PDO('mysql:host=localhost;dbname=projetmarchand;charset=utf8', 'root', '');
       //fonction pour affichage des erreurs mySql;
       $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
    }
