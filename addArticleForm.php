@@ -47,19 +47,19 @@
         ?>
       </div>
       <form action="addArticle.php" class="formAddArticle" method="post" enctype="multipart/form-data">
-        <input type="text" name="name" required placeholder="Nom de l'article">
-        <select name="type" id="type"  required placeholder="Type de l'article">
+        <input type="text" name="name" required placeholder=" Nom de l'article">
+        <select name="type" id="type"  required placeholder=" Type de l'article">
           <option value="l">Légume</option>
           <option value="f">Fruit</option>
         </select>
-        <input type="number" name="quantity" required placeholder="Quantité">
-        <input type="number" name="price" placeholder="Prix" required>
-        <input type="text" name="provenance" placeholder="Provenance" required>
+        <input type="text" name="quantity" required placeholder=" Quantité">
+        <input type="text" name="price" placeholder=" Prix" required>
+        <input type="text" name="provenance" placeholder=" Provenance" required>
         <div class="uploadPicture">
           <label for="pictureLabel">Photo de l'article :</label>
           <input type="file" id="picture" name="picture" accept="image/*" required>
         </div>
-        <input type="submit" value="Sauvegarder">
+        <input type="submit" value="Validé">
       </form>
     </div>
     </div>

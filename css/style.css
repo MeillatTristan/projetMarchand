@@ -144,6 +144,8 @@ body a{
 
 .formAddArticle > *{
 	margin-top: 10px;
+	margin-bottom: 15px;
+	width: 50%;
 }
 
 .containerAdmin .header-info{
@@ -211,6 +213,7 @@ div.prixArticle input {
 	font: 16px;
 	color: #333;
 	width: 50%;
+	background-color: #10ac84;
 }
 
 .contenant_button {
@@ -218,6 +221,29 @@ div.prixArticle input {
 	justify-content: center;
 }
 
+.coo input{
+	margin-top: 50px;
+	margin-right: 20px;
+	box-shadow: 0 0 2px 2px rgb(206, 206, 206);
+}
+
+.coo input:focus {
+	background: #eaeaea;
+}
+
+.coo span {
+	margin-right: 10px;
+}
+
+.button_coo {
+	border: none;
+	border-radius: 8px;
+	background: rgb(226, 226, 226);
+	color: #333;
+	height: 40px;
+	width: 200px;
+	background-color: #10ac84;
+}
 
 .lineTable{
 	display: flex;
@@ -641,6 +667,7 @@ label.mouse-divice{
 .containerAdmin .container{
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 }
 
 .sideBar ul li{

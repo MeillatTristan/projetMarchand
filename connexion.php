@@ -36,12 +36,16 @@ include "configbdd.php";
 			<!---- header-info ---->
 			<div class="header-info text-center">
 				<div class="container">
-					<h2>Connexion Admin</h2>
+					<h2>Connexion</h2>
+					<h5>Connectez-vous ici</h5>
         </div>
-        <form action="authUser.php">
-          <input type="text" name="email" required placeholder="Adresse Email">
-          <input type="password" name="password" required placeholder="Mot de Passe">
-          <input type="submit" value="Connexion">
+        <form class="coo" action="authUser.php">
+					<span>Entrez votre adresse Email :</span>
+					<input type="text" name="email" required placeholder=" Adresse Email">
+					<span>Entrez votre mot de passe :</span>
+					<input type="password" name="password" required placeholder=" Mot de Passe">
+					<br>
+          <input class="button_coo" type="submit" value="Connexion">
         </form>
 			</div>
 			</div>
