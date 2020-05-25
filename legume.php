@@ -7,6 +7,7 @@
 		<script src="js/jquery.min.js"></script>
 		 <!-- Custom Theme files -->
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		
    		 <!-- Custom Theme files -->
    		  <!---- start-smoth-scrolling---->
 		<script type="text/javascript" src="js/move-top.js"></script>
@@ -44,72 +45,63 @@
 		<!----//End-top-nav-script---->
 
 	</head>
-	<body class="Wbg">
+	<body id='body'>
 		<?php
 		session_start();
 		?>
 	<div class="containerAll">
-		<?php
-		include "header.php";
-		include "configbdd.php";
-		?>
+	<?php
+	include "sidebar.php";
+	include "header.php";
+	include "configbdd.php";
+	?>
 
-			<!---- header-info ---->
-		<div class="container">
-			<h2>Légumes</h2>
-			<h5>Choissez vos légumes ici</h5>
-		</div>
-			<div class="clearfix"> </div>
-			<!---- header-info ---->
-			<!--- about-us ---->
-			<div id="about" class="about">
-				<div class="container">
-					<div class="containerPrintArticle">
-					<?php
-					$requete = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y'");
-					if($requete->fetch() == FALSE){
-						echo "<p class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
-					}
-					else{
-        ?>
-				<div style='overflow-x:auto;'>
-					<?php 
-						if(isset($_REQUEST['falseQuantity'])){
-							echo "<p>Merci de rentrer une quantité uniquement composé de chiffre</p>";
-						}
-					?>
-          <table>
-            <thead>
-              <tr>
-								<th>Photo</th>
-                <th>Nom de l'article</th>
-								<th>Provenance</th>
-								<th>Prix</th>
-								<th>Quantité</th>
-                <th>Ajouter au panier</th>
-              </tr>
-            </thead>
-            <tbody class='tableau'>
-              <?php
-
-							$query = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y'");
-              while ( $articles = $query->fetch()){
-								echo "<tr>";
-								echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
-								echo "<td>". $articles['name']."</td>" ;
-								echo "<td>". $articles['provenance']."</td>" ;
-								echo "<td>". $articles['prix']."€ ( ≃ ) </td>" ;
-								echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' type='number' step=0.01 value=1 min=1 required>"."</td>" ;
-								echo "<td>" . "<input type='submit' value='Ajouter au panier'> </form>" ."</td>";
-								echo "</tr>";
-							}
-							
-							?>
-						</tbody>
-					</table>
-					<?php } ?>
-        </div>
+		<!---- header-info ---->
+		<div class="container ">
+		<div class="header-info text-center">
+			<div class="containerTitle">
+				<div class="bgHeaderLegume">
+				</div>
+				<h1><span> </span>Légumes<span> </span></h1>
 			</div>
-	</div>
+		</div>
+	<!--- Affichage Fruits ---->
+	<div id="about" class="about">
+		<div class="container">
+			<div class="containerPrintArticle">
+			<?php
+			$requete = $bdd->query("SELECT * FROM articles WHERE type='f' AND venteBool='y'");
+			if($requete->fetch() == FALSE){
+				echo "< class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
+			}
+			else{
+				if(isset($_REQUEST['falseQuantity'])){
+					echo "<p>Merci de rentrer une quantité uniquement composé de chiffre</p>";
+				}
+				?>
+				<div class="allArticle">
+					<?php
+
+					$query = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y'");
+					while ( $articles = $query->fetch()){
+						?>
+						<div class="article">
+						<?php
+							echo "<img class='imgArticle' src='images/".$articles['picture'] ."' alt='photo de l'article'>";
+							echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;
+							echo "<p class='priceArticle'><span></span>". $articles['prix']."€</p> </div>" ;
+							echo "<div class='containerProvenanceSubmit'><p class='provenanceArticle'>". $articles['provenance']."</p>" ;
+							echo "<form action='addArticleToPanier.php'> <input type='hidden' value='f' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> " ;
+							echo "<button type='sumbit' name='inputSubmit'><img src='images/panier.png'</button> </form></div>";
+						?>
+						</div>
+						<?php
+					}
+					
+					?>
+				</div>
+				<?php } ?>
+			</div>
+		</div>
 	</body>
 </html>
