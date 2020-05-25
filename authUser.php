@@ -8,7 +8,6 @@
   $req = $bdd->prepare('SELECT id, password_1 FROM users WHERE email = :email');
   $req->execute(['email' => $email]);
   $resultat = $req->fetch(); //on recupère l'id et le mdp lier au mail (peut être vide si mail faux)
-  echo "yo";
 
   $isPasswordCorrect = password_verify($password_1, $resultat['password_1']); //on vérifie si le mdp rentrer est en accord avec celui en bdd
 

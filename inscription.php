@@ -75,7 +75,7 @@
         <input type="text" name='firstname' id='firstname' required placeholder=' Prénom' autofocus=""> </input>
         <span>Adresse :</span>
         <input class="" type="text" name='adresse' id='adresse' required placeholder=' Adresse'> </input>
-        <span>Numéros de Téléphone Fixe :</span>
+        <span>Numéro de Téléphone Fixe :</span>
         <input class="" type="text" name='telephone' id='telephone_f' placeholder=''> </input>
         <span>Mot de passe :</span>
         <input class="" type="password" name='valid_mdp1' id='password_1' required placeholder=' ************'> </input>
@@ -85,7 +85,7 @@
         <input type="text" name='lastname' id='lastname' required placeholder=' Nom'> </input>
         <span>Code Postal :</span>
         <input class="" type="text" name='code_postal' id='code_postal' required placeholder=' Code Postal'> </input>
-        <span>Numéros de Télephone :</span>
+        <span>Numéro de Télephone Portable :</span>
         <input class="" type="text" name='telephone' id='telephone_p' required placeholder=' +33'> </input>
         <span>Confirmation de mot de passe :</span>
         <input class="" type="password" name='valid_mdp2' id='password_2' required placeholder=' ************'> </input>
