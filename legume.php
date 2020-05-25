@@ -66,7 +66,11 @@
 				<div class="container">
 					<div class="containerPrintArticle">
 					<?php
-				$requete = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y'");
+					$requete = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y'");
+					if($requete->fetch() == FALSE){
+						echo "<p class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
+					}
+					else{
         ?>
 				<div style='overflow-x:auto;'>
 					<?php 
@@ -87,9 +91,9 @@
             </thead>
             <tbody class='tableau'>
               <?php
-              
 
-              while ( $articles = $requete->fetch()){
+							$query = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y'");
+              while ( $articles = $query->fetch()){
 								echo "<tr>";
 								echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
 								echo "<td>". $articles['name']."</td>" ;
@@ -98,10 +102,12 @@
 								echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' type='number' step=0.01 value=1 min=1 required>"."</td>" ;
 								echo "<td>" . "<input type='submit' value='Ajouter au panier'> </form>" ."</td>";
 								echo "</tr>";
-              }
+							}
+							
 							?>
 						</tbody>
-          </table>
+					</table>
+					<?php } ?>
         </div>
 			</div>
 	</div>
