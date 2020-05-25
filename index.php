@@ -7,6 +7,8 @@
 		<script src="js/jquery.min.js"></script>
 		 <!-- Custom Theme files -->
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
    		 <!-- Custom Theme files -->
    		  <!---- start-smoth-scrolling---->
 		<script type="text/javascript" src="js/move-top.js"></script>
@@ -44,10 +46,12 @@
 		<!----//End-top-nav-script---->
 
 	</head>
-	<body>
+	<body id='body'>
 		<?php
 		session_start();
+		include 'sidebar.php'
 		?>
+
 		<div id="top" class="bg">
 		<!----- start-header---->
 			<div id="home" class="header">
@@ -60,8 +64,8 @@
 			</div>
 
 			<!---- header-info ---->
-			<div class="header-info text-center">
-				<div class="container">
+			<div class="header-info indexPage text-center">
+				<div class="container title">
 					<h1><span> </span><label>SALAH </label> PRIMEURS<span> </span></h1>
 					<p>Votre marchand</p>
 				</div>
@@ -73,14 +77,14 @@
 			<div id="about" class="about">
 				<div class="container">
 					<div class="about-head text-center">
-            <h3><span>A propos de moi</span></h3>
+            <h3><span>A propos</span></h3>
             <p>Daisy is sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum</p>
 					</div>
 
 			<!---- Address ---->
 			<div id="contact" class="address">
 				<div class="address-info text-center">
-					<h3>Addresse</h3>
+					<h3>Adresse</h3>
 					<p>615 4th Ave S, Jacksonville Beach, FL 32250</p>
 				</div>
 				<div class="map">

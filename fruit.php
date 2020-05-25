@@ -7,6 +7,7 @@
 		<script src="js/jquery.min.js"></script>
 		 <!-- Custom Theme files -->
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		
    		 <!-- Custom Theme files -->
    		  <!---- start-smoth-scrolling---->
 		<script type="text/javascript" src="js/move-top.js"></script>
@@ -44,64 +45,66 @@
 		<!----//End-top-nav-script---->
 
 	</head>
-	<body>
+	<body id='body'>
 		<?php
 		session_start();
 		?>
-<?php
-  include "header.php";
-  include "configbdd.php";
-?>
+	<div class="containerAll">
+	<?php
+	include "sidebar.php";
+	include "header.php";
+	include "configbdd.php";
+	?>
 
-			<!---- header-info ---->
-				<div class="container">
-					<h2>Fruits</h2>
-					<h5>Choissez vos fruits ici</h5>
+		<!---- header-info ---->
+		<div class="container ">
+		<div class="header-info text-center">
+			<div class="containerTitle">
+				<div class="bgHeaderFruits">
 				</div>
+				<h1><span> </span>Fruits<span> </span></h1>
 			</div>
-			<div class="clearfix"> </div>
-			<!---- header-info ---->
-			<!--- about-us ---->
-			<div id="about" class="about">
-				<div class="container">
-					<div class="containerPrintArticle">
-					<?php
-					$requete = $bdd->query("SELECT * FROM articles WHERE type='f' AND venteBool='y'");
-					if($requete->fetch() == FALSE){
-						echo "<p class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
+		</div>
+	<!--- Affichage Fruits ---->
+	<div id="about" class="about">
+		<div class="container">
+			<div class="containerPrintArticle">
+			<?php
+			$requete = $bdd->query("SELECT * FROM articles WHERE type='f' AND venteBool='y'");
+			if($requete->fetch() == FALSE){
+				echo "< class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
+			}
+			else{
+			$requete = $bdd->query("SELECT * FROM articles WHERE type='f' AND venteBool='y'");
+			?>
+				<?php
+					if(isset($_REQUEST['falseQuantity'])){
+						echo "<p>Merci de rentrer une quantité uniquement composé de chiffre</p>";
 					}
-					else{
-        	?>
-        	<div style='overflow-x:auto;'>
-          	<table>
-							<thead>
-								<tr>
-									<th>Photo</th>
-									<th>Nom de l'article</th>
-									<th>Provenance</th>
-									<th>Prix</th>
-									<th>Quantité</th>
-									<th>Ajouter au panier</th>
-								</tr>
-							</thead>
-							<tbody class='tableau'>
-								<?php
-								
-								while ( $articles = $requete->fetch()){
-									echo "<tr>";
-									echo "<td><img src='images/".$articles['picture'] ."' alt='photo de l'article'></td>";
-									echo "<td>". $articles['name']."</td>" ;
-									echo "<td>". $articles['provenance']."</td>" ;
-									echo "<td>". $articles['prix']."</td>" ;
-									echo "<td>". "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> <input name ='quantity' value=0 type='number' step=0.01 min=0 required>"."</td>" ;
-									echo "<td>" . "<input type='submit' value='Ajouter au panier'> </form>" ."</td>";
-									echo "</tr>";
-								}
-								?>
-							</tbody>
-					</table>
-					<?php } ?>
-        </div>
+				?>
+				<div class="allArticle">
+					<?php
+
+					$query = $bdd->query("SELECT * FROM articles WHERE type='f' AND venteBool='y'");
+					while ( $articles = $query->fetch()){
+						?>
+						<div class="article">
+						<?php
+							echo "<img class='imgArticle' src='images/".$articles['picture'] ."' alt='photo de l'article'>";
+							echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;
+							echo "<p class='priceArticle'><span></span>". $articles['prix']."€</p> </div>" ;
+							echo "<p class='provenanceArticle'>". $articles['provenance']."</p>" ;
+							echo "<form action='addArticleToPanier.php'> <input type='hidden' value='f' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> " ;
+							echo "<input type='submit' value='Ajouter au panier'> </form>";
+						?>
+						</div>
+						<?php
+					}
+					
+					?>
+				</div>
+				<?php } ?>
 			</div>
+		</div>
 	</body>
 </html>
