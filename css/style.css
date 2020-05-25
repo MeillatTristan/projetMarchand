@@ -290,18 +290,12 @@ body{
 	justify-content: space-between;
 }
 
-<<<<<<< HEAD
-table{
-	width: 100%;
-	text-align: left;
-=======
 .article p{
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 300;
 	font-size: 17px;
 	line-height: 23px;
->>>>>>> 052b084b25cd8f82d27ab67edc185bed65236108
 }
 
 .article .nameArticle{
