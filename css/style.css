@@ -287,6 +287,7 @@ body{
 
 .article .containerNamePrice{
 	display: flex;
+	justify-content: space-between;
 }
 
 .article p{
@@ -298,27 +299,46 @@ body{
 }
 
 .article .nameArticle{
-	width: 65%;
+	max-width: 65%;
 	text-align: left;
+	height: 46px;
 
 }
 
 .article .priceArticle span{
 	position: absolute;
 	top: 22px;
-	left: 20px;
-	width: 70%;
+	left: 0px;
+	width: 100%;
 	height: 2px;
 	border: 2px solid #0F8869;
 }
 
 .article .priceArticle{
-	width: 30%;
+	max-width: 30%;
 	position: relative;
-	text-align: right;
+}
+
+.article .containerProvenanceSubmit{
+	display: flex;
+	justify-content: space-between;
 }
 
 .article .provenanceArticle{
 	font-size: 16px;
 	color: #606060;
+	max-width: 69%;
+	height: 46px;
+}
+
+.article button{
+	max-width: 30%;
+	height: 45px;
+	background-color: transparent;
+	border: none;
+}
+
+.article button img{
+	max-width: 42px;;
+	height: auto;
 }

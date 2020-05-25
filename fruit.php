@@ -93,9 +93,9 @@
 							echo "<img class='imgArticle' src='images/".$articles['picture'] ."' alt='photo de l'article'>";
 							echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;
 							echo "<p class='priceArticle'><span></span>". $articles['prix']."€</p> </div>" ;
-							echo "<p class='provenanceArticle'>". $articles['provenance']."</p>" ;
+							echo "<div class='containerProvenanceSubmit'><p class='provenanceArticle'>". $articles['provenance']."</p>" ;
 							echo "<form action='addArticleToPanier.php'> <input type='hidden' value='f' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> " ;
-							echo "<input type='submit' value='Ajouter au panier'> </form>";
+							echo "<button type='sumbit' name='inputSubmit'><img src='images/panier.png'</button> </form></div>";
 						?>
 						</div>
 						<?php
