@@ -36,6 +36,9 @@ body{
 
 .top-nav a{
 	color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .top-nav .panier{
