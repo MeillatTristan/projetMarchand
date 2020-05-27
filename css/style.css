@@ -458,7 +458,7 @@ body{
 	width: 27px;
 }
 
-#viewQuantity{
+.viewQuantity{
 	width: 30px;
 	display: flex;
 	justify-content: center;

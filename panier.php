@@ -107,11 +107,11 @@
 								<div class="quantityArticle">
 									<div class="containerQuantity">
 										<input class="inputQuantity" type="button" value="-" onclick="quantityUpdate('-',<?php echo array_search($article, $_SESSION['panier']) ?>, <?php echo $query['prix'] ?>)">
-										<div  id="viewQuantity"> <?php echo $article[1]?> </div>
+										<div  class='viewQuantity' id="viewQuantity<?php echo array_search($article, $_SESSION['panier']) ?>"> <?php echo $article[1]?> </div>
 										<input class="inputQuantity" type="button" value="+" onclick="quantityUpdate('+',<?php echo array_search($article, $_SESSION['panier']) ?>, <?php echo $query['prix'] ?>)">
 									</div>
 								</div>
-								<p id='priceArticle' class="priceArticle"><?php echo $article[1]*$query['prix']?>€</p>
+								<p id='priceArticle<?php echo array_search($article, $_SESSION['panier']) ?>' class="priceArticle"><?php echo $article[1]*$query['prix']?>€</p>
 								<div class="delArticle">
 									<a href="delArticlePanier.php?idToDel=<?php echo key($_SESSION['panier']) ?>">×</a>
 								</div>
@@ -122,7 +122,10 @@
 						</div>
 						<div class="totalPanier">
 							<h3 class="titleTotal">MONTANT DU PANIER</h3>
-							
+							<div class="totalAppro">
+								<p>Total approximatif</p>
+								<p id="totalPanier"><?php echo $total ?>€</p>
+							</div>
 						</div>
 					</div>
 					<?php
