@@ -159,7 +159,7 @@ body{
 	height: 10px;
 	vertical-align: middle;
 	margin-left: 0.5em;
-	margin-right: 0.5em";"
+	margin-right: 0.5em;
 	
 }
 
@@ -444,4 +444,99 @@ body{
 .containerAllArticle *{
 	display: flex;
 	align-items: center;
+}
+
+/* Page connexion */
+
+.backlogin {
+	height: 100vh;
+	width: 100%;
+	overflow-y: hidden;
+}
+
+.groundlogin {
+	background-image: url(../images/primeurBg.jpg);
+	background-repeat:no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+	
+}
+
+.backgroundcolor {
+	background-color: rgba(16, 172, 132, 0.95);
+	height: 100%;
+	width: 100%;
+}
+
+.coo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 40px;
+}
+
+.coo input {
+	margin: 10px;
+	background: #FFFFFF;
+	border-radius: 150px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 28px;
+	width: 350px;
+	height: 50px;
+	border: none;
+}
+
+#coordonne {
+	padding-left: 65px;
+}
+
+
+.coo a {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 23px;
+	color: #CCCCCC;
+	margin: 5px;
+}
+
+#button_coo {
+	background: #4A4A4A;
+	border-radius: 150px;
+	color: #FFFFFF;
+}
+
+#connexion {
+	margin-top: 100px;
+	color: #ffffff;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 33px;
+}
+
+.imgconnexion {
+	position: relative;
+}
+
+#enveloppe {
+	position: absolute;
+	width: 32px;
+	height: 24px;
+	left: 28px;
+	top: 23px;
+}
+
+#key {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 29px;
+	top: 20px;
 }
