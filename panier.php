@@ -12,6 +12,7 @@
    		 <!-- Custom Theme files -->
    		  <!---- start-smoth-scrolling---->
 		<script type="text/javascript" src="js/move-top.js"></script>
+		<script src="js/script.js"></script>
 		<script type="text/javascript" src="js/easing.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -103,8 +104,14 @@
 									<img src="images/<?php echo $query['picture']?>" alt="pictureArticle">
 								</div>
 								<p class="nameArticle"><?php echo $query['name']?></p>
-								<div class="quantityArticle"></div>
-								<p class="priceArticle"><?php echo $article[1]*$query['prix']?>€</p>
+								<div class="quantityArticle">
+									<div class="containerQuantity">
+										<input class="inputQuantity" type="button" value="-" onclick="quantityUpdate('-',<?php echo array_search($article, $_SESSION['panier']) ?>, <?php echo $query['prix'] ?>)">
+										<div  id="viewQuantity"> <?php echo $article[1]?> </div>
+										<input class="inputQuantity" type="button" value="+" onclick="quantityUpdate('+',<?php echo array_search($article, $_SESSION['panier']) ?>, <?php echo $query['prix'] ?>)">
+									</div>
+								</div>
+								<p id='priceArticle' class="priceArticle"><?php echo $article[1]*$query['prix']?>€</p>
 								<div class="delArticle">
 									<a href="delArticlePanier.php?idToDel=<?php echo key($_SESSION['panier']) ?>">×</a>
 								</div>
@@ -114,8 +121,8 @@
 						?>
 						</div>
 						<div class="totalPanier">
-							<h4>Total (prix approximatif) : <?php echo $total ?>€</h4>
-							<input type="submit" value="Envoyer ma commande">
+							<h3 class="titleTotal">MONTANT DU PANIER</h3>
+							
 						</div>
 					</div>
 					<?php

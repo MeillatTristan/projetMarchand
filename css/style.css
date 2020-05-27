@@ -442,3 +442,23 @@ body{
 	display: flex;
 	align-items: center;
 }
+
+.containerQuantity{
+	border: solid 1px #6C6C6C;
+	border-radius: 5px;
+}
+
+.inputQuantity{
+	background-color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	width: 27px;
+}
+
+#viewQuantity{
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	border-left: solid 1px #6C6C6C;
+	border-right: solid 1px #6C6C6C;
+}
