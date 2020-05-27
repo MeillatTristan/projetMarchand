@@ -46,18 +46,24 @@
 		<!----//End-top-nav-script---->
 
 	</head>
-	<body class="Wbg">
+	<body id="body">
 		<?php
 		session_start();
 		?>
 	<div class="containerAll">
 		<?php
 		include "header.php";
+		include "sidebar.php";
 		include "configbdd.php";
 		?>
 
 			<!---- header-info ---->
-			<h2>Panier</h2>
+			<div class="header-info text-center">
+			<div class="containerTitle">
+				<div class="bgHeaderPanier"></div>
+				<h1><span> </span>Panier<span> </span></h1>
+			</div>
+		</div>
 		<div class="clearfix"> </div>
 		<!---- header-info ---->
 		<!--- about-us ---->
@@ -73,36 +79,35 @@
 					<div class="containerAllPanier">
 						<div class="containerAllArticle">
 							<div class='headPanier'>
-								<div class='infoArticle'>
-									<span>Photo</span>
-								</div>
-								<div class='infoArticle'>
+								<div class="photoArticle"></div>
+								<div class='nameArticle'>
 									<span>Articles</span>
 								</div>
-								<div class='infoArticle'>
+								<div class='quantityArticle'>
 									<span>Quantité</span>
 								</div>
-								<div class='infoArticle'>
-									<span >Supprimer du panier</span>
+								<div class="priceArticle">
+									<span>Prix</span>
+								</div>
+								<div class='delArticle'>
 								</div>
 							</div>
 						<?php
 						foreach ($_SESSION['panier'] as $article ){
-							$query = $bdd->query("SELECT * FROM articles WHERE id=".key($_SESSION['panier']))->fetch();
-							$total += $article * $query['prix'];
+							$query = $bdd->query("SELECT * FROM articles WHERE id=".$article[0])->fetch();
+							$total += $article[1] * $query['prix'];
 							?>
 
 							<div class="containerArticle">
-								<img src="images/<?php echo $query['picture']?>" alt="pictureArticle">
-								<div class="namePrixArticle">
-									<p class="infoArticle"><?php echo $query['name']?></p>
-									<p class="infoArticle"><?php echo $query['prix']?>€</p>
+								<div class='photoArticle'>
+									<img src="images/<?php echo $query['picture']?>" alt="pictureArticle">
 								</div>
-								<div class="quantityTotalArticle">
-									<p class="infoArticle" id="quantityOneArticle">quantité : <?php echo $article?></p>
-									<p class="infoArticle" id="totalOneArticle">total pour cet article : <?php echo $article*$query['prix']?>€</p>
+								<p class="nameArticle"><?php echo $query['name']?></p>
+								<div class="quantityArticle"></div>
+								<p class="priceArticle"><?php echo $article[1]*$query['prix']?>€</p>
+								<div class="delArticle">
+									<a href="delArticlePanier.php?idToDel=<?php echo key($_SESSION['panier']) ?>">×</a>
 								</div>
-								<a href="delArticlePanier.php?idToDel=<?php echo key($_SESSION['panier']) ?>">Supprimer l'article</a>
 							</div>
 						<?php
 						}
@@ -121,3 +126,4 @@
 	</div>
 </body>
 </html>
+

@@ -259,6 +259,16 @@ body{
 	background-size: 100%;
 }
 
+.bgHeaderPanier{
+	width: 100%;
+	height: 300px;
+	background-image: url(../images/primeurBg.jpg);
+	background-size: 1920px;
+	box-shadow: 0px 1px 11px rgba(0,0,0,0.4);
+	box-shadow: 0px -1px 11px rgba(0,0,0,0.4);
+	background-size: 100%;
+	background-position: top;
+}
 .containerTitle{
 	margin-top: 20px;
 }
@@ -352,4 +362,82 @@ body{
 .article button img{
 	max-width: 42px;;
 	height: auto;
+}
+
+/* page panier */
+
+.containerAllPanier{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.containerAllArticle{
+	width: 60%;
+	font-size: 18px;
+	border: solid 1px #DDDDDD;
+
+}
+
+.totalPanier{
+	width: auto;
+}
+
+.headPanier{
+	display: flex;
+	align-items: center;
+	background-color: #F8F6F6;
+	font-size: 18px;
+	height: 65px;
+	text-transform: uppercase;
+}
+
+.containerAllArticle .containerArticle{
+	display: flex;
+	border-bottom: solid 1px #ECECEC;
+	margin-top: 15px;
+	height: 100px;
+}
+
+.containerAllArticle .photoArticle{
+	width : 22.5%;
+	margin-left: 25px;
+}
+
+.containerAllArticle .photoArticle img{
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.containerAllArticle .nameArticle{
+	width: 30%;
+}
+
+.containerAllArticle .quantityArticle{
+	width: 23%;
+}
+
+.containerAllArticle .priceArticle{
+	width: 15%;
+}
+
+.containerAllArticle .delArticle{
+	width: 7.80%;
+	padding-bottom: 18px;
+}
+
+.containerAllArticle .delArticle a{
+	width: 30px;
+	height: 30px;
+	background-color: #F64747;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35px;
+}
+
+.containerAllArticle *{
+	display: flex;
+	align-items: center;
 }

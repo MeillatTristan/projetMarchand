@@ -60,8 +60,7 @@
 		<div class="container ">
 		<div class="header-info text-center">
 			<div class="containerTitle">
-				<div class="bgHeaderLegume">
-				</div>
+				<div class="bgHeaderLegume"></div>
 				<h1><span> </span>Légumes<span> </span></h1>
 			</div>
 		</div>
@@ -91,7 +90,7 @@
 							echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;
 							echo "<p class='priceArticle'><span></span>". $articles['prix']."€</p> </div>" ;
 							echo "<div class='containerProvenanceSubmit'><p class='provenanceArticle'>". $articles['provenance']."</p>" ;
-							echo "<form action='addArticleToPanier.php'> <input type='hidden' value='f' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> " ;
+							echo "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> " ;
 							echo "<button type='sumbit' name='inputSubmit'><img src='images/panier.png'</button> </form></div>";
 						?>
 						</div>

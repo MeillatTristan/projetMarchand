@@ -3,25 +3,24 @@
 session_start();
 
 $idArticle = $_REQUEST['id'];
-$quantity = $_REQUEST['quantity'];
-if (!is_int($quantity) OR $quantity <= 0){
-  if ($_REQUEST['page'] == 'l'){
-    header("Location:legume.php?falseQuantity=y");
-  }
-  elseif ($_REQUEST['page'] == 'f'){
-    header("Location:fruit.php?falseQuantity=y");
-  }
-}
 
 if(!isset($_SESSION['panier'])){
   $_SESSION['panier'] = [];
 }
 
-if(isset($_SESSION['panier'][$idArticle])){
-  $_SESSION['panier'][$idArticle] += $quantity;
+for($i = 0; $i < count($_SESSION['panier']); $i++){
+  if($_SESSION['panier'][$i][0] == $idArticle){
+    echo $idArticle;
+    $index = $i;
+  }
+}
+
+if(isset($present)){
+  $_SESSION['panier'][$index][1] += 1;
+
 }
 else{
-  $_SESSION['panier'][$idArticle] = $quantity;
+  $_SESSION['panier'][] = [$idArticle, 1];
 }
 
 if ($_REQUEST['page'] == 'l'){
