@@ -126,6 +126,24 @@
 								<p>Total approximatif</p>
 								<p id="totalPanier"><?php echo $total ?>€</p>
 							</div>
+							<p class="titleRemise">Remise</p>
+							<form action="ValidCommande.php" method="post">
+								<div class="livraisonEmporter" id="containerEmporter">
+									<input type="radio" name="livraison" id="livraisonEmporter" value="emporter" onclick="changeRadioEmport()">
+									<span class="checkmark"></span>
+									<p>A emporter</p>
+								</div>
+								<div class="livraisonEmporter" id="containerDomicile">
+									<input type="radio" name="livraison" id="livraisonDomicile" value="domicile" onclick="changeRadioDomicile()">
+									<span class="checkmark"></span>
+									<p for="livraisonDomicile">A domicile</p>
+								</div>
+								<p>Date de livraison</p>
+								<div class="dateLivraison">
+									<input type="date" name="livraison" id="dateLivraison">
+								</div>
+								<input type="submit" value="valider ma commande">
+							</form>
 						</div>
 					</div>
 					<?php

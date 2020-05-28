@@ -19,3 +19,22 @@ function quantityUpdate(signe, index, prix){
   }
 
 }
+
+function changeRadioEmport(){
+  if(document.getElementById('livraisonEmporter').checked){
+    document.getElementById('containerEmporter').style.backgroundColor = "#4A4A4A";
+    document.getElementById('containerEmporter').style.color = "#ffffff";
+    document.getElementById('containerDomicile').style.backgroundColor = "#ffffff";
+    document.getElementById('containerDomicile').style.color = "#4A4A4A";
+
+  }
+}
+
+function changeRadioDomicile(){
+  if(document.getElementById('livraisonDomicile').checked){
+    document.getElementById('containerDomicile').style.backgroundColor = "#4A4A4A";
+    document.getElementById('containerDomicile').style.color = "#ffffff";
+    document.getElementById('containerEmporter').style.backgroundColor = "#ffffff";
+    document.getElementById('containerEmporter').style.color = "#4A4A4A";
+  }
+}
