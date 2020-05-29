@@ -376,6 +376,13 @@ body{
 	margin-top: 20px;
 }
 
+.panierVide{
+	text-align: center;
+	font-size: 30px;
+	color: #4A4A4A;
+	margin-top: 40px;
+}
+
 .containerAllArticle{
 	width: 60%;
 	font-size: 18px;

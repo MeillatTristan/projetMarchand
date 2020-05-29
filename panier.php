@@ -72,7 +72,7 @@
 			<div class="container">
 				<?php
 				if(!isset($_SESSION['panier'])){
-					echo "<p>Votre panier est vide</p>";
+					echo "<p class='panierVide' >Votre panier est vide</p>";
 				}
 				else{
 					$total = 0;
