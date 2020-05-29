@@ -722,6 +722,6 @@ body{
 }
 
 #inscription_onclick {
-
+	display: none;
 	position: absolute;
 }
