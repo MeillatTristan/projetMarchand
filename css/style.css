@@ -652,3 +652,8 @@ body{
 	left: 29px;
 	top: 20px;
 }
+
+#inscription_onclick {
+	display: none;
+	position: absolute;
+}

@@ -13,7 +13,7 @@
 	<!---- start-smoth-scrolling---->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!----//End-top-nav-script---->
-
+	<script src="js/script.js"></script>
 </head>
 
 <body>
@@ -43,8 +43,41 @@
 						</div>
 						<input id="button_coo" type="submit" value="Login">
 						<a href="">Mot de passe ou Email oublié ?</a>
-						<a href="">Pas de compte ? Inscrivez-vous !</a>
+						<a onclick="inscription()" href="">Pas de compte ? Inscrivez-vous !</a>
 					</form>
+					<div id="inscription_onclick">
+						<form class="inscription" action='valid_user.php'>
+							<div class="first_contenant">
+								<span>Prénom :</span>
+								<input type="text" name='firstname' id='firstname' required placeholder=' Prénom' autofocus=""> </input>
+								<span>Adresse :</span>
+								<input class="" type="text" name='adresse' id='adresse' required placeholder=' Adresse'> </input>
+								<span>Numéro de Téléphone Fixe :</span>
+								<input class="" type="text" name='telephone' id='telephone_f' placeholder=''> </input>
+								<span>Mot de passe :</span>
+								<input class="" type="password" name='valid_mdp1' id='password_1' required placeholder=' ************'> </input>
+							</div>
+							<div class="first_contenant">
+								<span>Nom :</span>
+								<input type="text" name='lastname' id='lastname' required placeholder=' Nom'> </input>
+								<span>Code Postal :</span>
+								<input class="" type="text" name='code_postal' id='code_postal' required placeholder=' Code Postal'> </input>
+								<span>Numéro de Télephone Portable :</span>
+								<input class="" type="text" name='telephone' id='telephone_p' required placeholder=' +33'> </input>
+								<span>Confirmation de mot de passe :</span>
+								<input class="" type="password" name='valid_mdp2' id='password_2' required placeholder=' ************'> </input>
+								<div class="contenant_button">
+									<button class="button_inscription" type='submit' name='valid_user'>Valider</button>
+								</div>
+							</div>
+							<div class="first_contenant">
+								<span>Adresse Email :</span>
+								<input type="text" name='email' id='email' required placeholder=' Email'> </input>
+								<span>Ville :</span>
+								<input type="text" name='ville' id='ville' required placeholder=' Ville'> </input>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
