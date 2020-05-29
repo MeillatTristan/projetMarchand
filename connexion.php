@@ -43,8 +43,8 @@
 						</div>
 						<input id="button_coo" type="submit" value="Login">
 						<a href="">Mot de passe ou Email oublié ?</a>
-						<a onclick="inscription()" href="">Pas de compte ? Inscrivez-vous !</a>
 					</form>
+					<button onclick="inscription()">Pas de compte ? Inscrivez-vous ! </button>
 					<div id="inscription_onclick">
 						<form class="inscription" action='valid_user.php'>
 							<div class="first_contenant">

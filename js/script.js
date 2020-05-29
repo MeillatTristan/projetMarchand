@@ -40,6 +40,6 @@ function changeRadioDomicile(){
 }
 
 function inscription() {
-  // document.getElementById('inscription_onclick').style.display = block ;
-  document.getElementById('inscription_onclick').style.backgroundColor = "#4A4A4A"
+  alert('yoo')
+  document.getElementById('inscription_onclick').style.display = block ;
 }
