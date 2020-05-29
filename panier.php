@@ -126,23 +126,46 @@
 								<p>Total approximatif</p>
 								<p id="totalPanier"><?php echo $total ?>€</p>
 							</div>
-							<p class="titleRemise">Remise</p>
-							<form action="ValidCommande.php" method="post">
-								<div class="livraisonEmporter" id="containerEmporter">
-									<input type="radio" name="livraison" id="livraisonEmporter" value="emporter" onclick="changeRadioEmport()">
-									<span class="checkmark"></span>
-									<p>A emporter</p>
-								</div>
-								<div class="livraisonEmporter" id="containerDomicile">
-									<input type="radio" name="livraison" id="livraisonDomicile" value="domicile" onclick="changeRadioDomicile()">
-									<span class="checkmark"></span>
-									<p for="livraisonDomicile">A domicile</p>
-								</div>
-								<p>Date de livraison</p>
+							<div class="containerRemise">
+								<p class="titleRemise">Remise</p>
+								<form action="ValidCommande.php" method="post">
+									<div class="livraisonEmporter" id="containerEmporter">
+										<input type="radio" name="livraison" id="livraisonEmporter" value="emporter" onclick="changeRadioEmport()">
+										<span class="checkmark"></span>
+										<p>A emporter</p>
+									</div>
+									<div class="livraisonEmporter" id="containerDomicile">
+										<input type="radio" name="livraison" id="livraisonDomicile" value="domicile" onclick="changeRadioDomicile()">
+										<span class="checkmark"></span>
+										<p for="livraisonDomicile">A domicile</p>
+									</div>
+							</div>
+								<p class="titleDate">Date de livraison</p>
 								<div class="dateLivraison">
-									<input type="date" name="livraison" id="dateLivraison">
+									<img src="images/calendar-alt.png" alt="icone Date">
+									<select name="pets" id="pet-select">
+										<option value="" selected disabled>--Choisir une date--</option>
+										<?php
+											setlocale(LC_TIME, "fr_FR");
+											$currentDate = date("d F Y");
+											$days = ['lundi', 'mercredi', 'samedi'];
+											$lieux = ['lundi'=>'Ecouflant', 'mercredi'=>'Angers', 'samedi'=> 'Villeveque'];
+											for ($i=0; $i<=7; $i++){
+												$nextDay = strtotime('+' . $i .'day', strtotime($currentDate));
+												$nextDay = strftime(" %A %d %B %Y", $nextDay);
+												foreach ($days as $day){
+													if (strpos($nextDay,$day) == TRUE){
+														$lieu = $lieux[$day];
+														echo "<option value='$nextDay'>$nextDay  =>  lieu : $lieu</option>";
+													}
+												}
+											}
+										?>
+									</select>
 								</div>
-								<input type="submit" value="valider ma commande">
+								<div class="containerSubmitTotal">
+									<input id="commandSubmit" type="submit" value="Valider ma commande">
+								</div>
 							</form>
 						</div>
 					</div>
