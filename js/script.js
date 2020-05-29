@@ -38,3 +38,8 @@ function changeRadioDomicile(){
     document.getElementById('containerEmporter').style.color = "#4A4A4A";
   }
 }
+
+function inscription() {
+  // document.getElementById('inscription_onclick').style.display = block ;
+  document.getElementById('inscription_onclick').style.backgroundColor = "#4A4A4A"
+}
