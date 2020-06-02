@@ -4,6 +4,7 @@
 
 body{
 	overflow-x: hidden;
+	min-height: 100vh;
 }
 
 /* Header */
@@ -280,10 +281,13 @@ body{
 .containerTitle h1{
 	margin-top: 40px;
 	font-size: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .containerTitle h1 span{
-	width: 35%;
+	width:50%;
 	background: #0F8869;
 	display: inline-block;
 	height: 3px;
@@ -374,6 +378,13 @@ body{
 	display: flex;
 	justify-content: space-around;
 	margin-top: 20px;
+}
+
+.panierVide{
+	text-align: center;
+	font-size: 30px;
+	color: #4A4A4A;
+	margin-top: 40px;
 }
 
 .containerAllArticle{
@@ -472,8 +483,8 @@ body{
 
 .totalPanier{
 	border: solid 2px #DDDDDD;
-	height: auto;
-	padding: 10px 30px 10px 30px;
+	height: 100%;
+	padding: 10px 30px 30px 30px;
 	width: 25%;
 }
 
@@ -488,7 +499,7 @@ body{
 
 .titleRemise{
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: 500;
 	padding-top: 10px;
 }
 
@@ -499,7 +510,7 @@ body{
 	border: 2px solid #4A4A4A;
 	border-radius: 5px;
 	padding: 5px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	align-items: center;
 	font-size: 18px;
 }
@@ -559,6 +570,67 @@ body{
 	margin-left: 30px;
 }
 
+.containerRemise{
+	border-bottom: solid 1px #DDDDDD;
+}
+
+.titleDate{
+	font-size: 18px;
+	padding-top: 15px;
+}
+
+.dateLivraison{
+	position: relative;
+}
+
+.dateLivraison select{
+	width: 100%;
+	height: 40px;
+	border: 2px solid #4A4A4A;
+	border-radius: 5px;
+	z-index: 2;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+	-moz-appearance: none;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.dateLivraison select option {
+	word-spacing: 150%;
+	font-size: 18px;
+}
+
+.dateLivraison img{
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	width: auto;
+	height: auto;
+	max-width: 25px;
+	max-height: 25px;
+	z-index: 3;
+}
+
+#commandSubmit{
+	background-color: #4A4A4A;
+	border: none;
+	border-radius: 40px;
+	color: #ffffff;
+	width: 70%;
+	height: 40px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.containerSubmitTotal{
+	display: flex;
+	justify-content: center;
+}
+
 /* Page connexion */
 
 .backlogin {
@@ -585,7 +657,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 40px;
+	margin-top: 40px;
 }
 
 .coo input {
@@ -653,7 +725,66 @@ body{
 	top: 20px;
 }
 
+#buttonInscription{
+	background: transparent;
+	border: none;
+	color: #CCCCCC;
+	margin-top: 5px;
+	font-size: 15px;
+	line-height: 23px;
+	font-weight: 500;
+	text-align: center;
+}
+
 #inscription_onclick {
 	display: none;
 	position: absolute;
+}
+
+/* page profil */
+
+.containerBlocProfil{
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+.headerProfil{
+	display: flex;
+	justify-content: space-between;
+	height: 41px;
+	align-items: center;
+}
+
+.headerProfil .modifProfil a{
+	padding: 8px 20px 8px 20px;
+	border-radius: 40px;
+	color: #ffffff;
+	background-color: #4A4A4A;
+	font-size: 18px;
+}
+
+.modifProfil #firstButton{
+	margin-right: 30px;
+}
+
+.headerProfil h2{
+	margin: 0;
+}
+
+.containerInformations{
+	margin-top: 40px;
+}
+
+.informationProfil{
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+	border-bottom: solid 1px #000000;
+	margin-bottom: 15px;
+}
+
+.spanModifUser{
+	width: 35% !important;
 }

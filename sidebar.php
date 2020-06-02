@@ -30,7 +30,7 @@
 		</li>
 		<li>
 			<img src="images/profil.png" alt="icone Profil">
-			<a href="index.php">Profil</a>
+			<a href="profil.php">Profil</a>
 		</li>
 		<?php
 			$admin = $bdd->query("SELECT admin FROM users WHERE id=$idUser")->fetch()[0];
