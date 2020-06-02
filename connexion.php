@@ -52,42 +52,28 @@
 						<div id="inscription_onclick">
 							<form class="inscription" action='valid_user.php'>
 								<div class="first_contenant">
-									<input class="input_inscription" type="text" name='lastname' id='lastname' required placeholder=''> </input>
-									<label for="input_inscription">
-										<span class="word">Nom</span>
-										<span class="star">*</span>
-									</label>
-									<input class="input_inscription prenom" type="text" name='firstname' id='firstname' required placeholder='' > </input>
-									<label class="prenom" for="prenom">
-										<span class="word">Prénom</span>
-										<span class="star">*</span>
-									</label>
-									<input class="input_inscription" type="text" name='email' id='email' required placeholder=''> </input>
-									<label for="input_inscription">
-										<span class="word">Email</span>
-										<span class="star">*</span>
-									</label>
-									<input class="input_inscription" type="text" name='telephone' id='telephone_p' required placeholder=''> </input>
-									<label for="input_inscription">
-										<span class="word">Téléphone portable</span>
-										<span class="star">*</span>
-									</label>
+									<span>Nom <span class="red">*</span> :</span>
+									<input type="text" name='lastname' id='lastname' required placeholder=' Nom'> </input>
+									<span>Prénom <span class="red">*</span> :</span>
+									<input type="text" name='firstname' id='firstname' required placeholder=' Prénom' autofocus=""> </input>
+									<span>Adresse Email <span class="red">*</span> :</span>
+									<input type="text" name='email' id='email' required placeholder=' Email'> </input>
+									<span>Numéro de Télephone Portable <span class="red">*</span> :</span>
+									<input class="" type="text" name='telephone' id='telephone_p' required placeholder=' +33'> </input>
+									<span>Numéro de Téléphone Fixe :</span>
 									<input class="" type="text" name='telephone' id='telephone_f' placeholder=''> </input>
 								</div>
 								<div class="first_contenant">
+									<span>Ville :</span>
 									<input type="text" name='ville' id='ville' required placeholder=' Ville'> </input>
+									<span>Code Postal :</span>
 									<input class="" type="text" name='code_postal' id='code_postal' required placeholder=' Code Postal'> </input>
+									<span>Adresse :</span>
 									<input class="" type="text" name='adresse' id='adresse' required placeholder=' Adresse'> </input>
-									<input class="input_inscription" type="password" name='valid_mdp1' id='password_1' required placeholder=''> </input>
-									<label for="input_inscription">
-										<span class="word">Mot de passe</span>
-										<span class="star">*</span>
-									</label>
-									<input class="input_inscription" type="password" name='valid_mdp2' id='password_2' required placeholder=''> </input>
-									<label for="input_inscription">
-										<span class="word">Confirmer mot de passe</span>
-										<span class="star">*</span>
-									</label>
+									<span>Mot de passe <span class="red">*</span> :</span>
+									<input class="" type="password" name='valid_mdp1' id='password_1' required placeholder=' ************'> </input>
+									<span>Confirmation de mot de passe <span class="red">*</span> :</span>
+									<input class="" type="password" name='valid_mdp2' id='password_2' required placeholder=' ************'> </input>
 									<div class="contenant_button">
 										<button class="button_inscription" type='submit' name='valid_user'>S'INSCRIRE</button>
 									</div>
