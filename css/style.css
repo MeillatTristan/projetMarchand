@@ -762,7 +762,13 @@ body{
 	margin-bottom: 15px;
 }
 
+.first_contenant span {
+	text-align: left;
+}
 
+.red {
+	color: red;
+}
 .inscription {
 	display: flex;
 	align-items: center;
@@ -792,29 +798,7 @@ body{
 	display: inline-block;
 }
 
-.first_contenant label {
-	position: absolute;
-	display: none;
-	padding-left: 5px;
-	padding-top: 3px;
-}
 
-.word {
-	color: #919191;
-	font-weight: lighter;
-}
-
-.star {
-	color: red;
-}
-
-.input_inscription:placeholder-shown + label {
-	display: block;
-}
-
-.prenomm {
-	padding-top: 20px;
-}
 
 /* page profil */
 
