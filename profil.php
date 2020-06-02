@@ -50,8 +50,11 @@
 	<body id="body">
 		<?php
 		session_start();
+		if(!isset($_SESSION['id'])){
+			header('Location:connexion.php');
+		}
 		?>
-	<div class="containerAll panier">
+	<div class="containerAll">
 		<?php
 		include "header.php";
 		include "sidebar.php";
@@ -65,6 +68,80 @@
         <h1><span> </span>Profil<span> </span></h1>
       </div>
     </div>
+    <?php
+      $idUser = $_SESSION['id'];
+      $user = $bdd->query("SELECT * FROM users WHERE id=$idUser")->fetch();
+    ?>
+		<div class="containerBlocProfil">
+			<div class="headerProfil">
+				<h2><?php echo ucfirst($user['firstname']) .' '. ucfirst($user['lastname']) ?></h2>
+				<div class="modifProfil">
+					<a id='firstButton' href="modifPassword.php">Modifier mon mot de passe</a>
+					<a href="modifUserForm.php">Modifier mes informations</a>
+				</div>
+			</div>
+			<div class="containerInformations">
+				<div class="informationProfil">
+					<p>Email</p>
+					<p><?php echo $user['email'] ?></p>
+				</div>
+				<div class="informationProfil">
+					<p>Ville</p>
+					<?php
+						if ($user['ville'] == ''){
+							echo "<p>Non renseigné</p>";
+						}
+						else{
+							echo "<p>". $user['ville']."</p>";
+						}
+					?>
+				</div>
+				<div class="informationProfil">
+					<p>Code postale</p>
+					<?php
+						if ($user['code_postal'] == '' || $user['telephone_p'] == 0){
+							echo "<p>Non renseigné</p>";
+						}
+						else{
+							echo "<p>". $user['code_postal']."</p>";
+						}
+					?>
+				</div>
+				<div class="informationProfil">
+					<p>Adresse</p>
+					<?php
+						if ($user['adresse'] == ''){
+							echo "<p>Non renseigné</p>";
+						}
+						else{
+							echo "<p>". $user['adresse']."</p>";
+						}
+					?>
+				</div>
+				<div class="informationProfil">
+					<p>Téléphone portable</p>
+					<?php
+						if ($user['telephone_p'] == '' || $user['telephone_p'] == 0){
+							echo "<p>Non renseigné</p>";
+						}
+						else{
+							echo "<p>". $user['telephone_p']."</p>";
+						}
+					?>
+				</div>
+				<div class="informationProfil">
+					<p>Téléphone fix</p>
+					<?php
+						if ($user['telephone_f'] == ''){
+							echo "<p>Non renseigné</p>";
+						}
+						else{
+							echo "<p>". $user['telephone_f']."</p>";
+						}
+					?>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
