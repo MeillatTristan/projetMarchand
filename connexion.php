@@ -35,7 +35,7 @@
 					<div class="container">
 						<h2 id="connexion">Connexion</h2>
 					</div>
-					<form class="coo" action="authUser.php">
+					<form class="coo" id='coo' action="authUser.php">
 						<div class="imgconnexion">
 							<img id="enveloppe" src="images/envelope.png" alt="">
 							<input id="coordonne" type="text" name="email" required placeholder="Email">

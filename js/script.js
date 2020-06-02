@@ -41,4 +41,7 @@ function changeRadioDomicile(){
 
 function inscription() {
   document.getElementById('background_inscription').style.display = "flex" ;
+  document.getElementById('connexion').style.display = 'none';
+  document.getElementById('coo').style.display = 'none';
+  document.getElementById('buttonInscription').style.display ='none';
 }
