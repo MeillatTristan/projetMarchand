@@ -40,5 +40,5 @@ function changeRadioDomicile(){
 }
 
 function inscription() {
-  document.getElementById('inscription_onclick').style.display = "block" ;
+  document.getElementById('background_inscription').style.display = "flex" ;
 }
