@@ -726,7 +726,7 @@ body{
 	top: 20px;
 }
 
-#buttonInscription{
+#buttonInscription {
 	background: transparent;
 	border: none;
 	color: #CCCCCC;
@@ -735,11 +735,86 @@ body{
 	line-height: 23px;
 	font-weight: 500;
 	text-align: center;
+	
+}
+
+#buttonInscription:hover {
+	text-decoration: underline;
 }
 
 #inscription_onclick {
-	display: none;
+	display: flex;
+	background-color: #ffffff;
+	width: 75%;
+	height: 70%;
+	margin-top: 100px;
+	border-radius: 50px;
+}
+
+.first_contenant {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	height: 80%;
+}
+
+.first_contenant input{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+
+.inscription {
+	display: flex;
+	align-items: center;
+	padding: 60px;
+	width: 100%;
+	justify-content: space-around;
+}
+
+#background_inscription {
 	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	justify-content: center;
+	align-items: center;
+}
+
+.button_inscription {
+	float: right;
+}
+
+.input_inscription {
+	position: relative;
+	display: inline-block;
+}
+
+.first_contenant label {
+	position: absolute;
+	display: none;
+	padding-left: 5px;
+	padding-top: 3px;
+}
+
+.word {
+	color: #919191;
+	font-weight: lighter;
+}
+
+.star {
+	color: red;
+}
+
+.input_inscription:placeholder-shown + label {
+	display: block;
+}
+
+.prenomm {
+	padding-top: 20px;
 }
 
 /* page profil */
@@ -789,3 +864,4 @@ body{
 .spanModifUser{
 	width: 35% !important;
 }
+

@@ -19,7 +19,7 @@
 <body>
 	<?php
 	session_start();
-	if (isset($_SESSION['id'])){
+	if (isset($_SESSION['id'])) {
 		header('Location:index.php');
 	}
 	?>
@@ -48,38 +48,52 @@
 						<a href="">Mot de passe ou Email oublié ?</a>
 					</form>
 					<button id='buttonInscription' onclick="inscription()">Pas de compte ? Inscrivez-vous ! </button>
-					<div id="inscription_onclick">
-						<form class="inscription" action='valid_user.php'>
-							<div class="first_contenant">
-								<span>Prénom :</span>
-								<input type="text" name='firstname' id='firstname' required placeholder=' Prénom' autofocus=""> </input>
-								<span>Adresse :</span>
-								<input class="" type="text" name='adresse' id='adresse' required placeholder=' Adresse'> </input>
-								<span>Numéro de Téléphone Fixe :</span>
-								<input class="" type="text" name='telephone' id='telephone_f' placeholder=''> </input>
-								<span>Mot de passe :</span>
-								<input class="" type="password" name='valid_mdp1' id='password_1' required placeholder=' ************'> </input>
-							</div>
-							<div class="first_contenant">
-								<span>Nom :</span>
-								<input type="text" name='lastname' id='lastname' required placeholder=' Nom'> </input>
-								<span>Code Postal :</span>
-								<input class="" type="text" name='code_postal' id='code_postal' required placeholder=' Code Postal'> </input>
-								<span>Numéro de Télephone Portable :</span>
-								<input class="" type="text" name='telephone' id='telephone_p' required placeholder=' +33'> </input>
-								<span>Confirmation de mot de passe :</span>
-								<input class="" type="password" name='valid_mdp2' id='password_2' required placeholder=' ************'> </input>
-								<div class="contenant_button">
-									<button class="button_inscription" type='submit' name='valid_user'>Valider</button>
+					<div id="background_inscription">
+						<div id="inscription_onclick">
+							<form class="inscription" action='valid_user.php'>
+								<div class="first_contenant">
+									<input class="input_inscription" type="text" name='lastname' id='lastname' required placeholder=''> </input>
+									<label for="input_inscription">
+										<span class="word">Nom</span>
+										<span class="star">*</span>
+									</label>
+									<input class="input_inscription prenom" type="text" name='firstname' id='firstname' required placeholder='' > </input>
+									<label class="prenom" for="prenom">
+										<span class="word">Prénom</span>
+										<span class="star">*</span>
+									</label>
+									<input class="input_inscription" type="text" name='email' id='email' required placeholder=''> </input>
+									<label for="input_inscription">
+										<span class="word">Email</span>
+										<span class="star">*</span>
+									</label>
+									<input class="input_inscription" type="text" name='telephone' id='telephone_p' required placeholder=''> </input>
+									<label for="input_inscription">
+										<span class="word">Téléphone portable</span>
+										<span class="star">*</span>
+									</label>
+									<input class="" type="text" name='telephone' id='telephone_f' placeholder=''> </input>
 								</div>
-							</div>
-							<div class="first_contenant">
-								<span>Adresse Email :</span>
-								<input type="text" name='email' id='email' required placeholder=' Email'> </input>
-								<span>Ville :</span>
-								<input type="text" name='ville' id='ville' required placeholder=' Ville'> </input>
-							</div>
-						</form>
+								<div class="first_contenant">
+									<input type="text" name='ville' id='ville' required placeholder=' Ville'> </input>
+									<input class="" type="text" name='code_postal' id='code_postal' required placeholder=' Code Postal'> </input>
+									<input class="" type="text" name='adresse' id='adresse' required placeholder=' Adresse'> </input>
+									<input class="input_inscription" type="password" name='valid_mdp1' id='password_1' required placeholder=''> </input>
+									<label for="input_inscription">
+										<span class="word">Mot de passe</span>
+										<span class="star">*</span>
+									</label>
+									<input class="input_inscription" type="password" name='valid_mdp2' id='password_2' required placeholder=''> </input>
+									<label for="input_inscription">
+										<span class="word">Confirmer mot de passe</span>
+										<span class="star">*</span>
+									</label>
+									<div class="contenant_button">
+										<button class="button_inscription" type='submit' name='valid_user'>S'INSCRIRE</button>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
