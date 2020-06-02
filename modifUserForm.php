@@ -85,7 +85,33 @@
         <input type="text" name='email' value="<?php echo $user['email'] ?>">
       </div>
       </form>
-    </div>
+		</div>
+		<div class="AdresseUpdate">
+			<h2>Adresse</h2>
+			<div class="ville">
+				<p>Ville</p>
+				<input type="text" name='ville' value="<?php echo $user['ville'] ?>">
+			</div>
+			<div class="code_postal">
+				<p>Code postal</p>
+				<input type="text" name='code_postal' value="<?php echo $user['code_postal'] ?>">
+			</div>
+			<div class="adresse">
+				<p>Adresse</p>
+				<input type="text" name='adresse' value="<?php echo $user['adresse'] ?>">
+			</div>
+		</div>
+		<div class="coordonneesUpdate">
+			<h2>Coordonnées</h2>
+			<div class="telP">
+				<p>Téléphone portable</p>
+				<input type="text" name='telP' value="<?php echo $user['telephone_p'] ?>">
+			</div>
+			<div class="telF">
+				<p>Téléphone Fixe</p>
+				<input type="text" name='telF' value="<?php echo $user['telephone-f'] ?>">
+			</div>
+		</div>
 	</div>
 </body>
 </html>

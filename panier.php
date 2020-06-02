@@ -7,7 +7,6 @@
 		<script src="js/jquery.min.js"></script>
 		 <!-- Custom Theme files -->
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
-		<link href="css/panier.css" rel='stylesheet' type='text/css' />
 
    		 <!-- Custom Theme files -->
    		  <!---- start-smoth-scrolling---->

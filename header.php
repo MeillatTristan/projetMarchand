@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link href="css/style.css" rel='stylesheet' type='text/css' />
 
 <nav class="top-nav">
 	<ul class="top-nav">
