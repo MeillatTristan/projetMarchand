@@ -16,7 +16,7 @@
 	<script src="js/script.js"></script>
 </head>
 
-<body>
+<body class="body">
 	<?php
 	session_start();
 	if (isset($_SESSION['id'])) {
@@ -49,7 +49,11 @@
 					</form>
 					<button id='buttonInscription' onclick="inscription()">Pas de compte ? Inscrivez-vous ! </button>
 					<div id="background_inscription">
+						<span class="close_inscription" onclick="close_inscription()">×</span>
 						<div id="inscription_onclick">
+							<h2>S'inscrire <span></span></h2>
+							
+							<h3>Les champs avec une <span class="red">*</span> sont obligatoire</h3>
 							<form class="inscription" action='valid_user.php'>
 								<div class="first_contenant">
 									<span>Nom <span class="red">*</span> :</span>

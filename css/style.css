@@ -746,20 +746,60 @@ body{
 	display: flex;
 	background-color: #ffffff;
 	width: 75%;
-	height: 70%;
+	height: 530px;
 	border-radius: 50px;
+	margin-top: 80px;
+	flex-direction: column;
+	align-items: center;
+}
+
+#inscription_onclick h2 {
+	margin-top: 20px;
+	color: #10AC84;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 33px;
+	position: relative;
+}
+
+#inscription_onclick h3 {
+	align-self: flex-start;
+	margin-left: 113px;
+}
+
+#inscription_onclick h2 span {
+	position: absolute;
+	width:  72px;
+	height: 0;
+	border: 3px solid #10AC84;
+	border-radius: 4px;
+	top: 40px;
+	left: 32px;
+}
+
+.close_inscription {
+	position: absolute;
+	right: 240px;
+	top: 90px;
+	font-size: 50px;
+	color: #F64747;
+	cursor: pointer;
 }
 
 .first_contenant {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
-	height: 80%;
+	height: 100%;
 }
 
 .first_contenant input{
 	width: 100%;
 	margin-bottom: 15px;
+	border: 3px solid #10AC84;
+	box-sizing: border-box;
+	border-radius: 10px;
+	height: 30px;
 }
 
 .first_contenant span {
@@ -772,30 +812,42 @@ body{
 .inscription {
 	display: flex;
 	align-items: center;
-	padding: 60px;
+	padding: 0px 60px 30px 60px ;
 	width: 100%;
 	justify-content: space-around;
+	margin-top: 10px;
 }
 
 #background_inscription {
 	position: absolute;
 	display: none;
-	top: 100px;
+	top: 75px;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background: transparent;
 	justify-content: center;
-	align-items: center;
 }
 
 .button_inscription {
 	float: right;
+	background: #10AC84;
+	border-radius: 170px;
+	border: none;
+	color: #FFFFFF;
+	height: 40px;
+	width: 150px;
+	margin-top: 10px;
 }
 
 .input_inscription {
 	position: relative;
 	display: inline-block;
+}
+
+.body {
+	height: 100vh;
+	overflow-y: hidden;
 }
 
 

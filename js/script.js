@@ -43,5 +43,12 @@ function inscription() {
   document.getElementById('background_inscription').style.display = "flex" ;
   document.getElementById('connexion').style.display = 'none';
   document.getElementById('coo').style.display = 'none';
-  document.getElementById('buttonInscription').style.display ='none';
+  document.getElementById('buttonInscription').style.visibility = 'hidden'
+}
+
+function close_inscription() {
+  document.getElementById('background_inscription').style.display = "none";
+  document.getElementById('connexion').style.display = 'block';
+  document.getElementById('coo').style.display = 'flex';
+  document.getElementById('buttonInscription').style.visibility = 'visible';
 }
