@@ -63,23 +63,23 @@
 									<span>Adresse Email <span class="red">*</span> :</span>
 									<input type="text" name='email' id='email' required placeholder=' Email'> </input>
 									<span>Numéro de Télephone Portable <span class="red">*</span> :</span>
-									<input class="" type="text" name='telephone' id='telephone_p' required placeholder=' +33'> </input>
+									<input class="" type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" name='telephone' id='telephone_p' required placeholder=' +33'> </input>
 									<span>Numéro de Téléphone Fixe :</span>
-									<input class="" type="text" name='telephone' id='telephone_f' placeholder=''> </input>
+									<input class="" type="tel" pattern ="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" name='telephone' id='telephone_f' placeholder=''> </input>
 								</div>
 								<div class="first_contenant">
 									<span>Ville :</span>
-									<input type="text" name='ville' id='ville' required placeholder=' Ville'> </input>
+									<input type="text" name='ville' id='ville' placeholder=' Ville'> </input>
 									<span>Code Postal :</span>
-									<input class="" type="text" name='code_postal' id='code_postal' required placeholder=' Code Postal'> </input>
+									<input class="" type="text" name='code_postal' id='code_postal' placeholder=' Code Postal'> </input>
 									<span>Adresse :</span>
-									<input class="" type="text" name='adresse' id='adresse' required placeholder=' Adresse'> </input>
+									<input class="" type="text" name='adresse' id='adresse' placeholder=' Adresse'> </input>
 									<span>Mot de passe <span class="red">*</span> :</span>
 									<input class="" type="password" name='valid_mdp1' id='password_1' required placeholder=' ************'> </input>
 									<span>Confirmation de mot de passe <span class="red">*</span> :</span>
 									<input class="" type="password" name='valid_mdp2' id='password_2' required placeholder=' ************'> </input>
 									<div class="contenant_button">
-										<button class="button_inscription" type='submit' name='valid_user'>S'INSCRIRE</button>
+										<button class="button_inscription" type='submit' oninvalid="invalidForm()" name='valid_user'>S'INSCRIRE</button>
 									</div>
 								</div>
 							</form>

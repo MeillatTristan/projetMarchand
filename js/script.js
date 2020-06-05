@@ -52,3 +52,7 @@ function close_inscription() {
   document.getElementById('coo').style.display = 'flex';
   document.getElementById('buttonInscription').style.visibility = 'visible';
 }
+
+function invalidForm(){
+  Document
+}

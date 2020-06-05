@@ -26,7 +26,7 @@
 	<ul>
 		<li>
 			<img src="images/commandes.png" alt="icone Commandes">
-			<a href="index.php">Commandes</a>
+			<a href="commandes.php">Commandes</a>
 		</li>
 		<li>
 			<img src="images/profil.png" alt="icone Profil">
