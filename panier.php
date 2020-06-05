@@ -168,6 +168,7 @@
 									</select>
 								</div>
 								<div class="containerSubmitTotal">
+									<input type="text" value='<?php echo $total ?>' name="price" hidden >
 									<input id="commandSubmit" type="submit" value="Valider ma commande">
 								</div>
 							</form>

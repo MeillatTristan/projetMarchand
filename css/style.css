@@ -962,3 +962,19 @@ color: #0F8869;
 	width: 150px;
 	font-size: 17px;
 }
+
+/* page commande */
+
+.containerAllCommandes{
+	margin: 20px 236px 0px 236px;
+}
+
+.headerCommande{
+	display: flex;
+	background-color: #F8F6F6;
+}
+
+.headerCommande *{
+	margin-left: 40px;
+	font-size: 15px;
+}

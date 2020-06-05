@@ -15,7 +15,7 @@ for($i = 0; $i < count($_SESSION['panier']); $i++){
   }
 }
 
-if(isset($present)){
+if(isset($index)){
   $_SESSION['panier'][$index][1] += 1;
 
 }

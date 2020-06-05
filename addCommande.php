@@ -8,10 +8,10 @@ $typeLivraison = $_REQUEST['livraison'];
 $dateLivraison = $_REQUEST['dateLivraison'];
 $currentDate = strftime(" %A %d %B %Y");
 $idUser = $_SESSION['id'];
-echo $currentDate;
+$price = $_REQUEST['price'];
 
-$query = $bdd->prepare("INSERT INTO commandes SET userID=:userID, dateCommande=:dateCommande, dateRetrait=:dateRetrait, retrait=:typeRetrait");
-//$query->execute(['userID'=>$idUser, 'dateCommande'=>$currentDate, 'dateRetrait'=>$dateLivraison, 'typeRetrait'=>$typeLivraison]) ;
+$query = $bdd->prepare("INSERT INTO commandes SET userID=:userID, dateCommande=:dateCommande, dateRetrait=:dateRetrait, retrait=:typeRetrait, price=:price");
+$query->execute(['userID'=>$idUser, 'dateCommande'=>$currentDate, 'dateRetrait'=>$dateLivraison, 'typeRetrait'=>$typeLivraison, 'price'=>$price]) ;
 $idCommande = $bdd->query("SELECT id FROM commandes ORDER BY id DESC")->fetch()[0];
 
 
