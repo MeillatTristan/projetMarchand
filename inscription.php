@@ -74,7 +74,7 @@
         <span>Prénom :</span>
         <input type="text" name='firstname' id='firstname' required placeholder=' Prénom' autofocus=""> </input>
         <span>Adresse :</span>
-        <input class="" type="text" name='adresse' id='adresse' required placeholder=' Adresse'> </input>
+        <input class="" type="text" name='adresse' id='adresse' required placeholder=''> </input>
         <span>Numéro de Téléphone Fixe :</span>
         <input class="" type="text" name='telephone' id='telephone_f' placeholder=''> </input>
         <span>Mot de passe :</span>
@@ -84,7 +84,7 @@
         <span>Nom :</span>
         <input type="text" name='lastname' id='lastname' required placeholder=' Nom'> </input>
         <span>Code Postal :</span>
-        <input class="" type="text" name='code_postal' id='code_postal' required placeholder=' Code Postal'> </input>
+        <input class="" type="text" name='code_postal' id='code_postal' required placeholder=''> </input>
         <span>Numéro de Télephone Portable :</span>
         <input class="" type="text" name='telephone' id='telephone_p' required placeholder=' +33'> </input>
         <span>Confirmation de mot de passe :</span>
@@ -97,7 +97,7 @@
         <span>Adresse Email :</span>
         <input type="text" name='email' id='email' required placeholder=' Email'> </input>
         <span>Ville :</span>
-        <input type="text" name='ville' id='ville' required placeholder=' Ville'> </input>
+        <input type="text" name='ville' id='ville' required placeholder=''> </input>
       </div>
     </form>
   </div>

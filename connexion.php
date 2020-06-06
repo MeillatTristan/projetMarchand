@@ -69,11 +69,11 @@
 								</div>
 								<div class="first_contenant">
 									<span>Ville :</span>
-									<input type="text" name='ville' id='ville' required placeholder=' Ville'> </input>
+									<input type="text" name='ville' id='ville' placeholder=' Ville'> </input>
 									<span>Code Postal :</span>
-									<input class="" type="text" name='code_postal' id='code_postal' required placeholder=' Code Postal'> </input>
+									<input class="" type="text" name='code_postal' id='code_postal' placeholder=' Code Postal'> </input>
 									<span>Adresse :</span>
-									<input class="" type="text" name='adresse' id='adresse' required placeholder=' Adresse'> </input>
+									<input class="" type="text" name='adresse' id='adresse' placeholder=' Adresse'> </input>
 									<span>Mot de passe <span class="red">*</span> :</span>
 									<input class="" type="password" name='valid_mdp1' id='password_1' required placeholder=' ************'> </input>
 									<span>Confirmation de mot de passe <span class="red">*</span> :</span>
