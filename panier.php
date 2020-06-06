@@ -71,7 +71,12 @@
 			<div class="container">
 				<?php
 				if(!isset($_SESSION['panier'])){
+					if(isset($_REQUEST['commande'])){
+						echo "<p class='panierVide'> Merci pour votre commande ! </p>";
+					}
+					else{
 					echo "<p class='panierVide' >Votre panier est vide</p>";
+					}
 				}
 				else{
 					$total = 0;
@@ -127,14 +132,14 @@
 							</div>
 							<div class="containerRemise">
 								<p class="titleRemise">Remise</p>
-								<form action="ValidCommande.php" method="post">
+								<form action="addCommande.php" method="post">
 									<div class="livraisonEmporter" id="containerEmporter">
-										<input type="radio" name="livraison" id="livraisonEmporter" value="emporter" onclick="changeRadioEmport()">
+										<input type="radio" name="livraison" id="livraisonEmporter" value="e" onclick="changeRadioEmport()" required>
 										<span class="checkmark"></span>
 										<p>A emporter</p>
 									</div>
 									<div class="livraisonEmporter" id="containerDomicile">
-										<input type="radio" name="livraison" id="livraisonDomicile" value="domicile" onclick="changeRadioDomicile()">
+										<input type="radio" name="livraison" id="livraisonDomicile" value="d" onclick="changeRadioDomicile()">
 										<span class="checkmark"></span>
 										<p for="livraisonDomicile">A domicile</p>
 									</div>
@@ -142,7 +147,7 @@
 								<p class="titleDate">Date de livraison</p>
 								<div class="dateLivraison">
 									<img src="images/calendar-alt.png" alt="icone Date">
-									<select name="pets" id="pet-select">
+									<select required name="dateLivraison">
 										<option value="" selected disabled>--Choisir une date--</option>
 										<?php
 											setlocale(LC_TIME, "fr_FR");
@@ -163,6 +168,7 @@
 									</select>
 								</div>
 								<div class="containerSubmitTotal">
+									<input type="text" value='<?php echo $total ?>' name="price" hidden >
 									<input id="commandSubmit" type="submit" value="Valider ma commande">
 								</div>
 							</form>

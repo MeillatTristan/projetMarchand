@@ -161,7 +161,7 @@ body{
 	vertical-align: middle;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
-	
+
 }
 
 .indexPage h1 label {
@@ -408,7 +408,7 @@ body{
 	display: flex;
 	border-bottom: solid 1px #ECECEC;
 	padding-top: 15px;
-	height: 100px;
+	height: 120px;
 }
 
 .containerAllArticle .photoArticle{
@@ -632,7 +632,7 @@ body{
 	justify-content: center;
 }
 
-/* Page connexion */
+/* Page connexion + inscription */
 
 .backlogin {
 	height: 100vh;
@@ -735,7 +735,7 @@ body{
 	line-height: 23px;
 	font-weight: 500;
 	text-align: center;
-	
+
 }
 
 #buttonInscription:hover {
@@ -802,6 +802,11 @@ body{
 	height: 30px;
 }
 
+.first_contenant input:invalid{
+	border-color: #ff5252;
+	box-shadow: none;
+}
+
 .first_contenant span {
 	text-align: left;
 }
@@ -849,6 +854,7 @@ body{
 	height: 100vh;
 	overflow-y: hidden;
 }
+
 
 
 
@@ -900,3 +906,75 @@ body{
 	width: 35% !important;
 }
 
+/* page update profil */
+
+.containerPartsUpdate{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+ .informationUpdateContainer{
+	width: 40%;
+	margin-bottom: 20px;
+}
+
+#containerModifPassword{
+	margin-left: 5%;
+	margin-top: 40px;
+}
+
+.informationUpdateContainer h2{
+	border-bottom: 2px solid #CDCDCD;
+	padding-bottom: 10px;
+	font-size: 23px;
+}
+
+.containerInputUpdate{
+	display: flex;
+	margin-top: 15px;
+}
+
+.containerInputUpdate p{
+width: 150px;
+color: #0F8869;
+}
+
+.containerInputUpdate input[type=text], .containerInputUpdate input[type=password], .containerInputUpdate input[type=tel]{
+	width: 400px;
+	height: 30px;
+}
+
+.containerSubmitUpdate{
+	width: 40%;
+	margin-left: 5%;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.containerSubmitUpdate input[type=submit]{
+	justify-self: flex-start;
+	border: none;
+	background-color: #4A4A4A;
+	color: #ffffff;
+	border-radius: 40px;
+	height: 40px;
+	width: 150px;
+	font-size: 17px;
+}
+
+/* page commande */
+
+.containerAllCommandes{
+	margin: 20px 236px 0px 236px;
+}
+
+.headerCommande{
+	display: flex;
+	background-color: #F8F6F6;
+}
+
+.headerCommande *{
+	margin-left: 40px;
+	font-size: 15px;
+}

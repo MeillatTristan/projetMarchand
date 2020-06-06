@@ -7,7 +7,6 @@
 		<script src="js/jquery.min.js"></script>
 		 <!-- Custom Theme files -->
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
-		<link href="css/panier.css" rel='stylesheet' type='text/css' />
 
    		 <!-- Custom Theme files -->
    		  <!---- start-smoth-scrolling---->
@@ -66,51 +65,84 @@
       </div>
     </div>
     <?php
+			if(!isset($_SESSION['id'])){
+				header('Location:connexion.php');
+			}
       $idUser = $_SESSION['id'];
       $user = $bdd->query("SELECT * FROM users WHERE id=$idUser")->fetch();
     ?>
-		<div class="informationPerso">
-      <h2>Informations personnelles</h2>
-      <div class="firstname">
-        <p>Prénom</p>
-        <form action="modifUser.php" method="post">
-        <input type="text" name='firstname' value="<?php echo $user['firstname'] ?>">
-      </div>
-      <div class="email">
-        <p>Nom</p>
-        <input type="text" name='lastname' value="<?php echo $user['lastname'] ?>">
-      </div>
-      <div class="lastname">
-        <p>Email</p>
-        <input type="text" name='email' value="<?php echo $user['email'] ?>">
-      </div>
-      </form>
+		<div class="containerPartsUpdate">
+			<div class="informationUpdateContainer">
+				<h2>Informations personnelles</h2>
+				<div class="containerInputUpdate">
+					<p>Prénom</p>
+					<form action="modifUser.php" method="post">
+					<input type="text" name='firstname' value="<?php echo $user['firstname'] ?>">
+				</div>
+				<div class="containerInputUpdate">
+					<p>Nom</p>
+					<input type="text" name='lastname' value="<?php echo $user['lastname'] ?>">
+				</div>
+				<div class="containerInputUpdate">
+					<p>Email</p>
+					<input type="text" name='email' value="<?php echo $user['email'] ?>">
+				</div>
+			</div>
+			<div class="informationUpdateContainer">
+				<h2>Adresse</h2>
+				<div class="containerInputUpdate">
+					<p>Ville</p>
+					<input type="text" name='ville' value="<?php echo $user['ville'] ?>">
+				</div>
+				<div class="containerInputUpdate">
+					<p>Code postal</p>
+					<input type="text" name='code_postal' value="<?php
+					if($user['code_postal'] == 0 || $user['code_postal'] == ''){
+						echo '';
+					}
+					else{
+					echo $user['code_postal'];
+					} ?>">
+				</div>
+				<div class="containerInputUpdate">
+					<p>Adresse</p>
+					<input type="text" name='adresse' value="<?php echo $user['adresse'] ?>">
+				</div>
+			</div>
+			<div class="informationUpdateContainer">
+				<h2>Coordonnées</h2>
+				<div class="containerInputUpdate">
+					<p>Téléphone portable</p>
+					<input type="tel" name='telephone_p' pattern='^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$' value="<?php
+					if($user['telephone_p'] == 0 || $user['telephone_p'] == ''){
+						echo '';
+					}
+					else{
+					echo $user['telephone_p'];
+					} ?>">
+				</div>
+				<div class="containerInputUpdate">
+					<p>Téléphone Fixe</p>
+					<input type="tel" name='telephone_f' pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" value="<?php
+					if($user['telephone_f'] == 0 || $user['telephone_f'] == ''){
+						echo '';
+					}
+					else{
+					echo $user['telephone_f'];
+					} ?>">
+				</div>
+			</div>
+			<div class="informationUpdateContainer">
+				<h2>Mot de passe</h2>
+				<div class="containerInputUpdate">
+					<p>Confirmer votre </br>mot de passe</p>
+					<input type="password">
+				</div>
+			</div>
 		</div>
-		<div class="AdresseUpdate">
-			<h2>Adresse</h2>
-			<div class="ville">
-				<p>Ville</p>
-				<input type="text" name='ville' value="<?php echo $user['ville'] ?>">
-			</div>
-			<div class="code_postal">
-				<p>Code postal</p>
-				<input type="text" name='code_postal' value="<?php echo $user['code_postal'] ?>">
-			</div>
-			<div class="adresse">
-				<p>Adresse</p>
-				<input type="text" name='adresse' value="<?php echo $user['adresse'] ?>">
-			</div>
-		</div>
-		<div class="coordonneesUpdate">
-			<h2>Coordonnées</h2>
-			<div class="telP">
-				<p>Téléphone portable</p>
-				<input type="text" name='telP' value="<?php echo $user['telephone_p'] ?>">
-			</div>
-			<div class="telF">
-				<p>Téléphone Fixe</p>
-				<input type="text" name='telF' value="<?php echo $user['telephone-f'] ?>">
-			</div>
+		<div class="containerSubmitUpdate">
+				<input type="submit" value='confirmer'>
+				</form>
 		</div>
 	</div>
 </body>
