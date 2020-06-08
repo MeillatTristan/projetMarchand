@@ -404,7 +404,7 @@ body{
 	text-transform: uppercase;
 }
 
-.containerAllArticle .containerArticle{
+.containerArticle{
 	display: flex;
 	border-bottom: solid 1px #ECECEC;
 	padding-top: 15px;
@@ -416,7 +416,7 @@ body{
 	margin-left: 25px;
 }
 
-.containerAllArticle .photoArticle img{
+.photoArticle img{
 	max-width: 100px;
 	max-height: 100px;
 }
@@ -972,9 +972,58 @@ color: #0F8869;
 .headerCommande{
 	display: flex;
 	background-color: #F8F6F6;
+	height: 90px;
+	align-items: center;
 }
 
-.headerCommande *{
-	margin-left: 40px;
-	font-size: 15px;
+.headerCommande > *{
+	margin-right: 40px;
+	font-size: 13px;
+}
+
+.dateCommandeRecap{
+	margin-left: 20px;
+}
+
+.headerCommande .idCommande{
+	margin-left: auto;
+}
+
+.bodyCommande img{
+	max-height: 100px;
+	max-width: 100px;
+}
+
+.photoArticleCommande{
+	width: 220px;
+	display: flex;
+	justify-content: center;
+}
+
+.containerCommande{
+	border: solid 1px #ECECEC;
+	margin-bottom: 25px;
+}
+
+.containerAddToPanier{
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 35px;
+}
+
+.containerAddToPanier img{
+	height: 35px;
+	width: 35px;
+}
+
+.containerAddToPanier button{
+	background: none;
+	border: none;
+	z-index: 3;
+}
+
+.containerAddToPanier button span{
+	border-bottom: solid 1px #0F8869;
+	margin-right: 10px;
 }

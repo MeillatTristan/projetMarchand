@@ -53,6 +53,3 @@ function close_inscription() {
   document.getElementById('buttonInscription').style.visibility = 'visible';
 }
 
-function invalidForm(){
-  Document
-}

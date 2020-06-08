@@ -29,4 +29,8 @@ if ($_REQUEST['page'] == 'l'){
 elseif ($_REQUEST['page'] == 'f'){
   header("Location:fruit.php");
 }
+elseif ($_REQUEST['page'] == 'c'){
+  header("Location:commandes.php");
+}
+echo $_REQUEST['page'];
 ?>
