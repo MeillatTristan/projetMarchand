@@ -56,3 +56,14 @@ function close_inscription() {
 function invalidForm(){
   Document
 }
+
+function validForm() {
+  let password1 = document.getElementById('password_1').innerHTML;
+  let password2 = document.getElementById('password_2').innerHTML;
+  if (password1 == password2) {
+    return true
+  }
+  else {
+    return false
+  }
+}
