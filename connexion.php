@@ -63,9 +63,9 @@
 									<span>Adresse Email <span class="red">*</span> :</span>
 									<input type="text" name='email' id='email' required placeholder=' Email'> </input>
 									<span>Numéro de Télephone Portable <span class="red">*</span> :</span>
-									<input class="" type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" name='telephone' id='telephone_p' required placeholder=' +33'> </input>
+									<input class="" type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" name='telephone_p' id='telephone_p' required placeholder=' +33'> </input>
 									<span>Numéro de Téléphone Fixe :</span>
-									<input class="" type="tel" pattern ="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" name='telephone' id='telephone_f' placeholder=''> </input>
+									<input class="" type="tel" pattern ="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" name='telephone_f' id='telephone_f' placeholder=''> </input>
 								</div>
 								<div class="first_contenant">
 									<span>Ville :</span>
