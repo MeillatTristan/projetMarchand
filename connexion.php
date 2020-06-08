@@ -54,7 +54,7 @@
 							<h2>S'inscrire <span></span></h2>
 							
 							<h3>Les champs avec une <span class="red">*</span> sont obligatoire</h3>
-							<form class="inscription" action='valid_user.php'>
+							<form class="inscription" action='valid_user.php' onsubmit="return validForm()">
 								<div class="first_contenant">
 									<span>Nom <span class="red">*</span> :</span>
 									<input type="text" name='lastname' id='lastname' required placeholder=' Nom'> </input>
