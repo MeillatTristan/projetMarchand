@@ -35,5 +35,5 @@ $password_1 = password_hash($_REQUEST['valid_mdp1'], PASSWORD_DEFAULT);
 
 $query = $bdd->prepare("INSERT INTO users SET firstname=:firstname, lastname=:lastname, email=:email, adresse=:adresse, code_postal=:code_postal, ville=:ville, telephone_p=:telephone_p, telephone_f=:telephone_f, password_1=:password_1 ");
 $query->execute(['firstname'=>$firstname, 'lastname'=>$lastname, 'email'=>$email, 'adresse'=>$adresse, 'code_postal'=>$code_postal, 'ville'=>$ville, 'telephone_p'=>$telephone_p,'telephone_f'=>$telephone_f, 'password_1'=>$password_1 ]) ;
-//header('Location: http://localhost/projetMarchand/index.php');
+header('Location: http://localhost/projetMarchand/index.php');
 exit();
