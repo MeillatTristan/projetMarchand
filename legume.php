@@ -81,10 +81,16 @@
 				<div class="allArticle">
 					<?php
 
-					$query = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y'");
+					$query = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y' ORDER BY promo DESC");
 					while ( $articles = $query->fetch()){
 						?>
 						<div class="article">
+						<?php 
+							if($articles['promo'] == 'y'){
+								echo "<span class='triangleTopRight'></span>";
+								echo "<span class='textTriangle'>%</span>";	
+							}
+						?>
 						<?php
 							echo "<img class='imgArticle' src='images/".$articles['picture'] ."' alt='photo de l'article'>";
 							echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;

@@ -307,6 +307,7 @@ body{
 	margin-left: 170px;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 .article img{
@@ -370,6 +371,25 @@ body{
 .article button img{
 	max-width: 42px;;
 	height: auto;
+}
+
+.triangleTopRight {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 75px solid #10AC84;
+	border-left: 75px solid transparent;
+	right: 0;
+	top: 0;
+}
+
+.textTriangle{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 30px;
 }
 
 /* page panier */
