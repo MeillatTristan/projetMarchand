@@ -12,6 +12,7 @@
    		  <!---- start-smoth-scrolling---->
 		<script type="text/javascript" src="js/move-top.js"></script>
 		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
@@ -57,7 +58,6 @@
 	?>
 
 		<!---- header-info ---->
-		<div class="container ">
 		<div class="header-info text-center">
 			<div class="containerTitle">
 				<div class="bgHeaderLegume"></div>
@@ -65,48 +65,51 @@
 			</div>
 		</div>
 	<!--- Affichage Fruits ---->
-	<div id="about" class="about">
-		<div class="container">
-			<div class="containerPrintArticle">
-			<?php
-			$requete = $bdd->query("SELECT * FROM articles WHERE type='f' AND venteBool='y'");
-			if($requete->fetch() == FALSE){
-				echo "< class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
+		<div class="containerPrintArticle">
+		<?php
+		$requete = $bdd->query("SELECT * FROM articles WHERE type='f' AND venteBool='y'");
+		if($requete->fetch() == FALSE){
+			echo "< class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
+		}
+		else{
+			if(isset($_REQUEST['falseQuantity'])){
+				echo "<p>Merci de rentrer une quantité uniquement composé de chiffre</p>";
 			}
-			else{
-				if(isset($_REQUEST['falseQuantity'])){
-					echo "<p>Merci de rentrer une quantité uniquement composé de chiffre</p>";
-				}
-				?>
-				<div class="allArticle">
-					<?php
+			?>
+			<label class="filtre">Bio
+				<input type="checkbox" id='bio' onclick="filtreBio()">
+				<span class="checkmark"></span>
+			</label>
+			<div class="allArticle">
+				<?php
 
-					$query = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y' ORDER BY promo DESC");
-					while ( $articles = $query->fetch()){
-						?>
-						<div class="article">
-						<?php 
-							if($articles['promo'] == 'y'){
-								echo "<span class='triangleTopRight'></span>";
-								echo "<span class='textTriangle'>%</span>";	
-							}
-						?>
-						<?php
-							echo "<img class='imgArticle' src='images/".$articles['picture'] ."' alt='photo de l'article'>";
-							echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;
-							echo "<p class='priceArticle'><span></span>". $articles['prix']."€</p> </div>" ;
-							echo "<div class='containerProvenanceSubmit'><p class='provenanceArticle'>". $articles['provenance']."</p>" ;
-							echo "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> " ;
-							echo "<button type='sumbit' name='inputSubmit'><img src='images/panier.png'</button> </form></div>";
-						?>
-						</div>
-						<?php
-					}
-					
+				$query = $bdd->query("SELECT * FROM articles WHERE type='l' AND venteBool='y' ORDER BY promo DESC");
+				while ( $articles = $query->fetch()){
 					?>
-				</div>
-				<?php } ?>
+					<div class="article <?php if($articles['bio'] != 'y'){
+					echo "noBio";
+					}?>">
+					<?php 
+						if($articles['promo'] == 'y'){
+							echo "<span class='triangleTopRight'></span>";
+							echo "<span class='textTriangle'>%</span>";	
+						}
+					?>
+					<?php
+						echo "<img class='imgArticle' src='images/".$articles['picture'] ."' alt='photo de l'article'>";
+						echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;
+						echo "<p class='priceArticle'><span></span>". $articles['prix']."€</p> </div>" ;
+						echo "<div class='containerProvenanceSubmit'><p class='provenanceArticle'>". $articles['provenance']."</p>" ;
+						echo "<form action='addArticleToPanier.php'> <input type='hidden' value='l' name='page'> <input type='hidden' value= '" .$articles['id']."' name='id'> " ;
+						echo "<button type='sumbit' name='inputSubmit'><img src='images/panier.png'</button> </form></div>";
+					?>
+					</div>
+					<?php
+				}
+				
+				?>
 			</div>
+			<?php } ?>
 		</div>
 	</body>
 </html>

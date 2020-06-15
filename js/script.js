@@ -63,3 +63,20 @@ function validForm() {
     return false
   }
 }
+
+function filtreBio(){
+  let articleBio = document.getElementsByClassName('noBio');
+  let checkmark = document.getElementById('bio');
+
+  if (checkmark.checked == true){
+    for (let index = 0; index < articleBio.length; index++) {
+      articleBio[index].style.display = 'none';
+    }
+  }
+  else{
+    for (let index = 0; index < articleBio.length; index++) {
+      articleBio[index].style.display = 'flex';
+    }
+  }
+
+}
