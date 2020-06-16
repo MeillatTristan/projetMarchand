@@ -13,12 +13,11 @@
 		<!----//End-top-nav-script---->
 
 	</head>
-	<body class='toHeight'>
+	<body id='body'>
   <?php
   session_start();
   ?>
   <div class="containerAdminAll">
-  <?php include "sidebarAdmin.php" ?>
   <?php
   include "configbdd.php";
   if(!isset($_SESSION['id'])){
@@ -27,6 +26,7 @@
   ?>
   <div class="containerAdmin">
     <?php include "header.php" ?>
+    <?php include "sidebar.php" ?>
     <style type="text/css">
     .bg {
       background : #eceef2

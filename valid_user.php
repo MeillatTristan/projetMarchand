@@ -29,7 +29,7 @@ else {
   $telephone_f = '' ;
 }
 
-$telephone_p = "+33".$_REQUEST["telephone_p"];
+$telephone_p = $_REQUEST["telephone_p"];
 $password_1 = password_hash($_REQUEST['valid_mdp1'], PASSWORD_DEFAULT);
 
 

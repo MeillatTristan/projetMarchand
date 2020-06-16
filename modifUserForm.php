@@ -69,10 +69,18 @@
 				header('Location:connexion.php');
 			}
       $idUser = $_SESSION['id'];
-      $user = $bdd->query("SELECT * FROM users WHERE id=$idUser")->fetch();
+			$user = $bdd->query("SELECT * FROM users WHERE id=$idUser")->fetch();
+			
     ?>
+
 		<div class="containerPartsUpdate">
+			
 			<div class="informationUpdateContainer">
+			<?php 
+				if(isset($_REQUEST['errorPass'])){
+					echo "<p class='errorPassword'>Votre mot de passe ne correspond pas</p>";
+				}
+			?>
 				<h2>Informations personnelles</h2>
 				<div class="containerInputUpdate">
 					<p>Prénom</p>
@@ -136,7 +144,7 @@
 				<h2>Mot de passe</h2>
 				<div class="containerInputUpdate">
 					<p>Confirmer votre </br>mot de passe</p>
-					<input type="password">
+					<input name='passwordConfirm' type="password">
 				</div>
 			</div>
 		</div>

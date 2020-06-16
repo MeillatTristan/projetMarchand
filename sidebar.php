@@ -35,11 +35,11 @@
 		<?php
 			$admin = $bdd->query("SELECT admin FROM users WHERE id=$idUser")->fetch()[0];
 			if ($admin == "y"){
-			?>
+				?>
 				<li>
-			<img src="images/user-crown.png" alt="icone Gestion">
-			<a href="pannelAdmin.php">Gestion</a>
-		</li>
+					<img src="images/user-crown.png" alt="icone Gestion">
+					<a href="pannelAdmin.php">Gestion</a>
+				</li>
 		<?php
 			}
 		?>
