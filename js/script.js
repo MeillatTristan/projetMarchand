@@ -64,7 +64,7 @@ function validForm() {
   }
 }
 
-function filtreBio(){
+function filtre(choiceFiltre){
   let articleBio = document.getElementsByClassName('noBio');
   let checkmark = document.getElementById('bio');
 

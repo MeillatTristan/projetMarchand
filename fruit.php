@@ -68,21 +68,26 @@
 	<div id="about" class="about">
 		<div class="containerPrintArticle">
 		<?php
-		$requete = $bdd->query("SELECT * FROM articles WHERE type='f' AND venteBool='y'");
+		$requete = $bdd->query("SELECT * FROM articles WHERE venteBool='y'");
 		if($requete->fetch() == FALSE){
 			echo "< class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
 		}
 		else{
 		?>
-			<?php
-				if(isset($_REQUEST['falseQuantity'])){
-					echo "<p>Merci de rentrer une quantité uniquement composé de chiffre</p>";
-				}
-			?>
-			<label class="filtre">Bio
-				<input type="checkbox" id='bio' onclick="filtreBio()">
-				<span class="checkmark"></span>
-			</label>
+			<div class="allFiltre">
+				<label class="filtre">Bio
+					<input type="checkbox" id='bio' onclick="filtre('bio')">
+					<span class="checkmark"></span>
+				</label>
+				<label class="filtre">Fruits
+					<input type="checkbox" id='bio' onclick="filtreBio('fruit')">
+					<span class="checkmark"></span>
+				</label>
+				<label class="filtre">Légumes
+					<input type="checkbox" id='bio' onclick="filtreBio('legume')">
+					<span class="checkmark"></span>
+				</label>
+			</div>
 			<div class="allArticle">
 				<?php
 

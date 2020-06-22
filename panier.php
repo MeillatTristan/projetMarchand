@@ -49,6 +49,9 @@
 	<body id="body">
 		<?php
 		session_start();
+		if(isset($_SESSION['id'])){
+			header("Location:connexion.php");
+		}
 		?>
 	<div class="containerAll">
 		<?php
