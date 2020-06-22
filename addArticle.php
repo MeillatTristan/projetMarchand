@@ -20,9 +20,12 @@ $provenance = $_REQUEST['provenance'];
 $namePicture = $_FILES['picture']['name'];
 
 move_uploaded_file($_FILES['picture']['tmp_name'], "images/" . $namePicture);
-$queryInsert = $bdd->prepare("INSERT INTO articles SET name = :name, type = :type, prix = :price, quantity = :quantity, picture = :picture, venteBool= :venteBool, provenance= :provenance");
-$queryInsert->execute(array(':name' =>$name,':type'=> $type, ':price'=>$price, ':quantity'=>$quantity, ':picture' => $namePicture, ':venteBool' =>'y', ':provenance'=>$provenance));
-header('Location: addArticleForm.php?good=y');
+$queryInsert = $bdd->prepare("INSERT INTO articles SET name = :name, prix = :price, picture = :picture, venteBool= :venteBool, provenance= :provenance");
+$queryInsert->execute(array(':name' =>$name, ':price'=>$price, ':picture' => $namePicture, ':venteBool' =>'y', ':provenance'=>$provenance));
+
+$idLastArticle = $bdd->query("SELECT * form articles DESC")->fetch()[0];
+echo $idLastArticle;
+//header('Location: addArticleForm.php?good=y');
 
 
 ?>

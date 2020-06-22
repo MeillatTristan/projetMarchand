@@ -16,22 +16,20 @@
 	<body class="toHeight">
   <?php
   session_start();
+  
   ?>
   <div class="containerAdminAll">
-  <?php include "sidebarAdmin.php" ?>
   <?php
   include "configbdd.php";
   if(!isset($_SESSION['id'])){
     header("Location : index.php");
   }
+  $id = $_SESSION['id'];
+  $admin = $bdd->query("SELECT admin FROM users WHERE id = $id")->fetch()[0];
+  if($admin == 'n'){
+    header("Location:index.php");
+  }
   ?>
-  <div class="containerAdmin">
-    <?php include "header.php" ?>
-    <style type="text/css">
-    .bg {
-      background : #eceef2
-    }
-    </style>
 
     <!---- header-info ---->
     <div class="header-info text-center">
@@ -52,13 +50,17 @@
           <option value="l">Légume</option>
           <option value="f">Fruit</option>
         </select>
-        <input type="text" name="quantity" required placeholder=" Quantité">
         <input type="text" name="price" placeholder=" Prix" required>
         <input type="text" name="provenance" placeholder=" Provenance" required>
         <div class="uploadPicture">
           <label for="pictureLabel">Photo de l'article :</label>
           <input type="file" id="picture" name="picture" accept="image/*" required>
         </div>
+        <div>
+          <input type="checkbox"  name="bio">
+          <label for="bio">Bio</label>
+        </div>
+        
         <input type="submit" value="Validé">
       </form>
     </div>
