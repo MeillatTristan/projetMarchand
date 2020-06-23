@@ -30,13 +30,31 @@ function changeRadioEmport(){
   }
 }
 
-function changeRadioDomicile(){
-  if(document.getElementById('livraisonDomicile').checked){
-    document.getElementById('containerDomicile').style.backgroundColor = "#4A4A4A";
-    document.getElementById('containerDomicile').style.color = "#ffffff";
-    document.getElementById('containerEmporter').style.backgroundColor = "#ffffff";
-    document.getElementById('containerEmporter').style.color = "#4A4A4A";
+function changeRadioDomicile(adresse){
+  if(adresse.length == 0){
+    document.getElementById('livraisonDomicile').checked = false;
+    document.getElementById('livraisonEmporter').checked = true;
+    changeRadioEmport();
+    document.getElementById('overlayAdresse').style.visibility = "visible";
+    document.getElementById('overlayAdresse').style.opacity = "1";
+  document.getElementById('overlayAdresse').style.zIndex = "4";
+
   }
+  else{
+    if(document.getElementById('livraisonDomicile').checked){
+      document.getElementById('containerDomicile').style.backgroundColor = "#4A4A4A";
+      document.getElementById('containerDomicile').style.color = "#ffffff";
+      document.getElementById('containerEmporter').style.backgroundColor = "#ffffff";
+      document.getElementById('containerEmporter').style.color = "#4A4A4A";
+    }
+  }
+}
+
+function closePopup(){
+  document.getElementById('overlayAdresse').style.visibility = "invisible";
+  document.getElementById('overlayAdresse').style.opacity = "0";
+  document.getElementById('overlayAdresse').style.zIndex = "-1";
+
 }
 
 function inscription() {
@@ -64,18 +82,22 @@ function validForm() {
   }
 }
 
-function filtre(choiceFiltre){
-  let articleBio = document.getElementsByClassName('noBio');
-  let checkmark = document.getElementById('bio');
+function filtre(choiceFiltre, idCheckmark){
+  let articles = document.getElementsByClassName("article");
+  let checkmark = document.getElementById(idCheckmark);
 
   if (checkmark.checked == true){
-    for (let index = 0; index < articleBio.length; index++) {
-      articleBio[index].style.display = 'none';
+    for (let index = 0; index < articles.length; index++) {
+      if(!articles[index].className.includes(choiceFiltre)){
+        articles[index].style.display = 'none';
+      }
     }
   }
   else{
-    for (let index = 0; index < articleBio.length; index++) {
-      articleBio[index].style.display = 'flex';
+    for (let index = 0; index < articles.length; index++) {
+      if(!articles[index].className.includes(choiceFiltre)){
+        articles[index].style.display = 'flex';
+      }
     }
   }
 

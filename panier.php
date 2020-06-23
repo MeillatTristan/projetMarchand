@@ -83,7 +83,19 @@
 				}
 				else{
 					$total = 0;
+					if(date('H') < 12){
+						echo "<p class='avertissement'>Commander avant 12h00 pour récupérer votre commande dès demain !</p>";
+					}
 					?>
+					<div id="overlayAdresse">
+						<div class="noAdress">
+							<div class="containerPopup">
+								<h3 class="titlePopup">Aucune adresse renseigner</h3>
+								<button class="closePopup" onclick="closePopup()">✖</button>
+							</div>
+							<p>Pour renseigner une adresse <a href="modifUserForm.php">cliquer ici</a></p>
+						</div>
+					</div>
 					<div class="containerAllPanier">
 						<div class="containerAllArticle">
 							<div class='headPanier'>
@@ -142,7 +154,12 @@
 										<p>A emporter</p>
 									</div>
 									<div class="livraisonEmporter" id="containerDomicile">
-										<input type="radio" name="livraison" id="livraisonDomicile" value="d" onclick="changeRadioDomicile()">
+										<?php
+											$idUser = $_SESSION['id'];
+											$adresse = $bdd->query("SELECT adresse FROM users WHERE id=$idUser")->fetch()[0];
+
+										?>
+										<input type="radio" name="livraison" id="livraisonDomicile" value="d" onclick="changeRadioDomicile('<?php echo $adresse ?>')">
 										<span class="checkmark"></span>
 										<p for="livraisonDomicile">A domicile</p>
 									</div>

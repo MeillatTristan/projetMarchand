@@ -462,6 +462,15 @@ body{
   transform: rotate(45deg);
 }
 
+.allFiltre{
+	display: flex;
+}
+
+.allFiltre label{
+	font-size: 20px;
+	font-weight: normal;
+}
+
 /* page panier */
 
 .containerAllPanier{
@@ -586,6 +595,20 @@ body{
 	font-weight: 400;
 	border-bottom: solid 1px #DDDDDD;
 	padding-bottom: 15px;
+}
+
+.avertissement{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-left: 55px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #fff5f4;
+	border: 2px solid #F64747;
+	border-radius: 10px;
+	width: 60%;
 }
 
 .titleRemise{
@@ -720,6 +743,51 @@ body{
 .containerSubmitTotal{
 	display: flex;
 	justify-content: center;
+}
+
+.noAdress{
+	position: absolute;
+	top: 50%; left: 50%; /* à 50%/50% du parent référent */
+	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	width: 30%;
+}
+
+.containerPopup{
+	display: flex;
+	justify-content: space-between;
+}
+
+.titlePopup{
+	margin-top: 0px;
+}
+
+.closePopup{
+	width: 25px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background: none;
+	font-size: 25px;
+}
+
+
+
+#overlayAdresse {
+	position: fixed;
+	z-index: 4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
 }
 
 /* Page connexion + inscription */

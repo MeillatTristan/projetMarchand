@@ -61,7 +61,7 @@
 			<div class="containerTitle">
 				<div class="bgHeaderFruits">
 				</div>
-				<h1><span> </span>Fruits<span> </span></h1>
+				<h1><span> </span>Articles<span> </span></h1>
 			</div>
 		</div>
 	<!--- Affichage Fruits ---->
@@ -76,27 +76,32 @@
 		?>
 			<div class="allFiltre">
 				<label class="filtre">Bio
-					<input type="checkbox" id='bio' onclick="filtre('bio')">
+					<input type="checkbox" id='checkmarkBio' onclick="filtre('bio', 'checkmarkBio')">
 					<span class="checkmark"></span>
 				</label>
 				<label class="filtre">Fruits
-					<input type="checkbox" id='bio' onclick="filtreBio('fruit')">
+					<input type="checkbox" id='checkmarkFruit' onclick="filtre('fruit','checkmarkFruit')">
 					<span class="checkmark"></span>
 				</label>
 				<label class="filtre">Légumes
-					<input type="checkbox" id='bio' onclick="filtreBio('legume')">
+					<input type="checkbox" id='checkmarkLegume' onclick="filtre('legume', 'checkmarkLegume')">
 					<span class="checkmark"></span>
 				</label>
 			</div>
 			<div class="allArticle">
 				<?php
 
-				$query = $bdd->query("SELECT * FROM articles WHERE type='f' AND venteBool='y'  ORDER BY promo DESC");
+				$query = $bdd->query("SELECT * FROM articles WHERE venteBool='y'  ORDER BY promo DESC");
 				while ( $articles = $query->fetch()){
+					$idArticle = $articles['id'];
+					$tagsArticle = $bdd->query("SELECT tag FROM tagarticles WHERE idArticle = $idArticle");
 					?>
-					<div class="article <?php if($articles['bio'] != 'y'){
-						echo "noBio";
-						}?>">
+					<div class="article
+					<?php
+						while($tag = $tagsArticle->fetch()){
+							echo $tag[0] . " ";
+						}
+					?>">
 					<?php 
 						if($articles['promo'] == 'y'){
 							echo "<span class='triangleTopRight'></span>";

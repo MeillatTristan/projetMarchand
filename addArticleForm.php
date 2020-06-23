@@ -13,7 +13,7 @@
 		<!----//End-top-nav-script---->
 
 	</head>
-	<body class="toHeight">
+	<body id="body">
   <?php
   session_start();
   
@@ -29,6 +29,8 @@
   if($admin == 'n'){
     header("Location:index.php");
   }
+  include "header.php";
+  include "sidebar.php";
   ?>
 
     <!---- header-info ---->
@@ -47,8 +49,8 @@
       <form action="addArticle.php" class="formAddArticle" method="post" enctype="multipart/form-data">
         <input type="text" name="name" required placeholder=" Nom de l'article">
         <select name="type" id="type"  required placeholder=" Type de l'article">
-          <option value="l">Légume</option>
-          <option value="f">Fruit</option>
+          <option value="legume">Légume</option>
+          <option value="fruit">Fruit</option>
         </select>
         <input type="text" name="price" placeholder=" Prix" required>
         <input type="text" name="provenance" placeholder=" Provenance" required>
@@ -57,11 +59,11 @@
           <input type="file" id="picture" name="picture" accept="image/*" required>
         </div>
         <div>
-          <input type="checkbox"  name="bio">
+          <input type="checkbox" value='bio' name="bio">
           <label for="bio">Bio</label>
         </div>
-        
-        <input type="submit" value="Validé">
+        <textarea name="description" rows="5" cols="33" placeholder="description du produit"></textarea>
+        <input type="submit" value="Valider">
       </form>
     </div>
     </div>

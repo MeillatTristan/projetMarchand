@@ -8,13 +8,8 @@
 			</a>
 		</li>
 		<li>
-			<a href="legume.php">
-			<img src="images/iconLegume.png" alt="icone Legume">Légumes
-			</a>
-		</li>
-		<li>
 			<a href="fruit.php">
-			<img src="images/iconFruit.png" alt="icone Fruit">Fruits
+			<img src="images/iconFruit.png" alt="icone Fruit">Articles
 			</a>
 		</li>
 		<li class='panier'>
