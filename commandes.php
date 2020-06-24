@@ -42,6 +42,9 @@
     <?php
       $idUser = $_SESSION['id'];
       $commandes = $bdd->query("SELECT * FROM commandes WHERE userID = $idUser");
+      if($commandes->fetch() == false){
+        echo "<p class='panierVide'>Vous n'avez pas encore éffectué de commandes</p>";
+      }
     ?>
     <div class="containerAllCommandes">
     <?php
