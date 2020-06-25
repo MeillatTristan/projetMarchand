@@ -27,18 +27,12 @@
   <div class="containerAdmin">
     <?php include "header.php" ?>
     <?php include "sidebar.php" ?>
-    <style type="text/css">
-    .bg {
-      background : #eceef2
-    }
-    </style>
 
-    <!---- header-info ---->
+<!---- header-info ---->
     <div class="header-info text-center">
-      <div class="container">
-        <h2>Bienvenue sur le pannel admin !</h2>
+      <h2>Statistiques</h2>
     </div>
-  </div>
-
+    <?php include "headerAdmin.php" ?>
+    <p class='panierVide'>Les statistiques ne sont pas encore disponible</p>
 	</body>
 </html>

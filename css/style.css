@@ -1191,3 +1191,61 @@ color: #0F8869;
 	border-bottom: solid 1px #0F8869;
 	margin-right: 10px;
 }
+
+/* header admin */
+
+.containerAlign{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.containerHeaderAdmin{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #F6F2F2;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	width: 90%;
+	height: 80px;
+}
+
+.containerAlign p{
+	color: #505050;
+	font-size: 16px;
+	position: absolute;
+	left: 7%;
+	top: 25px;
+}
+
+.containerHeaderAdmin ul{
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+
+.containerHeaderAdmin ul li{
+	margin-left: 25px;
+}
+
+.containerHeaderAdmin ul li a{
+	color: #000000;
+	transition: 0.3s;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.containerHeaderAdmin ul li a:hover{
+	color: #0F8869;
+}
+
+/* add article Form */
+
+/* .formAddArticle{
+	display: flex;
+} */
