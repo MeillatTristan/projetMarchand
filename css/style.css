@@ -177,7 +177,7 @@ body{
 
 .indexPage p{
 	font-size: 2em;
-	margin: 0.5em 0 2em;
+	margin: 5px 0 5px;
 }
 
 .about-head{
@@ -226,19 +226,6 @@ body{
 .address {
 	margin-top: 200px;
 	position: relative;
-}
-
-.map{
-	display: flex;
-	justify-content: center;
-	z-index: -1;
-}
-
-.map iframe {
-	margin-top: 60px;
-	width: 85%;
-	min-height: 300px;
-	border: none;
 }
 
 /* page fruit */
@@ -1243,6 +1230,7 @@ color: #0F8869;
 
 /* page commande admin */
 
+<<<<<<< HEAD
 .buttonValidateCommande{
 	display: flex;
 	justify-content: right;
@@ -1260,3 +1248,64 @@ color: #0F8869;
 .titlePartsCommandes{
 	margin-left: 15.5%;
 }
+=======
+.formAddArticle{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.formAddArticle * {
+	margin: 5px;
+}
+
+/* Page Accueil */
+
+#textinfo {
+	font-size: 20px;
+}	
+
+#marchand {
+	font-size: 35px;
+}
+
+#primeur {
+	font-size: 25px;
+}
+
+.information {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 2;
+}
+
+.info h2 {
+	margin: 0 0 10px 0;
+}
+
+.info {
+	margin: 20px;
+	width: 35%;
+	margin-left: 150px;
+	margin-bottom: 50px;
+	margin: 50px 10px 50px 150px;
+	background: #FAFAFA;
+	border: 1px solid #DADADA;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.map {
+	padding: 130px 100px 20px 100px;
+}
+
+.map img {
+	width: 100%;
+}
+
+.map h2 {
+	margin-bottom: 50px;
+}
+>>>>>>> 8f8ad28b211875ed75147def2598454c66a72bbf
