@@ -89,15 +89,16 @@
 			<div class="information">
 				<div class="info">
 					<h2>Nos services</h2>
-					<p id="textinfo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia doloremque vero rerum numquam minus dolore vitae accusantium eligendi incidunt provident! Assumenda nulla in eos eveniet temporibus autem? Quidem, eligendi modi.</p>
+					<p id="textinfo">Précommandez sur le site les articles qui vous intéresse. Vous pourcez ensuite venir les chercher au lieu de votre choix. La livraison à domicile est également possible dans les zones indiquées.</p>
 				</div>
 				<div class="info">
 					<h2>Les commandes</h2>
-					<p id="textinfo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia doloremque vero rerum numquam minus dolore vitae accusantium eligendi incidunt provident! Assumenda nulla in eos eveniet temporibus autem? Quidem, eligendi modi.</p>
+					<p id="textinfo">Effectuer votre commande avant 12h00 pour être livré dès le lendemain matin. </br> Cette dernière est modifiable jusqu'à ce que votre primeur la valide (sauf certains produits indiqués). </p>
 				</div>
 				<div class="info">
 					<h2>Marchés</h2>
-					<p id="textinfo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia doloremque vero rerum numquam minus dolore vitae accusantium eligendi incidunt provident! Assumenda nulla in eos eveniet temporibus autem? Quidem, eligendi modi.</p>
+					<p id="textinfo">Votre marchand est aussi présent sur certains marchés :</p>
+					<img src="" alt="">
 				</div>
 				<div class="infoimage">
 					<img src="" alt="">
