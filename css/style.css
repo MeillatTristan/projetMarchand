@@ -1246,6 +1246,13 @@ color: #0F8869;
 
 /* add article Form */
 
-/* .formAddArticle{
+.formAddArticle{
 	display: flex;
-} */
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.formAddArticle * {
+	margin: 5px;
+}
