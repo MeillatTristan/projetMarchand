@@ -35,9 +35,9 @@ function changeRadioDomicile(adresse){
     document.getElementById('livraisonDomicile').checked = false;
     document.getElementById('livraisonEmporter').checked = true;
     changeRadioEmport();
-    document.getElementById('overlayAdresse').style.visibility = "visible";
+    document.getElementById('overlayAdresse').style.display = "block";
     document.getElementById('overlayAdresse').style.opacity = "1";
-  document.getElementById('overlayAdresse').style.zIndex = "4";
+    document.getElementById('overlayAdresse').style.zIndex = "4";
 
   }
   else{
@@ -51,9 +51,9 @@ function changeRadioDomicile(adresse){
 }
 
 function closePopup(){
-  document.getElementById('overlayAdresse').style.visibility = "invisible";
+  document.getElementById('overlayAdresse').style.display = "none";
   document.getElementById('overlayAdresse').style.opacity = "0";
-  document.getElementById('overlayAdresse').style.zIndex = "-1";
+  document.getElementById('overlayAdresse').style.zIndex = "0";
 
 }
 

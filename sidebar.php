@@ -24,10 +24,15 @@
 	</div>
 
 	<ul>
-		<li>
-			<img src="images/commandes.png" alt="icone Commandes">
-			<a href="commandes.php">Commandes</a>
-		</li>
+		<?php
+			$admin = $bdd->query("SELECT admin FROM users WHERE id=$idUser")->fetch()[0];
+			if ($admin != "y"){
+		?>
+			<li>
+				<img src="images/commandes.png" alt="icone Commandes">
+				<a href="commandes.php">Commandes</a>
+			</li>
+			<?php } ?>
 		<li>
 			<img src="images/profil.png" alt="icone Profil">
 			<a href="profil.php">Profil</a>
@@ -38,7 +43,7 @@
 				?>
 				<li>
 					<img src="images/user-crown.png" alt="icone Gestion">
-					<a href="pannelAdmin.php">Gestion</a>
+					<a href="statistiques.php">Gestion</a>
 				</li>
 		<?php
 			}

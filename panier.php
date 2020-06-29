@@ -82,6 +82,7 @@
 					}
 				}
 				else{
+					
 					$total = 0;
 					if(date('H') < 12){
 						echo "<p class='avertissement'>Commander avant 12h00 pour récupérer votre commande dès demain !</p>";
@@ -170,8 +171,12 @@
 									<select required name="dateLivraison">
 										<option value="" selected disabled>--Choisir une date--</option>
 										<?php
+											echo date_default_timezone_get();
+											date_default_timezone_set('Europe/Paris');
+											echo date_default_timezone_get();
 											setlocale(LC_TIME, "fr_FR");
-											$currentDate = date("d F Y");
+											$currentDate = date("d F Y H:i");
+											echo $currentDate;
 											$days = ['lundi', 'mercredi', 'samedi'];
 											$lieux = ['lundi'=>'Ecouflant', 'mercredi'=>'Angers', 'samedi'=> 'Villeveque'];
 											for ($i=0; $i<=7; $i++){
