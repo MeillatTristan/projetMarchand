@@ -1114,7 +1114,7 @@ color: #0F8869;
 /* page commande */
 
 .containerAllCommandes{
-	margin: 20px 236px 0px 236px;
+	margin: 20px 15.5% 0px 15.5%;
 }
 
 .headerCommande{
@@ -1228,8 +1228,27 @@ color: #0F8869;
 	color: #0F8869;
 }
 
-/* add article Form */
+/* page commande admin */
 
+<<<<<<< HEAD
+.buttonValidateCommande{
+	display: flex;
+	justify-content: right;
+}
+
+.buttonValidateCommande input{
+	background: #10AC84;
+	border-radius: 18px;
+	border: none;
+	color: #FFFFFF;
+	height: 40px;
+	width: 150px;
+}
+
+.titlePartsCommandes{
+	margin-left: 15.5%;
+}
+=======
 .formAddArticle{
 	display: flex;
 	flex-direction: column;
@@ -1289,3 +1308,4 @@ color: #0F8869;
 .map h2 {
 	margin-bottom: 50px;
 }
+>>>>>>> 8f8ad28b211875ed75147def2598454c66a72bbf

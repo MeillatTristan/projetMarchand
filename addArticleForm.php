@@ -21,19 +21,19 @@
 
   ?>
   <div class="containerAdminAll">
-    <?php
-    include "configbdd.php";
-    if (!isset($_SESSION['id'])) {
-      header("Location : index.php");
-    }
-    $id = $_SESSION['id'];
-    $admin = $bdd->query("SELECT admin FROM users WHERE id = $id")->fetch()[0];
-    if ($admin == 'n') {
-      header("Location:index.php");
-    }
-    include "header.php";
-    include "sidebar.php";
-    ?>
+  <?php
+  include "configbdd.php";
+  if(!isset($_SESSION['id'])){
+    header("Location : index.php");
+  }
+  $idUser = $_SESSION['id'];
+  $admin = $bdd->query("SELECT admin FROM users WHERE id = $idUser")->fetch()[0];
+  if ($admin != 'y') {
+    header("Location : index.php");
+  }
+  include "header.php";
+  include "sidebar.php";
+  ?>
 
     <!---- header-info ---->
     <div class="header-info text-center">
