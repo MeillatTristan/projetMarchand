@@ -95,7 +95,7 @@
                 <div class="infosArticles">
                   <p><?php echo $article['name'] ?></p>
                   <p>Quantité: <?php echo $articleCommande['quantity'] ?> </p>
-                  <p><?php echo $article['prix'] ?>€</p>
+                  <p><?php echo $articleCommande['prix'] ?>€</p>
                 </div>
                 <div class="containerAddToPanier">
                 <form action='addArticleToPanier.php'>
