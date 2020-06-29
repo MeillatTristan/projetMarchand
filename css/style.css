@@ -676,7 +676,6 @@ body{
 	height: 100%;
   opacity: 0;
 	cursor: pointer;
-	z-index: 2;
 }
 
 .livraisonEmporter p{
@@ -702,7 +701,6 @@ body{
 	height: 40px;
 	border: 2px solid #4A4A4A;
 	border-radius: 5px;
-	z-index: 2;
 	-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -785,8 +783,7 @@ body{
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
-  transition: opacity 500ms;
-  visibility: hidden;
+  display: none;
   opacity: 0;
 }
 

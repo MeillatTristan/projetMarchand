@@ -6,7 +6,7 @@ include "configbdd.php";
 
 $typeLivraison = $_REQUEST['livraison'];
 $dateLivraison = $_REQUEST['dateLivraison'];
-$currentDate = strftime(" %A %d %B %Y");
+$currentDate = strftime(" %A %d %B %Y H:i");
 $idUser = $_SESSION['id'];
 $price = $_REQUEST['price'];
 
