@@ -8,7 +8,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="fruit.php">
+			<a href="articles.php">
 			<img src="images/iconFruit.png" alt="icone Fruit">Articles
 			</a>
 		</li>
