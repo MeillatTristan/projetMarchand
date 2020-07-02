@@ -35,6 +35,12 @@
 					<div class="container">
 						<h2 id="connexion">Connexion</h2>
 					</div>
+					<?php
+						if(isset($_REQUEST['badCo'])){
+							echo "<p class='errorAuth'>Mauvais email ou mot de passe <span class='underlignErrorAuth'></span></p> ";
+
+						}
+					?>
 					<form class="coo" id='coo' action="authUser.php">
 						<div class="imgconnexion">
 							<img id="enveloppe" src="images/envelope.png" alt="">

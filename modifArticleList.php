@@ -8,6 +8,8 @@
   <script src="js/jquery.min.js"></script>
   <!-- Custom Theme files -->
   <link href="css/style.css" rel='stylesheet' type='text/css' />
+  <script src="https://kit.fontawesome.com/836a2159df.js" crossorigin="anonymous"></script>
+
 
   <!---- start-smoth-scrolling---->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,68 +36,73 @@
   }
   ?>
     <!---- header-info ---->
-  <div class="header-info text-center">
-    <?php
-    $requete = $bdd->query('SELECT * FROM articles');
-    ?>
-    <h2>Modification d'articles :</h2>
-    <?php include "headerAdmin.php"; ?>
-    <div class='allTable'>
-      <div class="headList">
-        <div class="nameArticle">
-          <span class="spanHeadList">Nom de l'article</span>
-        </div>
-        <div class="typeArticle">
-          <span class="spanHeadList">Fruit/légume</span>
-        </div>
-        <div class="quantityArticle">
-          <span class="spanHeadList">Quantité</span>
-        </div>
-        <div class="prixArticle">
-          <span class="spanHeadList">prix</span>
-        </div>
-        <div class="provenanceArticle">
-          <span class="spanHeadList">provenance</span>
-        </div>
-        <div class="venteBoolArticle">
-          <span class="spanHeadList">En vente</span>
-        </div>
-        <div class="pictureArticle">
-          <span class="spanHeadList">Photo</span>
-        </div>
-        <div class="updateArticle">
-          <span class="spanHeadList">modifier</span>
-        </div>
-      </div>
-      <div class="bodyList">
-      <?php
+  <?php
+  $requete = $bdd->query('SELECT * FROM articles');
+  ?>
+  <h2>Modification d'articles :</h2>
+  <?php include "headerAdmin.php"; ?>
+  <div class="containerPrintArticle">
+		<?php
+		$requete = $bdd->query("SELECT * FROM articles WHERE venteBool='y'");
+		if($requete->fetch() == FALSE){
+			echo "< class='articleNull'>Il n'y a plus d'articles' pour le moment</p>";
+		}
+		else{
+		?>
+			<div class="allFiltre">
+				<label class="filtre">Bio
+					<input type="checkbox" id='checkmarkBio' onclick="filtre('bio', 'checkmarkBio')">
+					<span class="checkmark"></span>
+				</label>
+				<label class="filtre">Fruits
+					<input type="checkbox" id='checkmarkFruit' onclick="filtre('fruit','checkmarkFruit')">
+					<span class="checkmark"></span>
+				</label>
+				<label class="filtre">Légumes
+					<input type="checkbox" id='checkmarkLegume' onclick="filtre('legume', 'checkmarkLegume')">
+					<span class="checkmark"></span>
+				</label>
+				<div class="containerSearch">
+					<input type="text" id="inputRecherche" placeholder="Rechercher..." onkeyup="recherche(this.value)">
+					<i class="fas fa-search"></i>
+					<span class="backgroundSearchIcon"></span>
+				</div>
+			</div>
+			<div class="allArticle">
+				<?php
 
-        while ($articles = $requete->fetch()) {
-          echo "<tr>";
-          if ($articles['type'] == 'f') {
-            $type = 'Fruit';
-          } elseif ($articles['type'] == 'l') {
-            $type = 'Légume';
-          }
-
-          if ($articles['venteBool'] == 'y') {
-            $vente = 'Oui';
-          } elseif ($articles['venteBool'] == 'n') {
-            $vente = 'Non';
-          }
-          echo " <div class='lineTable'><div class='nameArticle' >" . "<form action='modifArticle.php'>" . "<input type = 'hidden' value = '$articles[id]' name = 'idarticle'>" . "<input type='text' name='name' value='" . $articles['name'] ." ' >" . "</div>";
-          echo "<div class='typeArticle'>" . "<select name='type' id='type'  required placeholder='Type de l\'article'> <option value='l'>Légume</option> <option value='f'>Fruit</option> </select>" . "</div>";
-          echo "<div class='quantityArticle'>" . "<input type='text' name='quantity' value='" . $articles['quantity'] . " ' >" . "</div>";
-          echo "<div class='prixArticle'>" . "<input type='text' name='prix' value='" . $articles['prix'] . " ' >" . "</div>";
-          echo "<div class='provenanceArticle'>" . "<input  type='text' name='provenance' value='" . $articles['provenance'] . " ' >" . "</div>";
-          echo "<div class='venteBoolArticle'>" . "<select name='VenteBool' id='vente'  required placeholder='En vente'> <option value='y'>Oui</option> <option value='n'>Non</option> </select>" . "</div>";
-          echo "<div class='pictureArticle imgModif'><img src='images/".$articles['picture'] ."' alt='photo de l'article'> <label for='file' class='label-file'>Choisir une image</label> <input type='file' class='input-file' id='picture' name='picture' accept='image/*' ></div>"  ;
-          echo "<div class='updateArticle'>" . "<button type='submit' name='modifyBook'>Modifier</button>" . "</div>" . "</form> </div>" ;
-        }
-        ?>
-      </div>
-    </div>
-  </div>
+				$query = $bdd->query("SELECT * FROM articles WHERE venteBool='y'  ORDER BY promo DESC");
+				while ( $articles = $query->fetch()){
+					$idArticle = $articles['id'];
+					$tagsArticle = $bdd->query("SELECT tag FROM tagarticles WHERE idArticle = $idArticle");
+					?>
+					<div class="article modifArticle
+					<?php
+						while($tag = $tagsArticle->fetch()){
+							echo $tag[0] . " ";
+						}
+					?>">
+					<?php 
+						if($articles['promo'] == 'y'){
+							echo "<span class='triangleTopRight'></span>";
+							echo "<span class='textTriangle'>%</span>";	
+						}
+					?>
+					<?php
+						echo "<img class='imgArticle' src='images/".$articles['picture'] ."' alt='photo de l'article'>";
+						echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;
+						echo "<p class='priceArticle'><span></span>". $articles['prix']."€</p> </div>" ;
+						echo "<div class='containerProvenanceSubmit'><p class='provenanceArticle'>". $articles['provenance']."</p>" ;
+						echo "<div class='midBlock'><p>Modifier cet article</p><a href='modifArticle.php?". $articles['id'] ."' class='linkToModif'></a></div></div>";
+					?>
+					</div>
+					<?php
+				}
+				
+				?>
+			</div>
+			<?php } ?>
+		</div>
 
 </body>
 

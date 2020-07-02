@@ -102,3 +102,25 @@ function filtre(choiceFiltre, idCheckmark){
   }
 
 }
+
+
+// recherche
+
+function recherche(stringRecherche){
+  let allArticle = document.getElementsByClassName('article');
+  for (var i = 0; i < allArticle.length; i++) {
+    let contains = 0
+    for (var j = 0; j < allArticle[i].childNodes.length; j++) {
+      if(allArticle[i].childNodes[j].textContent.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(stringRecherche.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase())){
+        contains =+ 1;
+      }
+    }
+    console.log(contains)
+    if(contains > 0){
+      allArticle[i].style.display = "flex";
+    }
+    else{
+      allArticle[i].style.display = "none";
+    }
+  }
+}

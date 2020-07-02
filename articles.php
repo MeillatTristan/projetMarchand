@@ -7,6 +7,7 @@
 		<script src="js/jquery.min.js"></script>
 		 <!-- Custom Theme files -->
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<script src="https://kit.fontawesome.com/836a2159df.js" crossorigin="anonymous"></script>
 		
    		 <!-- Custom Theme files -->
    		  <!---- start-smoth-scrolling---->
@@ -70,7 +71,7 @@
 		<?php
 		$requete = $bdd->query("SELECT * FROM articles WHERE venteBool='y'");
 		if($requete->fetch() == FALSE){
-			echo "< class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
+			echo "< class='articleNull'>Il n'y a plus d'articles' pour le moment</p>";
 		}
 		else{
 		?>
@@ -87,6 +88,11 @@
 					<input type="checkbox" id='checkmarkLegume' onclick="filtre('legume', 'checkmarkLegume')">
 					<span class="checkmark"></span>
 				</label>
+				<div class="containerSearch">
+					<input type="text" id="inputRecherche" placeholder="Rechercher..." onkeyup="recherche(this.value)">
+					<i class="fas fa-search"></i>
+					<span class="backgroundSearchIcon"></span>
+				</div>
 			</div>
 			<div class="allArticle">
 				<?php

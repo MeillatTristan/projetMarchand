@@ -12,8 +12,8 @@
   $isPasswordCorrect = password_verify($password_1, $resultat['password_1']); //on vérifie si le mdp rentrer est en accord avec celui en bdd
 
 
-  if (!$resultat){ //si le résultat est vide (donc email faux)
-    echo 'Mauvais email ou mot de passe !';
+  if (!$resultat || !$isPasswordCorrect){ //si le résultat est vide (donc email faux)
+    header("Location: connexion.php?badCo=n");
   }
   else{
     if ($isPasswordCorrect) { //si le mdp est bon
