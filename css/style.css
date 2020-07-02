@@ -1230,7 +1230,6 @@ color: #0F8869;
 
 /* page commande admin */
 
-<<<<<<< HEAD
 .buttonValidateCommande{
 	display: flex;
 	justify-content: right;
@@ -1248,7 +1247,6 @@ color: #0F8869;
 .titlePartsCommandes{
 	margin-left: 15.5%;
 }
-=======
 .formAddArticle{
 	display: flex;
 	flex-direction: column;
@@ -1308,4 +1306,3 @@ color: #0F8869;
 .map h2 {
 	margin-bottom: 50px;
 }
->>>>>>> 8f8ad28b211875ed75147def2598454c66a72bbf
