@@ -835,8 +835,26 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 40px;
+	margin-top: 30px;
 }
+
+.errorAuth{
+	font-size: 18px;
+	position: relative;
+	color: #ffffff;
+	margin-top: 10px;
+}
+
+.underlignErrorAuth{
+	width: 260px;
+	height: 3px;
+	position: absolute;
+	background-color: #ef537b;
+	top: 30px;
+	left: 638px;
+}
+
+
 
 .coo input {
 	margin: 10px;
@@ -1293,6 +1311,9 @@ color: #0F8869;
 	margin: 5px;
 }
 
+.formAddArticle textarea{
+	resize: none;
+}
 /* Page Accueil */
 
 #textinfo {

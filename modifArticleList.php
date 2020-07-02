@@ -71,10 +71,19 @@
       <?php
 
         while ($articles = $requete->fetch()) {
+          $idArticle = $articles['id'];
+          $fruit = 0;
+          $tags = $bdd->query("SELECT tag FROM tagarticles WHERE idArticle = $idArticle");
+          foreach($tags as $element){
+            if($element == 'fruit'){
+              $fruit =+ 1;
+            }
+          }
           echo "<tr>";
-          if ($articles['type'] == 'f') {
+          if ($fruit > 0) {
             $type = 'Fruit';
-          } elseif ($articles['type'] == 'l') {
+          }
+          else{
             $type = 'Légume';
           }
 
