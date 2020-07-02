@@ -71,7 +71,7 @@
 		<?php
 		$requete = $bdd->query("SELECT * FROM articles WHERE venteBool='y'");
 		if($requete->fetch() == FALSE){
-			echo "< class='articleNull'>Il n'y a plus de fruits pour le moment</p>";
+			echo "< class='articleNull'>Il n'y a plus d'articles' pour le moment</p>";
 		}
 		else{
 		?>

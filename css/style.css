@@ -12,7 +12,7 @@ body{
 .top-nav{
 	display: flex;
 	align-items: flex-end;
-	justify-content: end;
+	justify-content: flex-end;
 	width: 100%;
 	padding-left: 0;
 	margin-top: 5px;
@@ -290,11 +290,12 @@ body{
 
 .article{
 	width: 175px;
-	height: 340px;
+	height: 280px;
 	margin-left: 170px;
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	overflow : hidden;
 }
 
 .article img{
@@ -1361,4 +1362,45 @@ color: #0F8869;
 
 .map h2 {
 	margin-bottom: 50px;
+}
+
+/* modification article liste */
+
+.midBlock{
+	position: absolute;
+	transition: all 0.5s ease;
+	bottom: -280px;
+	height: 280px;
+	width: 175px;
+	background-color: rgba(16, 172, 132, 0.95);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.midBlock a{
+	position: absolute;
+	width: 175px;
+	height: 280px;
+	display: block;
+	z-index: 1;
+	opacity: 0;
+	top: 0;
+	left: 0;
+}
+
+.modifArticle:hover .midBlock, .modifArticle:focus .midBlock{
+	bottom: 0;
+}
+
+.midBlock p{
+	color: #ffffff;
+	border: 2px solid #fff;
+	height: 40px;
+	border-radius: 10px;
+	padding: 0px 5px 0px 5px;
+	text-align: center;
+	display: flex;
+	align-items: center;
 }
