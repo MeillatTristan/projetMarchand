@@ -74,13 +74,13 @@
 				$query = $bdd->query("SELECT * FROM articles WHERE venteBool='y'  ORDER BY promo DESC");
 				while ( $articles = $query->fetch()){
 					$idArticle = $articles['id'];
-					$tagsArticle = $bdd->query("SELECT tag FROM tagarticles WHERE idArticle = $idArticle");
 					?>
 					<div class="article modifArticle
 					<?php
-						while($tag = $tagsArticle->fetch()){
-							echo $tag[0] . " ";
+						if($articles['bio'] == 'y'){
+							echo "bio ";
 						}
+						echo $articles['type'];
 					?>">
 					<?php 
 						if($articles['promo'] == 'y'){
@@ -93,7 +93,7 @@
 						echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;
 						echo "<p class='priceArticle'><span></span>". $articles['prix']."€</p> </div>" ;
 						echo "<div class='containerProvenanceSubmit'><p class='provenanceArticle'>". $articles['provenance']."</p>" ;
-						echo "<div class='midBlock'><p>Modifier cet article</p><a href='modifArticle.php?". $articles['id'] ."' class='linkToModif'></a></div></div>";
+						echo "<div class='midBlock'><p>Modifier cet article</p><a href='modifArticleForm.php?idArticle=". $articles['id'] ."' class='linkToModif'></a></div></div>";
 					?>
 					</div>
 					<?php

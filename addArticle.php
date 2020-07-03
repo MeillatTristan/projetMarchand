@@ -24,11 +24,17 @@ $namePicture = $_FILES['picture']['name'];
 $description = $_REQUEST['description'];
 $bio = $_REQUEST['bio'];
 $tag = [$type,$bio];
-echo "bio";
+if($bio == 'bio'){
+  $bio = 'y';
+}
+else{
+  $bio = 'n';
+}
+
 
 move_uploaded_file($_FILES['picture']['tmp_name'], "images/" . $namePicture);
-$queryInsert = $bdd->prepare("INSERT INTO articles SET name = :name, prix = :price, picture = :picture, venteBool= :venteBool, provenance= :provenance, description = :description");
-$queryInsert->execute(array(':name' =>$name, ':price'=>$price, ':picture' => $namePicture, ':venteBool' =>'y', ':provenance'=>$provenance, ':description'=>$description));
+$queryInsert = $bdd->prepare("INSERT INTO articles SET name = :name, prix = :price, picture = :picture, venteBool= :venteBool, provenance= :provenance, description = :description, type= :type, bio = :bio");
+$queryInsert->execute(array(':name' =>$name, ':price'=>$price, ':picture' => $namePicture, ':venteBool' =>'y', ':provenance'=>$provenance, ':description'=>$description, ':type'=>$type, ':bio'=>$bio));
 
 
 $idLastArticle = $bdd->query("SELECT * FROM articles GROUP BY id DESC")->fetch()[0];

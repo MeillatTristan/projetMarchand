@@ -2,7 +2,7 @@
 <html id="body">
 
 <head>
-  <title>Salah Primeur | Ajouter un article</title>
+  <title>Salah Primeur | Modifier un article</title>
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.min.js"></script>
@@ -38,7 +38,7 @@
     <!---- header-info ---->
     <div class="header-info text-center">
       <div class="titleAdd">
-        <h2>Ajouter un article</h2>
+        <h2>Modifier un article</h2>
         <?php include "headerAdmin.php" ?>
         <?php
         if (isset($_REQUEST['good']) && $_REQUEST['good'] == 'f') {
@@ -46,26 +46,51 @@
         } elseif (isset($_REQUEST['good']) && $_REQUEST['good'] == 'y') {
           echo "<p class='goodPass'>L'article à parfaitement été sauvegardé</p>";
         }
+        $idArticle = $_REQUEST['idArticle'];
+        $article =  $bdd->query("SELECT * FROM articles WHERE id = $idArticle")->fetch();
         ?>
       </div>
       <div class="formarticle" >
-        <form action="addArticle.php" class="formAddArticle" method="post" enctype="multipart/form-data">
-          <input type="text" name="name" required placeholder=" Nom de l'article">
-          <input type="text" name="provenance" placeholder=" Provenance" required>
+        <form action="modifArticle.php" class="formAddArticle" method="post" enctype="multipart/form-data">
+          <input type="text" name='id' hidden value = <?php echo $article['id'] ?>>
+          <input type="text" name="name" required value = <?php echo $article['name'] ?>>
+          <input type="text" name="provenance" value = <?php echo $article['provenance'] ?> required>
           <select name="type" id="type" required placeholder=" Type de l'article">
-            <option value="legume">Légume</option>
-            <option value="fruit">Fruit</option>
-          </select>
-          <input type="text" name="price" placeholder=" Prix" required>
+            <?php
+            if($article['type'] == 'legume'){
+              ?>
+              <option value="legume">Légume</option>
+              <option value="fruit">Fruit</option>
+              </select>
+              <?php
+            }
+            else{
+              ?>
+              <option value="fruit">Fruit</option>
+              <option value="legume">Légume</option>
+              </select>
+              <?php
+            }
+            ?>
+          <div class="containerPrice">
+            <input type="text" name="price" value = <?php echo $article['prix'] ?> required>
+            <span>€</span>
+          </div>
           <div class="uploadPicture">
+            <img class='picturePreviewModif' src="images/<?php echo $article['picture'] ?>" alt="photo actuelle">
             <label for="pictureLabel">Photo de l'article :</label>
-            <input type="file" id="picture" name="picture" accept="image/*" required>
+            <input type="file" id="picture" name="picture" accept="image/*" >
           </div>
           <div>
-            <input type="checkbox" value='bio' name="bio">
+            <input type="checkbox" value='bio' name="bio" <?php 
+            if ($article['bio'] == 'y'){
+              ?>
+              checked
+              <?php
+            } ?> >
             <label for="bio">Bio</label>
           </div>
-          <textarea name="description" rows="5" cols="33" placeholder="description du produit"></textarea>
+          <textarea name="description" rows="5" cols="33" value = <?php echo $article['description'] ?>></textarea>
           <input type="submit" value="Valider">
         </form>
       </div>

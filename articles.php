@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Daisy Website Template | Home :: w3layouts</title>
+		<title>Salah Primeur | Articles</title>
 		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
@@ -100,21 +100,20 @@
 				$query = $bdd->query("SELECT * FROM articles WHERE venteBool='y'  ORDER BY promo DESC");
 				while ( $articles = $query->fetch()){
 					$idArticle = $articles['id'];
-					$tagsArticle = $bdd->query("SELECT tag FROM tagarticles WHERE idArticle = $idArticle");
+					
 					?>
 					<div class="article
 					<?php
-						while($tag = $tagsArticle->fetch()){
-							echo $tag[0] . " ";
+						if($articles['bio'] == 'y'){
+							echo "bio ";
 						}
+						echo $articles['type']
 					?>">
 					<?php 
 						if($articles['promo'] == 'y'){
 							echo "<span class='triangleTopRight'></span>";
 							echo "<span class='textTriangle'>%</span>";	
 						}
-					?>
-					<?php
 						echo "<img class='imgArticle' src='images/".$articles['picture'] ."' alt='photo de l'article'>";
 						echo "<div class='containerNamePrice'> <p class='nameArticle'>". $articles['name']."</p>" ;
 						echo "<p class='priceArticle'><span></span>". $articles['prix']."€</p> </div>" ;
@@ -125,7 +124,6 @@
 					</div>
 					<?php
 				}
-				
 				?>
 			</div>
 			<?php } ?>
