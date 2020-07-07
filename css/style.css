@@ -1424,3 +1424,22 @@ color: #0F8869;
 	max-width: 100px;
 	max-height: 100px;
 }
+
+/* footer */
+
+.footerbackground {
+	background-color: #494949;
+	width: 100%;
+}
+
+.footercontact .footerinfo , h3 {
+	margin: 0;
+}
+
+.footercontact p {
+	margin: 0;
+}
+
+.footercontact {
+	color: white;
+}

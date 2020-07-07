@@ -62,7 +62,8 @@
 <body id='body'>
 	<?php
 	session_start();
-	include 'sidebar.php'
+	include 'sidebar.php';
+	include 'footer.php';
 	?>
 
 	<div id="top" class="bg">
@@ -110,6 +111,9 @@
 				<h2>Voici la carte, les livraisons a domicile ce passe exclusivement dans ces zones</h2>
 				<img src="images/map.png" alt="">
 			</div>
+	<?php
+		include 'footer.php'; 
+	?>		
 </body>
 
 </html>
