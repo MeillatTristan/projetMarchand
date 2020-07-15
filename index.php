@@ -63,7 +63,6 @@
 	<?php
 	session_start();
 	include 'sidebar.php';
-	include 'footer.php';
 	?>
 
 	<div id="top" class="bg">

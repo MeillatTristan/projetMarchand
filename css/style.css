@@ -1430,16 +1430,34 @@ color: #0F8869;
 .footerbackground {
 	background-color: #494949;
 	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 
 .footercontact .footerinfo , h3 {
 	margin: 0;
+	color: white;
+}
+
+.footerinfo p {
+	margin-top: 10px;
+}
+
+.footerinfo a {
+	color: white;
+	text-decoration: none;
 }
 
 .footercontact p {
 	margin: 0;
+	margin-top: 10px;
 }
 
 .footercontact {
 	color: white;
+	padding: 15px 150px 15px 350px;
+}
+
+.footerinfo {
+	padding: 15px 150px 15px 250px;
 }
